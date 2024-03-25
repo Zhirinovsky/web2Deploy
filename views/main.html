@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <script src="/static/js/lib/bootstrap.js"></script>
+    <script src="/static/js/lib/bootstrap.bundle.js"></script>
+    <script src="/static/js/lib/jquery.js"></script>
+    <script src="/static/js/custom/errorWindow.js"></script>
+    <script src="/static/js/custom/modals.js"></script>
+</head>
+<body>
+    <!-- Шапка и боковая панель -->
+    {{template "menu" .}}
+
+    <!-- Модальное окно вывода ошибки -->
+    {{template "errorWindow" .}}
+
+    <!-- Модальное окно показа Изображений -->
+    {{template "showImage" .}}
+
+    <!-- Модальное окно подробной информации о Товаре -->
+    {{template "infoProduct" .}}
+
+    <h1 class="display-5 mb-3 text-center mt-5 pt-5">Каталог товаров</h1>
+
+    <div class="py-2 mx-4 pb-4">
+        <form action="/search" method="post" class="input-group p-10">
+            {{.BaseObject.CsrfField}}
+            <input placeholder="Найти" class="form-control form-control-lg rounded-start" type="text" name="SearchText">
+            <button type="submit" class="btn btn-primary btn-lg input-group-btn">Поиск</button>
+        </form>
+    </div>
+
+    <div class="mx-4">
+        <div class="row mt-3">
+            <div class="col-2 mt-2">
+                <div class="border border-2 rounded p-2">
+                    <p class="text-center fs-4 text-bg-primary rounded">Категории</p>
+                    <form class="px-3" action="/category">
+                        {{ range $key, $category := .Categories }}
+                        {{ if and (eq .Relation 0) (eq .IsExist true) }}
+                        <div class="text-center fs-5">{{ .Name }}</div>
+                        {{ range $key1, $category1 := $.Categories }}
+                        {{ if and (eq .Relation $category.ID) (eq .IsExist true) }}
+                        <div class="row">
+                            <label class="form-check-label col">{{ .Name }} </label>
+                            <input class="form-check-input col-auto" type="checkbox" value="1" name="{{ .Name }}">
+                        </div>
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                        {{ end }}
+                        <div class="row mt-3">
+                            <button type="submit" class="btn btn-outline-primary w-50 mx-auto">Применить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col row row-cols-1 row-cols-md-4 p-2">
+                {{ range $key, $product := .Products }}
+                {{ if eq .IsExist true }}
+                <div class="col">
+                    <div class="card h-100">
+                        <img class="card-img-top p-1 showImage" src="{{ .ImageLink }}" alt="{{ .ImageLink }}" height="350" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .ImageLink }}"/>
+                        <div class="card-body">
+                            <h4 class="card-title">{{ .Name }}</h4>
+                            <p class="card-text">{{ .Category.Name }}</p>
+                        </div>
+                        <ul class="list-group border-0">
+                            <li class="list-group-item border-0">Цена: {{ subf .Price (mulf .Price (divf .Discount 100)) }} руб{{ if ne .Discount 0 }} ({{ .Discount}}% Скидка){{ end }}</li>
+                            <li class="list-group-item border-0">В наличии: {{ .Amount }} шт</li>
+                        </ul>
+                        <div class="card-footer">
+                            <div class="row pb-2">
+                                {{ if eq $.BaseObject.CurrentUser.Role.Name "Клиент" }}
+                                <button type="button" class="btn btn-outline-primary col mx-2 infoProduct" data-bs-toggle="modal" data-bs-target="#infoProduct" data-id="{{ .ID }}" data-name="{{ .Name }}" data-number="{{ add .ID 1000 }}" data-price="{{ subf .Price (mulf .Price (divf .Discount 100)) }}" data-amount="{{ .Amount }}" data-image="{{ .ImageLink }}" data-category="{{ .Category.Name }}">Подробно</button>
+                                <button type="submit" class="btn btn-primary col mx-2" form="addCart{{ .ID }}">В корзину</button>
+                                {{ else }}
+                                <button type="button" class="btn btn-outline-primary col mx-4 infoProduct" data-bs-toggle="modal" data-bs-target="#infoProduct" data-id="{{ .ID }}" data-name="{{ .Name }}" data-number="{{ add .ID 1000 }}" data-price="{{ subf .Price (mulf .Price (divf .Discount 100)) }}" data-amount="{{ .Amount }}" data-image="{{ .ImageLink }}" data-category="{{ .Category.Name }}">Подробно</button>
+                                {{ end }}
+                            </div>
+                            <form class="visually-hidden" id="addCart{{ .ID }}" action="/addCart">
+                                <input type="hidden" value="{{ .ID }}" name="Id">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>

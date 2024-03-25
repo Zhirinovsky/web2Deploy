@@ -1,0 +1,41 @@
+{{define "tableLogs"}}
+<table id="tableLogs" class="table caption-top datatable">
+  <caption class="display-6 mx-1">Логи</caption>
+  <thead>
+  <tr>
+    <td>Идентификатор</td>
+    <td>Уровень</td>
+    <td>Группа</td>
+    <td>Время</td>
+    <td>Сообщение</td>
+    <td>Данные</td>
+  </tr>
+  </thead>
+  <tfoot>
+  <tr>
+    <td>Идентификатор</td>
+    <td>Уровень</td>
+    <td>Группа</td>
+    <td>Время</td>
+    <td>Сообщение</td>
+    <td>Данные</td>
+  </tr>
+  </tfoot>
+  <tbody>
+  {{ range $key, $log := .Logs }}
+  <tr>
+    <td></td>
+    {{ if eq .Level "trace" }}<td class="bg-info-subtle">{{ .Level }}</td>{{end}}
+    {{ if eq .Level "info" }}<td class="bg-info">{{ .Level }}</td>{{end}}
+    {{ if eq .Level "error" }}<td class="bg-danger-subtle">{{ .Level }}</td>{{end}}
+    {{ if eq .Level "panic" }}<td class="bg-danger">{{ .Level }}</td>{{end}}
+    {{ if eq .Level "fatal" }}<td class="bg-dark-subtle">{{ .Level }}</td>{{end}}
+    <td>{{ .Group }}</td>
+    <td>{{ .Time }}</td>
+    <td>{{ .Msg }}</td>
+    <td>{{ .Data }}</td>
+  </tr>
+  {{ end }}
+  </tbody>
+</table>
+{{end}}

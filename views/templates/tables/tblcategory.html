@@ -1,0 +1,49 @@
+{{define "tableCategory"}}
+<table id="tableCategory" class="table caption-top datatable">
+<caption class="display-6 mx-1">Список категорий</caption>
+<thead>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+  <td>Значения</td>
+  <td>Функции</td>
+</tr>
+</thead>
+<tfoot>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+</tr>
+</tfoot>
+<tbody>
+{{ range $key, $category := .Categories }}
+{{ if and (eq .Relation 0) (eq .IsExist true) }}
+<tr class="table-primary">
+  <td>{{ .ID }}</td>
+  <td>{{ .Name }}</td>
+  <td>
+    <button type="button" class="btn btn-sm btn-warning createCategory mx-1" data-bs-toggle="modal" data-bs-target="#categoryCreate" data-relation="{{ .ID }}">Добавить значение</button>
+  </td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editCategory" data-bs-toggle="modal" data-bs-target="#categoryEdit" data-id="{{ .ID }}" data-name="{{ .Name }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteCategory" data-bs-toggle="modal" data-bs-target="#categoryDelete" data-id="{{ .ID }}" data-name="{{ .Name }}">Удалить</button>
+  </td>
+</tr>
+{{ range $key1, $category1 := $.Categories }}
+{{ if and (eq .Relation $category.ID) (eq .IsExist true)  }}
+<tr class="table-info">
+  <td>{{ .ID }}</td>
+  <td>{{ .Name }}</td>
+  <td></td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editCategory" data-bs-toggle="modal" data-bs-target="#categoryEdit" data-id="{{ .ID }}" data-name="{{ .Name }}" data-relation="{{ .Relation }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteCategory" data-bs-toggle="modal" data-bs-target="#categoryDelete" data-id="{{ .ID }}" data-name="{{ .Name }}">Удалить</button>
+  </td>
+</tr>
+{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
+</tbody>
+</table>
+{{end}}

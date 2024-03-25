@@ -1,0 +1,51 @@
+{{define "tableProduct"}}
+<table id="tableProduct" class="table table-striped caption-top datatable">
+<caption class="display-6 mx-1">Список продуктов</caption>
+<thead>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+  <td>Цена</td>
+  <td>Количество</td>
+  <td>Скидка</td>
+  <td>Изображение</td>
+  <td>Категория</td>
+  <td>Характеристики</td>
+  <td>Функции</td>
+</tr>
+</thead>
+<tfoot>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+  <td>Цена</td>
+  <td>Количество</td>
+  <td>Скидка</td>
+  <td>Изображение</td>
+  <td>Категория</td>
+</tr>
+</tfoot>
+<tbody>
+{{ range $key, $product := .Products }}
+{{ if eq .IsExist true }}
+<tr>
+  <td>{{ .ID }} </td>
+  <td>{{ .Name }}</td>
+  <td>{{ .Price }} руб</td>
+  <td>{{ .Amount }} шт</td>
+  <td>{{ .Discount }} %</td>
+  <td>{{ if .ImageLink }}<button type="button" class="btn btn-sm btn-outline-primary showImage" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .ImageLink }}">{{ .ImageLink }}</button>{{ end }}</td>
+  <td>{{ .Category.Name }}</td>
+  <td>
+    <button type="button" class="btn btn-sm btn-warning editProductCharacteristics mx-1" data-bs-toggle="modal" data-bs-target="#productCharacteristics" data-id="{{ .ID }}">Характеристики</button>
+  </td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editProduct" data-bs-toggle="modal" data-bs-target="#productEdit" data-id="{{ .ID }}" data-name="{{ .Name }}" data-price="{{ .Price }}" data-amount="{{ .Amount }}" data-discount="{{ .Discount }}" data-image="{{ .ImageLink }}" data-category="{{ .Category.ID }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteProduct" data-bs-toggle="modal" data-bs-target="#productDelete" data-id="{{ .ID }}" data-name="{{ .Name }}">Удалить</button>
+  </td>
+</tr>
+{{ end }}
+{{ end }}
+</tbody>
+</table>
+{{end}}

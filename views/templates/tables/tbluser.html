@@ -1,0 +1,59 @@
+{{define "tableUser"}}
+<table id="tableUser" class="table table-striped caption-top datatable">
+<caption class="display-6 mx-1">Список пользователей</caption>
+<thead>
+<tr>
+  <td>Идентификатор</td>
+  <td>Почта</td>
+  <td>Телефон</td>
+  <td>ФИО</td>
+  <td>Пол</td>
+  <td>Роль</td>
+  <td>Скидочная карта</td>
+  <td>Функции</td>
+</tr>
+</thead>
+<tfoot>
+<tr>
+  <td>Идентификатор</td>
+  <td>Почта</td>
+  <td>Телефон</td>
+  <td>ФИО</td>
+  <td>Пол</td>
+  <td>Роль</td>
+</tr>
+</tfoot>
+<tbody>
+{{ range $key, $user := .Users }}
+{{ if eq .IsExist true }}
+<tr>
+  <td>{{ .ID }}</td>
+  <td>{{ .Email }}</td>
+  <td>{{ .Phone }}</td>
+  <td>{{ .LastName }} {{ .Name }} {{ .MiddleName }}</td>
+  <td>{{ .Gender }}</td>
+  <td>{{ .Role.Name }}</td>
+  <td>
+    {{ if eq .Role.Name "Клиент" }}
+      {{ if ne .Card.ID 0 }}
+        <button type="button" class="btn btn-sm btn-primary mx-3 editCard" data-bs-toggle="modal" data-bs-target="#editCard" data-id="{{ .Card.ID }}" data-number="{{ add .Card.ID 1000 }}" data-discount="{{ .Card.Discount }}" data-date="{{ .Card.Date }}">Номер: {{ add .Card.ID 1000 }}, скидка: {{ .Card.Discount }}, дата: {{ .Card.Date }}</button>
+      {{ else }}
+        <form action="/cards">
+          {{$.BaseObject.CsrfField}}
+          <input type="hidden" name="Method" value="POST">
+          <input type="hidden" name="Id" value="{{ .ID }}">
+          <button type="submit" class="btn btn-sm btn-outline-primary mx-3" data-bs-toggle="modal">Создать скидочную карту</button>
+        </form>
+      {{ end }}
+    {{ end }}
+  </td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editUser" data-bs-toggle="modal" data-bs-target="#userEdit" data-id="{{ .ID }}" data-email="{{ .Email }}" data-phone="{{ .Phone }}" data-lastname="{{ .LastName }}" data-name="{{ .Name }}" data-middlename="{{ .MiddleName }}" data-gender="{{ .Gender }}" data-role="{{ .Role.ID }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteUser" data-bs-toggle="modal" data-bs-target="#userDelete" data-id="{{ .ID }}" data-email="{{ .Email }}">Удалить</button>
+  </td>
+</tr>
+{{ end }}
+{{ end }}
+</tbody>
+</table>
+{{end}}

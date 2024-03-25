@@ -1,0 +1,53 @@
+{{define "tableCharacteristic"}}
+<table id="tableCharacteristic" class="table caption-top datatable">
+<caption class="display-6 mx-1">Список характеристик</caption>
+<thead>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+  <td>Тип</td>
+  <td>Значения</td>
+  <td>Функции</td>
+</tr>
+</thead>
+<tfoot>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+  <td>Тип</td>
+</tr>
+</tfoot>
+<tbody>
+{{ range $key, $characteristic := .Characteristics }}
+{{ if and (eq .Relation 0) (eq .IsExist true) }}
+<tr class="table-primary">
+  <td>{{ .ID }}</td>
+  <td>{{ .Name }}</td>
+  <td>{{ if eq .Type "SET" }}Список{{ else }}Числовой{{ end }}</td>
+  <td>
+    {{ if eq .Type "SET" }}<button type="button" class="btn btn-sm btn-warning mx-1 createCharacteristic" data-bs-toggle="modal" data-bs-target="#characteristicCreate" data-relation="{{ .ID }}">Добавить значение</button>{{ end }}
+  </td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editCharacteristic" data-bs-toggle="modal" data-bs-target="#characteristicEdit" data-id="{{ .ID }}" data-name="{{ .Name }}" data-type="{{ .Type }}" data-relation="{{ .Relation }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteCharacteristic" data-bs-toggle="modal" data-bs-target="#characteristicDelete" data-id="{{ .ID }}" data-name="{{ .Name }}">Удалить</button>
+  </td>
+</tr>
+{{ range $key1, $characteristic1 := $.Characteristics }}
+{{ if and (eq .Relation $characteristic.ID) (eq .IsExist true)  }}
+<tr class="table-info">
+  <td>{{ .ID }}</td>
+  <td>{{ .Name }}</td>
+  <td>Значение</td>
+  <td></td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editCharacteristic" data-bs-toggle="modal" data-bs-target="#characteristicEdit" data-id="{{ .ID }}" data-name="{{ .Name }}" data-type="{{ .Type }}" data-relation="{{ .Relation }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteCharacteristic" data-bs-toggle="modal" data-bs-target="#characteristicDelete" data-id="{{ .ID }}" data-name="{{ .Name }}">Удалить</button>
+  </td>
+</tr>
+{{ end }}
+{{ end }}
+{{ end }}
+{{ end }}
+</tbody>
+</table>
+{{end}}

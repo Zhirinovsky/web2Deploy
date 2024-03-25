@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Панель управления</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/datatables.bootstrap5.min.css">
+    <script src="/static/js/lib/bootstrap.js"></script>
+    <script src="/static/js/lib/bootstrap.bundle.js"></script>
+    <script src="/static/js/lib/jquery.js"></script>
+    <script src="/static/js/lib/jquery.maskedinput.js"></script>
+    <script src="/static/js/custom/errorWindow.js"></script>
+    <script src="/static/js/custom/modals.js"></script>
+    <script src="/static/js/lib/datatables.min.js"></script>
+    <script src="/static/js/lib/datatables.bootstrap5.min.js"></script>
+    <script src="/static/js/custom/tables.js"></script>
+    <script src="/static/js/lib/jquery.canvasjs.min.js"></script>
+    <script src="/static/js/custom/charts.js"></script>
+    <script src="/static/js/custom/tabs.js"></script>
+</head>
+<body>
+    <!-- Шапка и боковая панель -->
+    {{template "menu" .}}
+
+    <!-- Модальное окно вывода ошибки -->
+    {{template "errorWindow" .}}
+
+    <!-- Модальное окно показа Изображений -->
+    {{template "showImage" .}}
+
+    <!-- Модальные окна манипулирования Продуктами -->
+    {{template "cudProduct" .}}
+
+    <!-- Модальные окна манипулирования Характеристиками -->
+    {{template "cudCharacteristic" .}}
+
+    <!-- Модальные окна манипулирования Категориями -->
+    {{template "cudCategory" .}}
+
+    <!-- Модальные окна манипулирования Характеристиками продуктов и их значениями -->
+    {{template "cudSet" .}}
+
+    <!-- Модальные окна манипулирования Статусами -->
+    {{template "cudStatus" .}}
+
+    <!-- Модальные окна манипулирования Ролями -->
+    {{template "cudRole" .}}
+
+    <!-- Модальные окна манипулирования Пользователями -->
+    {{template "cudUser" .}}
+
+    <!-- Модальные окна манипулирования Заказами -->
+    {{template "cudOrder" .}}
+
+    <!-- Модальные окна манипулирования Позициями заказов -->
+    {{template "cudPosition" .}}
+
+    <!-- Модальные окна манипулирования Скидочными картами -->
+    {{template "cudCard" .}}
+
+    <div class="d-flex flex-wrap justify-content-center mt-5 pt-5">
+        <h1 class="display-5 justify-content-center">Панель управления</h1>
+    </div>
+
+    {{ if or (eq .BaseObject.CurrentUser.Role.Name "Администратор")  (eq .BaseObject.CurrentUser.Role.Name "Товарный менеджер") }}
+    <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" role="button">Продукты</a>
+            <ul class="dropdown-menu">
+                <a class="nav-link active" id="nav-product-tab" data-bs-toggle="tab" href="#nav-product" role="tab" aria-controls="nav-product" aria-selected="true">Продукты</a>
+                <a class="nav-link" id="nav-characteristic-tab" data-bs-toggle="tab" href="#nav-characteristic" role="tab" aria-controls="nav-characteristic" aria-selected="false">Характеристики</a>
+                <a class="nav-link" id="nav-category-tab" data-bs-toggle="tab" href="#nav-category" role="tab" aria-controls="nav-category" aria-selected="false">Категории</a>
+                <a class="nav-link" id="nav-image-tab" data-bs-toggle="tab" href="#nav-image" role="tab" aria-controls="nav-image" aria-selected="false">Изображения</a>
+            </ul>
+        </div>
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Заказы</a>
+            <ul class="dropdown-menu">
+                <a class="nav-link" id="nav-order-tab" data-bs-toggle="tab" href="#nav-order" role="tab" aria-controls="nav-order" aria-selected="false">Заказы</a>
+                <a class="nav-link" id="nav-status-tab" data-bs-toggle="tab" href="#nav-status" role="tab" aria-controls="nav-status" aria-selected="false">Статусы</a>
+            </ul>
+        </div>
+        {{ if eq .BaseObject.CurrentUser.Role.Name "Администратор" }}
+        <div class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button">Пользователи</a>
+            <ul class="dropdown-menu">
+                <a class="nav-link" id="nav-user-tab" data-bs-toggle="tab" href="#nav-user" role="tab" aria-controls="nav-user" aria-selected="false">Пользователи</a>
+                <a class="nav-link" id="nav-role-tab" data-bs-toggle="tab" href="#nav-role" role="tab" aria-controls="nav-role" aria-selected="false">Роли</a>
+            </ul>
+        </div>
+        {{ end }}
+        <div class="nav-item">
+            <a class="nav-link" id="nav-log-tab" data-bs-toggle="tab" href="#nav-log" role="tab" aria-controls="nav-log" aria-selected="false">Логи</a>
+        </div>
+        <div class="nav-item">
+            <a class="nav-link" id="nav-diagram-tab" data-bs-toggle="tab" href="#nav-diagram" role="tab" aria-controls="nav-diagram" aria-selected="false">Диаграмы</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active p-2" id="nav-product" role="tabpanel" aria-labelledby="nav-product-tab">
+            <div class="row p-2 pb-3">
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                {{.BaseObject.CsrfField}}
+                                <input type="hidden" name="Table" value="products">
+                                <input class="form-control" onchange="form.submit()" type="file" name="File">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="products">
+                                <input type="hidden" name="Type" value="csv">
+                                <button type="submit" class="dropdown-item">.csv</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="products">
+                                <input type="hidden" name="Type" value="xlsx">
+                                <button type="submit" class="dropdown-item">.xlsx</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Таблица продуктов -->
+            {{template "tableProduct" .}}
+            <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#productCreate">Создать новую запись</button>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-characteristic" role="tabpanel" aria-labelledby="nav-characteristic-tab">
+            <div class="row p-2 pb-3">
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                {{.BaseObject.CsrfField}}
+                                <input type="hidden" name="Table" value="characteristics">
+                                <input class="form-control" onchange="form.submit()" type="file" name="File">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="characteristics">
+                                <input type="hidden" name="Type" value="csv">
+                                <button type="submit" class="dropdown-item">.csv</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="characteristics">
+                                <input type="hidden" name="Type" value="xlsx">
+                                <button type="submit" class="dropdown-item">.xlsx</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Таблица характеристик -->
+            {{template "tableCharacteristic" .}}
+            <button type="button" class="btn btn-primary m-1 createCharacteristic" data-bs-toggle="modal" data-bs-target="#characteristicCreate" data-relation="0">Создать новую запись</button>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-category" role="tabpanel" aria-labelledby="nav-category-tab">
+            <div class="row p-2 pb-3">
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                {{.BaseObject.CsrfField}}
+                                <input type="hidden" name="Table" value="categories">
+                                <input class="form-control" onchange="form.submit()" type="file" name="File">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="categories">
+                                <input type="hidden" name="Type" value="csv">
+                                <button type="submit" class="dropdown-item">.csv</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="categories">
+                                <input type="hidden" name="Type" value="xlsx">
+                                <button type="submit" class="dropdown-item">.xlsx</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Таблица категорий -->
+            {{template "tableCategory" .}}
+            <button type="button" class="btn btn-primary m-1 createCategory" data-bs-toggle="modal" data-bs-target="#categoryCreate" data-relation="0">Создать новую запись</button>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-image" role="tabpanel" aria-labelledby="nav-image-tab">
+            <!-- Таблица изображений -->
+            {{template "tableImage" .}}
+            <div class="row">
+                <form class="col-auto" action="/images" enctype="multipart/form-data" method="post">
+                    {{.BaseObject.CsrfField}}
+                    <input hidden type="text" name="Method" value="POST">
+                    <div class="mb-3">
+                        <input class="form-control" type="file" name="File" multiple />
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary" type="submit">Загрузить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-order" role="tabpanel" aria-labelledby="nav-order-tab">
+            <div class="row p-2 pb-3">
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                {{.BaseObject.CsrfField}}
+                                <input type="hidden" name="Table" value="orders">
+                                <input class="form-control" onchange="form.submit()" type="file" name="File">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="orders">
+                                <input type="hidden" name="Type" value="csv">
+                                <button type="submit" class="dropdown-item">.csv</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="orders">
+                                <input type="hidden" name="Type" value="xlsx">
+                                <button type="submit" class="dropdown-item">.xlsx</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Таблица заказов -->
+            {{template "tableOrder" .}}
+            <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#orderCreate">Создать новую запись</button>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
+            <div class="row p-2 pb-3">
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                {{.BaseObject.CsrfField}}
+                                <input type="hidden" name="Table" value="statuses">
+                                <input class="form-control" onchange="form.submit()" type="file" name="File">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="statuses">
+                                <input type="hidden" name="Type" value="csv">
+                                <button type="submit" class="dropdown-item">.csv</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="statuses">
+                                <input type="hidden" name="Type" value="xlsx">
+                                <button type="submit" class="dropdown-item">.xlsx</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Таблица статусов -->
+            {{template "tableStatus" .}}
+            <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#statusCreate">Создать новую запись</button>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-user" role="tabpanel" aria-labelledby="nav-user-tab">
+            <div class="row p-2 pb-3">
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                {{.BaseObject.CsrfField}}
+                                <input type="hidden" name="Table" value="users">
+                                <input class="form-control" onchange="form.submit()" type="file" name="File">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="users">
+                                <input type="hidden" name="Type" value="csv">
+                                <button type="submit" class="dropdown-item">.csv</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="users">
+                                <input type="hidden" name="Type" value="xlsx">
+                                <button type="submit" class="dropdown-item">.xlsx</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Таблица пользователей -->
+            {{template "tableUser" .}}
+            <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#userCreate">Создать новую запись</button>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-role" role="tabpanel" aria-labelledby="nav-role-tab">
+            <div class="row p-2 pb-3">
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                {{.BaseObject.CsrfField}}
+                                <input type="hidden" name="Table" value="roles">
+                                <input class="form-control" onchange="form.submit()" type="file" name="File">
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-auto px-1 ">
+                    <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="roles">
+                                <input type="hidden" name="Type" value="csv">
+                                <button type="submit" class="dropdown-item">.csv</button>
+                            </form>
+                        </li>
+                        <li>
+                            <form class="col-auto px-1" action="/export">
+                                <input type="hidden" name="Table" value="roles">
+                                <input type="hidden" name="Type" value="xlsx">
+                                <button type="submit" class="dropdown-item">.xlsx</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Таблица ролей -->
+            {{template "tableRole" .}}
+            <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#roleCreate">Создать новую запись</button>
+        </div>
+        <div class="tab-pane fade p-2" id="nav-log" role="tabpanel" aria-labelledby="nav-log-tab">
+            <!-- Таблица логов -->
+            {{template "tableLogs" .}}
+        </div>
+        <div class="tab-pane fade p-2" id="nav-diagram" role="tabpanel" aria-labelledby="nav-diagram-tab">
+            <div class="py-3">
+                <div id="pieChart" style="height: 400px;" data-object="{{ range $key, $item := .PieData }}{{.Label}},{{.Y}};{{ end }}"></div>
+            </div>
+            <div class="py-2"></div>
+            <div class="py-3">
+                <div id="graphChart" style="height: 400px;" data-object="{{ range $key, $item := .GraphData }}{{.Label}},{{.Y}},{{.X}};{{ end }}"></div>
+            </div>
+            <div class="py-2"></div>
+            <div class="py-3">
+                <div id="columnChart" style="height: 400px;" data-object="{{ range $key, $item := .ColumnData }}{{.Label}},{{.Y}};{{ end }}"></div>
+            </div>
+            <div class="py-2"></div>
+        </div>
+    </div>
+    {{ else }}
+    <div class="alert alert-danger text-center fs-5 mt-3 fade show" role="alert">
+        <i class="bi-cart4"></i> Доступ к данной странице запрещён!
+    </div>
+    {{ end }}
+    <script src="/static/js/custom/masks.js"></script>
+</body>
+</html>

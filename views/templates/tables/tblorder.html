@@ -1,0 +1,53 @@
+{{define "tableOrder"}}
+<table id="tableOrder" class="table table-striped caption-top datatable">
+<caption class="display-6 mx-1">Список заказов</caption>
+<thead>
+<tr>
+  <td>Идентификатор</td>
+  <td>Номер</td>
+  <td>Дата</td>
+  <td>Полная цена</td>
+  <td>Адрес</td>
+  <td>Статус</td>
+  <td>Заказчик</td>
+  <td>Содержимое</td>
+  <td>Функции</td>
+</tr>
+</thead>
+<tfoot>
+<tr>
+  <td>Идентификатор</td>
+  <td>Номер</td>
+  <td>Дата</td>
+  <td>Полная цена</td>
+  <td>Адрес</td>
+  <td>Статус</td>
+  <td>Заказчик</td>
+</tr>
+</tfoot>
+<tbody>
+{{ range $key, $order := .Orders }}
+<tr>
+  <td>{{ .ID }}</td>
+  <td>{{ add .ID 1000 }}</td>
+  <td>{{ .Date }}</td>
+  {{ $price := 0 }}
+  {{ range $key, $position := .Positions }}
+    {{ $price = (addf $price ( mulf .CheckoutPrice .Amount )) }}
+  {{ end }}
+  <td>{{ $price }} руб</td>
+  <td>{{ .Address }}</td>
+  <td>{{ .Status.Status }}</td>
+  <td>{{ .User.Email }}</td>
+  <td>
+    <button type="button" class="btn btn-sm btn-warning editOrderPositions mx-1" data-bs-toggle="modal" data-bs-target="#orderPositions" data-id="{{ .ID }}">Содержимое</button>
+  </td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editOrder" data-bs-toggle="modal" data-bs-target="#orderEdit" data-id="{{ .ID }}" data-date="{{ .Date }}" data-address="{{ .Address }}" data-status="{{ .Status.ID }}" data-user="{{ .User.ID }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteOrder" data-bs-toggle="modal" data-bs-target="#orderDelete" data-id="{{ .ID }}">Удалить</button>
+  </td>
+</tr>
+{{ end }}
+</tbody>
+</table>
+{{end}}

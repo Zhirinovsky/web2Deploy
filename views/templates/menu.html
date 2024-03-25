@@ -1,0 +1,84 @@
+{{define "menu"}}
+<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2 px-3 border-bottom fixed-top bg-white">
+    <div class="nav col-3">
+        <button class="btn float-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+            <i class="bi bi-list fs-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+            <span class="fs-4">Меню</span>
+        </button>
+    </div>
+    <div class="nav col-3 flex-column d-flex align-items-center">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="fit-picture" src="/images/icons.png" alt="" height="50"/>
+        </a>
+    </div>
+    <div class="col text-end">
+        {{ if .BaseObject.CurrentUser.Email }}
+        <a hidden="hidden" class="btn btn-outline-primary mx-1" type="button" href="/cart">Корзина <i class="bi-cart4"></i></a>
+        <a class="btn btn-outline-primary mx-1" type="button" href="/profile">Профиль <i class="bi-person-circle"></i></a>
+        <p class="d-inline-block px-3 m-0">Вы авторизованы под почтой: {{ .BaseObject.CurrentUser.Email }}</p>
+        <a href="/logout" class="btn btn-outline-danger">Выйти</a>
+        {{ else }}
+        <a href="/login" class="btn btn-outline-primary">Войти</a>
+        <a href="/registration" class="btn btn-primary">Зарегистрироваться</a>
+        {{ end }}
+    </div>
+</header>
+
+<div style="width: 15%" class="offcanvas offcanvas-start" tabindex="-1" data-bs-keyboard="false" id="offcanvas" data-bs-backdrop="false">
+    <div class="offcanvas-header">
+        <h6 class="offcanvas-title d-none d-sm-block">Menu</h6>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-3">
+        <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-start" id="menu">
+            <li class="nav-item">
+                <a href="/" class="nav-link align-middle px-0">
+                    <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Главная страница</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/profile" class="nav-link align-middle px-0">
+                    <i class="fs-4 bi-person-circle"></i> <span class="ms-1 d-none d-sm-inline">Профиль</span>
+                </a>
+            </li>
+            <li>
+                <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                    <i class="fs-4 bi-database-exclamation"></i>  <span class="ms-1 d-none d-sm-inline">Панель управления</span>
+                </a>
+                <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
+                    <li class="w-100">
+                        <a href="/admin#nav-product" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Продукты</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-characteristic" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Характеристики</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-category" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Категория</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-order" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Заказы</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-status" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Статусы</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-user" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Заказы</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-role" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Статусы</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-image" class="nav-link px-0"> <i class="bi-image"></i> <span class="d-none d-sm-inline">Изображения</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-log" class="nav-link px-0"> <i class="bi-clipboard"></i> <span class="d-none d-sm-inline">Логи</span> </a>
+                    </li>
+                    <li>
+                        <a href="/admin#nav-diagram" class="nav-link px-0"> <i class="bi-diagram-2"></i> <span class="d-none d-sm-inline">Диаграмы</span> </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+{{end}}

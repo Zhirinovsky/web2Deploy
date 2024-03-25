@@ -1,0 +1,47 @@
+{{define "infoProduct"}}
+<div class="modal modal-lg fade" id="infoProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Подробная информация о товаре</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body row d-flex">
+                <div class="col-5">
+                    <img id="productImage" width="300"/>
+                </div>
+                <div class="col">
+                    <h3 class="text-center productName mb-0"></h3>
+                    <p class="text-center"><small class="productCategory"></small></p>
+                    <p class="text-center fs-6 productNumber mb-1"></p>
+                    <p class="text-center fs-6 productPrice mb-1"></p>
+                    <p class="text-center fs-6 productAmount"></p>
+                    <p class="text-center fs-6 mb-1">Список характеристик: </p>
+                    <div class="mx-5" id="allCharacteristics">
+                        {{ range $key, $product := .Products }}
+                        <ul id="productCharacteristics{{ .ID }}" class="list-group list-group-flush">
+                            {{ range $key, $set := .Sets }}
+                            <li class="list-group-item">
+                                {{ if eq .Characteristic.Type "INT" }}
+                                    {{ .Characteristic.Name }}: {{ .Value }}
+                                {{ else }}
+                                    {{ range $key, $characteristic := $.Characteristics }}
+                                        {{ if eq .ID $set.Characteristic.Relation }}
+                                            {{ .Name }}: {{ $set.Characteristic.Name }}
+                                        {{ end }}
+                                    {{ end }}
+                                {{ end }}
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}

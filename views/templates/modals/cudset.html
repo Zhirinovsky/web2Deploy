@@ -1,0 +1,187 @@
+{{define "cudSet"}}
+<div class="modal modal-lg fade" id="productCharacteristics" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение характеристик продукта</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div id="allTables" class="modal-body table-wrapper-scroll-y">
+                {{ range $key, $product := .Products }}
+                <table id="product{{ .ID }}" class="table table-striped caption-top">
+                    <caption class="display-6 mx-1">Текущие характеристики</caption>
+                    <thead>
+                    <tr>
+                        <td>Наименование</td>
+                        <td>Тип</td>
+                        <td>Значение</td>
+                        <td>Функции</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {{ range $key, $set := .Sets }}
+                    <tr>
+                        {{ if eq .Characteristic.Type "INT" }}
+                        <td>{{ .Characteristic.Name }}</td>
+                        <td>Число</td>
+                        <td>{{ .Value }}</td>
+                        {{ else }}
+                        {{ range $key, $characteristic := $.Characteristics }}
+                        {{ if eq .ID $set.Characteristic.Relation }}
+                        <td>{{ .Name }}</td>
+                        <td>Список</td>
+                        {{ end }}
+                        {{ end }}
+                        <td>{{ .Characteristic.Name }}</td>
+                        {{ end }}
+                        <td>
+                            <button type="button" class="btn btn-sm btn-primary editSet" data-bs-toggle="modal" data-bs-target="#setEdit" data-id="{{ .ID }}" data-characteristic="{{ .Characteristic.ID }}" data-relation="{{ .Characteristic.Relation }}" data-value="{{ .Value }}">Изменить</button>
+                            <button type="button" class="btn btn-sm btn-danger deleteSet" data-bs-toggle="modal" data-bs-target="#setDelete" data-id="{{ .ID }}" data-name="{{ .Characteristic.Name }}">Удалить</button>
+                        </td>
+                    </tr>
+                    {{ end }}
+                    </tbody>
+                </table>
+                <button id="btn{{ .ID }}" type="button" class="btn btn-primary mx-1 createSet" data-bs-toggle="modal" data-bs-target="#setCreate" data-id="{{ .ID }}">Добавить характеристику</button>
+                {{ end }}
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary mx-1 createCharacteristic" data-bs-toggle="modal" data-bs-target="#characteristicCreate" data-relation="0">Создать новую характеристику</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="setCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Добавление характеристики продукту</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/sets" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="POST">
+                <input id="product" hidden type="text" name="Product.Id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <select id="setSelectorCreate" required class="form-select" name="Characteristic.Id">
+                            <option value="" selected disabled>Характеристика</option>
+                            {{ range $key, $item := .Characteristics }}
+                            {{ if and (eq .Relation 0) (eq .IsExist true) }}
+                            <option value="{{ .ID }}">{{ .Name }} ({{ if eq .Type "INT" }}Число{{ else }}Список{{ end }})</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                    <div id="SETC" class="mb-3">
+                        {{ range $key, $item := .Characteristics }}
+                        {{ if and (eq .Type "SET") (eq .IsExist true) }}
+                        <select id="SETC{{ .ID }}" required class="form-select" name="ValueSet{{ .ID }}">
+                            <option value="" selected disabled>Значение</option>
+                            {{ range $key2, $item2 := $.Characteristics }}
+                            {{ if and (eq .Relation $item.ID) (eq .IsExist true) }}
+                            <option value="{{ .ID }}">{{ .Name }}</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                    <div id="INTC" class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="number" min="0" step="any" placeholder="A" name="ValueInt">
+                            <label>Значение</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="setEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение характеристики продукта</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/sets" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="PUT">
+                <input id="setId" hidden type="text" name="Id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <select id="setSelectorEdit" required class="form-select" name="Characteristic.Id">
+                            <option value="" selected disabled>Характеристика</option>
+                            {{ range $key, $item := .Characteristics }}
+                            {{ if and (eq .Relation 0) (eq .IsExist true) }}
+                            <option value="{{ .ID }}">{{ .Name }} ({{ if eq .Type "INT" }}Число{{ else }}Список{{ end }})</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                    <div id="SETE" class="mb-3">
+                        {{ range $key, $item := .Characteristics }}
+                        {{ if and (eq .Type "SET") (eq .IsExist true) }}
+                        <select id="SETE{{ .ID }}" required class="form-select" name="ValueSet{{ .ID }}">
+                            <option value="" selected disabled>Значение</option>
+                            {{ range $key2, $item2 := $.Characteristics }}
+                            {{ if and (eq .Relation $item.ID) (eq .IsExist true) }}
+                            <option value="{{ .ID }}">{{ .Name }}</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                        {{ end }}
+                        {{ end }}
+                    </div>
+                    <div id="INTE" class="mb-3">
+                        <div class="form-floating">
+                            <input id="ValueInt" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" min="0" type="number" step="any" placeholder="A" name="ValueInt">
+                            <label>Значение</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="setDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Удаление характеристики продукта</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/sets" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="DELETE">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="setIdDel" hidden type="text" name="Id">
+                            <input id="setCharacteristicDel" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" readonly required type="text" placeholder="A" name="Characteristic">
+                            <label>Наименование</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{end}}

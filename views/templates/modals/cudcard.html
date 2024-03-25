@@ -1,0 +1,47 @@
+{{define "cudCard"}}
+<div class="modal modal-lg fade" id="editCard" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение скидочной карты</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <form id="buyerCardChange" action="/cards" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input hidden type="text" name="Method" value="PUT">
+                    <input id="cardId" hidden type="text" name="Id">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="cardNumber" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required readonly type="number" step="1" placeholder="A" name="Number">
+                            <label>Номер</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="cardDiscount" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="number" min="0" max="100" step="1" placeholder="A" name="Discount">
+                            <label>Скидка</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="cardDate" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="date" placeholder="A" name="Date">
+                            <label>Дата</label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="submit" class="btn btn-primary" form="buyerCardChange">Изменить</button>
+                <form action="/cards" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input id="cardIdDel" hidden type="text" name="Id">
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}

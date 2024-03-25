@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Профиль</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <script src="/static/js/lib/bootstrap.js"></script>
+    <script src="/static/js/lib/bootstrap.bundle.js"></script>
+    <script src="/static/js/lib/jquery.js"></script>
+    <script src="/static/js/lib/jquery.maskedinput.js"></script>
+    <script src="/static/js/custom/errorWindow.js"></script>
+    <script src="/static/js/custom/modals.js"></script>
+</head>
+<body>
+    <!-- Шапка и боковая панель -->
+    {{template "menu" .}}
+
+    <!-- Модальное окно вывода ошибки -->
+    {{template "errorWindow" .}}
+
+    <!-- Модальное окно смены пароля -->
+    {{template "changePassword" .}}
+
+    <h1 class="display-4 my-4 text-center mt-5 pt-5">Профиль</h1>
+
+    {{ if .BaseObject.CurrentUser.Email }}
+    <div class="justify-content-center align-items-center text-center d-flex flex-column">
+        <h1 class="display-6 mt-2 mb-4">Личные данные</h1>
+        <form class="form" action="/personalisation" method="post">
+            <div class="row form justify-content-center align-items-center">
+                <input type="hidden" name="Role" value="Сотрудник">
+                {{.BaseObject.CsrfField}}
+                <div class="m-3 col-3">
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg" required type="text" name="LastName" placeholder="" value="{{ .BaseObject.CurrentUser.LastName }}">
+                        <label>Фамилия</label>
+                    </div>
+                </div>
+                <div class="m-3 col-3">
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg" required type="text" name="Name" placeholder="" value="{{ .BaseObject.CurrentUser.Name }}">
+                        <label>Имя</label>
+                    </div>
+                </div>
+                <div class="m-3 col-3">
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg" type="text" name="MiddleName" placeholder="" value="{{ .BaseObject.CurrentUser.MiddleName }}">
+                        <label>Отчество</label>
+                    </div>
+                </div>
+                <div class="m-3 col-3">
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg" readonly type="email" placeholder="" value="{{ .BaseObject.CurrentUser.Email }}">
+                        <label>Почта</label>
+                    </div>
+                </div>
+                <div class="m-3 col-3">
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg mask-phone" required type="text" name="Phone" placeholder="" value="{{ .BaseObject.CurrentUser.Phone }}">
+                        <label>Телефон</label>
+                    </div>
+                </div>
+                <div class="m-3 col-3">
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg" readonly type="text" placeholder="" value="{{ .BaseObject.CurrentUser.Role.Name }}">
+                        <label>Роль</label>
+                    </div>
+                </div>
+                <div class="m-3 col-3"></div>
+                <div class="m-3 col-3 fs-5">
+                    <label class="form-check-label pe-3">Пол: </label>
+                    <input class="form-check-input" type="radio" name="Gender" value="Мужской" {{ if eq .BaseObject.CurrentUser.Gender "Мужской" }} checked="checked" {{ end }}>
+                    <label class="form-check-label ps-1 pe-3">Мужской </label>
+                    <input class="form-check-input" type="radio" name="Gender" value="Женский" {{ if eq .BaseObject.CurrentUser.Gender "Женский" }} checked="checked" {{ end }}>
+                    <label class="form-check-label ps-1">Женский </label>
+                </div>
+                <div class="m-3 col-3"></div>
+            </div>
+            <div class="mt-4 fs-5">
+                <button type="submit" class="btn btn-lg btn-primary px-5 mx-2">Изменить</button>
+                <button type="button" class="btn btn-lg btn-outline-primary px-5 mx-2" data-bs-toggle="modal" data-bs-target="#changePassword">Смена пароля</button>
+            </div>
+        </form>
+        {{ if eq .BaseObject.CurrentUser.Role.Name "Клиент" }}
+        <h1 class="display-6 my-4 text-center">Список заказов</h1>
+        {{ range $key, $order := .Orders }}
+        {{ if eq $.BaseObject.CurrentUser.Email .User.Email }}
+        <div class="justify-content-center align-items-center p-2 px-4 w-100">
+            <div class="align-items-center border border-primary border-2 rounded-5 row p-4 pt-3 justify-content-center">
+                <div class="col-3">
+                    <p class="text-center fs-4 m-0">Заказ №{{ .Number }}</p>
+                </div>
+                <div class="col-auto">
+                    <p class="text-center fs-4 m-0"> | </p>
+                </div>
+                <div class="col-3">
+                    {{ range $key, $product := .Products }}
+                    <p class="text-center fs-4 m-0">{{ .Name }}, {{ .Price }} руб, {{ .Amount }} шт</p>
+                    {{ end }}
+                </div>
+                <div class="col-auto">
+                    <p class="text-center fs-4 m-0"> | </p>
+                </div>
+                <div class="col-3 justify-content-center align-items-center">
+                    <p class="text-center fs-4 m-0">Общая стоимость: {{ .Price }} руб</p>
+                </div>
+                <div class="col-3 justify-content-center align-items-center pt-3">
+                    <p class="text-center fs-4 m-0">Дата: {{ .Date }}</p>
+                </div>
+                <div class="col-auto pt-3">
+                    <p class="text-center fs-4 m-0"> | </p>
+                </div>
+                <div class="col-3 justify-content-center align-items-center pt-3">
+                    <p class="text-center fs-4 m-0">Статус: {{ .Status }}</p>
+                </div>
+                <div class="col-auto pt-3">
+                    <p class="text-center fs-4 m-0"> | </p>
+                </div>
+                <div class="col-3 justify-content-center align-items-center pt-3">
+                    <p class="text-center fs-4 m-0">Оплачен: {{ .Payment }}</p>
+                </div>
+            </div>
+        </div>
+        {{ end }}
+        {{ end }}
+        <h1 class="display-6 my-4 text-center">Скидочная карта</h1>
+        {{ if .DiscountCard.Number }}
+        <div class="justify-content-center align-items-center p-2 px-4 w-50">
+            <div class="align-items-center border border-primary border-2 rounded-5 p-4 bg-info bg-opacity-25 row">
+                <p class="text-center fs-1 my-4">Скидка: {{ .DiscountCard.Discount }}%</p>
+                <p class="text-start fs-3 m-0 col">Номер: {{ .DiscountCard.Number }}</p>
+                <p class="text-end fs-3 m-0 col">{{ .DiscountCard.Date }}</p>
+            </div>
+        </div>
+        <a href="/deleteCard" class="btn btn-lg btn-danger my-3" >Удалить скидочную карту</a>
+        {{ else }}
+        <p class="text-decoration-underline fs-5">Для создания скидочной карты необходимы полностью заполненные персональные данные пользователя</p>
+        <a href="/createCard" {{ if not .Full }} class="btn btn-lg btn-success disabled" {{ else }} class="btn btn-lg btn-success" {{ end }}>Создать скидочную карту</a>
+        <p class="text-decoration-underline fs-5"> </p>
+        {{ end }}
+        {{ end }}
+    </div>
+    {{ else }}
+    <div class="alert alert-danger text-center fs-5 mt-3 fade show" role="alert">
+        <img src="/icons/exclamation-triangle-fill.svg" width="24"> Для доступа к данной странице необходимо авторизироваться!
+    </div>
+    {{ end }}
+    <script src="/static/js/custom/masks.js"></script>
+</body>
+</html>

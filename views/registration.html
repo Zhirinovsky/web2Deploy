@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/password.css">
+    <script src="/static/js/lib/bootstrap.js"></script>
+    <script src="/static/js/lib/jquery.js"></script>
+    <script src="/static/js/custom/password.js"></script>
+    <script src="/static/js/custom/errorWindow.js"></script>
+</head>
+<body>
+    <!-- Шапка и боковая панель -->
+    {{template "menu" .}}
+
+    <!-- Модальное окно вывода ошибки -->
+    {{template "errorWindow" .}}
+
+    <div class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
+        <form action="/registration" method="post" class="form">
+            <h1 class="display-3">Регистрация</h1>
+            {{.BaseObject.CsrfField}}
+            <div class="mb-3">
+                <div class="form-floating">
+                    <input class="form-control" required type="email" placeholder="A" name="email">
+                    <label>Почта</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="form-floating">
+                    <input class="form-control" id="password" required minlength="8" type="password" placeholder="A" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать по меньшей мере одну цифру, одну большую и одну маленькую буквы латинского алфавита и быть в длину не менее 8 символов">
+                    <label>Пароль</label>
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="form-floating">
+                    <input class="form-control" required minlength="8" type="password" placeholder="A" name="passwordAgain" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать по меньшей мере одну цифру, одну большую и одну маленькую буквы латинского алфавита и быть в длину не менее 8 символов">
+                    <label>Повтор пароля</label>
+                </div>
+            </div>
+            <button class="btn btn-lg btn-primary" type="submit">Зарегистрироваться</button>
+        </form>
+        <a class="btn btn-outline-primary btn-lg mt-4" href="/login">Перейти на страницу авторизации</a>
+        <div id="message">
+            <h3>Пароль должен содержать:</h3>
+            <p id="letter" class="invalid"><b>Маленькую</b> букву</p>
+            <p id="capital" class="invalid"><b>Заглавную (большую)</b> букву</p>
+            <p id="number" class="invalid"><b>Цифру</b></p>
+            <p id="length" class="invalid">Минимум <b>8 символов</b></p>
+        </div>
+    </div>
+</body>
+</html>

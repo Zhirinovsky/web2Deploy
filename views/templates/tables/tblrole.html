@@ -1,0 +1,32 @@
+{{define "tableRole"}}
+<table id="tableRole" class="table table-striped caption-top datatable">
+    <caption class="display-6 mx-1">Список ролей</caption>
+    <thead>
+    <tr>
+        <td>Идентификатор</td>
+        <td>Наименование</td>
+        <td>Функции</td>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td>Идентификатор</td>
+        <td>Наименование</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    {{ range $key, $role := .Roles }}
+    {{ if eq .IsExist true }}
+    <tr>
+        <td>{{ .ID }}</td>
+        <td>{{ .Name }}</td>
+        <td>
+            <button type="button" class="btn btn-sm btn-primary editRole" data-bs-toggle="modal" data-bs-target="#roleEdit" data-id="{{ .ID }}" data-name="{{ .Name }}">Изменить</button>
+            <button type="button" class="btn btn-sm btn-danger deleteRole" data-bs-toggle="modal" data-bs-target="#roleDelete" data-id="{{ .ID }}" data-name="{{ .Name }}">Удалить</button>
+        </td>
+    </tr>
+    {{ end }}
+    {{ end }}
+    </tbody>
+</table>
+{{end}}

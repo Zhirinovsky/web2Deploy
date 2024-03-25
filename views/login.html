@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Авторизация</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <script src="/static/js/lib/bootstrap.js"></script>
+    <script src="/static/js/lib/jquery.js"></script>
+    <script src="/static/js/custom/errorWindow.js"></script>
+</head>
+<body>
+    <!-- Шапка и боковая панель -->
+    {{template "menu" .}}
+
+    <!-- Модальное окно вывода ошибки -->
+    {{template "errorWindow" .}}
+
+    <div class="d-flex flex-column justify-content-center align-items-center text-center vh-100">
+        <form action="/login" method="post" class="form">
+            <h1 class="display-3 pb-4">Авторизация</h1>
+            {{.BaseObject.CsrfField}}
+            <div class="mb-3">
+                <div class="form-floating">
+                    <input class="form-control form-control-lg" required type="email" placeholder="A" name="email" >
+                    <label>Почта</label>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="form-floating">
+                    <input class="form-control form-control-lg" required type="password" placeholder="A" name="password">
+                    <label>Пароль</label>
+                </div>
+            </div>
+            <button class="btn btn-primary btn-lg mt-2" type="submit">Войти</button>
+        </form>
+        <a class="btn btn-outline-primary btn-lg mt-4" href="/registration">Перейти на страницу регистрации</a>
+    </div>
+</body>
+</html>

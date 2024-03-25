@@ -1,0 +1,190 @@
+{{define "cudUser"}}
+<div class="modal modal-lg fade" id="userCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Создание пользователя</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/users" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="email" placeholder="A" name="Email">
+                            <label>Почта</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required minlength="8" type="password" step="any" placeholder="A" name="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать по меньшей мере одну цифру, одну большую и одну маленькую буквы латинского алфавита и быть в длину не менее 8 символов">
+                            <label>Пароль</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control mask-phone" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="Phone">
+                            <label>Телефон</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="LastName">
+                            <label>Фамилия</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="Name">
+                            <label>Имя</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="MiddleName">
+                            <label>Отчество</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" name="Gender">
+                            <option value="" selected>Пол</option>
+                            <option>Мужской</option>
+                            <option>Женский</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select required class="form-select" name="Role.Id">
+                            <option value="" selected disabled>Роль</option>
+                            {{ range $key, $item := .Roles }}
+                            {{ if eq .IsExist true }}
+                            <option value="{{ .ID }}">{{ .Name }}</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Создать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="userEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение пользователя</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/users" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="PUT">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="userId" hidden type="text" name="Id">
+                            <input id="userEmail" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="email" placeholder="A" name="Email">
+                            <label>Почта</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="userPhone" class="form-control mask-phone" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="Phone">
+                            <label>Телефон</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="userLastName" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="LastName">
+                            <label>Фамилия</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="userName" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="Name">
+                            <label>Имя</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="userMiddleName" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" type="text" step="any" placeholder="A" name="MiddleName">
+                            <label>Отчество</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <select id="userGender" class="form-select" name="Gender">
+                            <option value="" selected>Пол</option>
+                            <option>Мужской</option>
+                            <option>Женский</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select required id="userRole" class="form-select" name="Role.Id">
+                            <option value="" selected disabled>Роль</option>
+                            {{ range $key, $item := .Roles }}
+                            {{ if eq .IsExist true }}
+                            <option value="{{ .ID }}">{{ .Name }}</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="userDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Удаление пользователя</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <div class="form-floating">
+                        <input id="userEmailDel" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" readonly required type="text" placeholder="A" name="Email">
+                        <label>Почта</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                {{ if eq .BaseObject.CurrentUser.Role.Name "Администратор" }}
+                <form action="/users" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="userIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Physical">
+                    <button type="submit" class="btn btn-danger">Физическое удаление</button>
+                </form>
+                <form action="/users" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="userIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Logical">
+                    <button type="submit" class="btn btn-danger">Логическое удаление</button>
+                </form>
+                {{ else }}
+                <form action="/users" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="userIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Logical">
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </form>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}

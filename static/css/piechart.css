@@ -1,0 +1,47 @@
+.graph {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px 0px 0px;
+    width: 300px;
+    height: 300px; 
+    text-align: center;
+  }
+
+  .pie > div {
+    transform-origin: center; 
+    width: 300px; 
+    height: 300px; 
+    display: flex; 
+    justify-content: center;
+  }
+  
+  .pie > div > .label {
+    position: absolute;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .pie {
+    width: 300px;
+    aspect-ratio:1;
+    position:absolute;
+  }
+  .pie:before,
+  .pie:after {
+    content:"";
+    position:absolute;
+    border-radius:50%;
+  }
+  .pie:before {
+    inset:0;
+    background: radial-gradient(farthest-side,var(--c) 98%,#0000) top/var(--b) var(--b) no-repeat,
+            conic-gradient(var(--c) calc(var(--p)*1%),#0000 0);
+  }
+  .no-round:before {
+    background-size:0 0,auto;
+  }
+  .no-round:after {
+    content:none;
+  }

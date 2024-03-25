@@ -1,0 +1,28 @@
+{{ define "tablePosition" }}
+<table id="position{{ .ID }}" class="table table-striped caption-top">
+    <caption class="display-6 mx-1">Текущее содержимое</caption>
+    <thead>
+    <tr>
+        <td>Наименование товара</td>
+        <td>Цена</td>
+        <td>Количество</td>
+        <td>Полная стоимость</td>
+        <td>Функции</td>
+    </tr>
+    </thead>
+    <tbody>
+    {{ range $key, $position := .Positions }}
+    <tr>
+        <td>{{ .Product.Name }}</td>
+        <td>{{ .CheckoutPrice }} руб</td>
+        <td>{{ .Amount }} шт</td>
+        <td>{{ mulf .CheckoutPrice .Amount }} руб</td>
+        <td>
+            <button type="button" class="btn btn-sm btn-primary editPosition" data-bs-toggle="modal" data-bs-target="#positionEdit" data-id="{{ .ID }}" data-price="{{ .CheckoutPrice }}" data-amount="{{ .Amount }}" data-product="{{ .Product.ID }}" data-order="{{ .Order.ID }}">Изменить</button>
+            <button type="button" class="btn btn-sm btn-danger deletePosition" data-bs-toggle="modal" data-bs-target="#positionDelete" data-id="{{ .ID }}" data-name="{{ .Product.Name }}">Удалить</button>
+        </td>
+    </tr>
+    {{ end }}
+    </tbody>
+</table>
+{{ end }}

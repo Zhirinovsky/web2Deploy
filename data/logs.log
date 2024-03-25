@@ -1,0 +1,441 @@
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T01:48:06+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T01:48:06+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T01:48:06+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T01:48:06+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T01:48:06+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T01:48:06+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T01:48:06+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-18T01:48:23+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-18T01:48:23+03:00"}
+{"amount":3333,"category_id":"2","discount":343,"group":"crud","id":0,"image_link":"/images/vacuum_cleaner_1.jpg","level":"trace","method":"POST","msg":"Sending database change request...","name":"кау","price":34343,"table":"product","time":"2024-03-18T01:49:13+03:00"}
+{"amount":3333,"category_id":"2","discount":343,"error":"pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"correct_discount\"","group":"crud","id":0,"image_link":"/images/vacuum_cleaner_1.jpg","level":"error","method":"POST","msg":"Failed database change","name":"кау","price":34343,"table":"product","time":"2024-03-18T01:49:13+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T02:20:02+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T02:20:02+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T02:20:02+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T02:20:53+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T02:20:53+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T02:20:53+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T02:20:53+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T02:21:42+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T02:21:42+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T02:21:42+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T02:21:42+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T02:21:42+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T02:21:42+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T02:21:42+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T02:24:21+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T02:24:21+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T02:24:21+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T02:24:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T02:24:22+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T02:24:22+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T02:24:22+03:00"}
+{"error":"open logs.log: The system cannot find the file specified.","group":"errors","level":"error","msg":"open logs.log: The system cannot find the file specified.","time":"2024-03-18T02:24:28+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T02:25:01+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T02:25:01+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T02:25:01+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T02:25:01+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T02:25:01+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T02:25:01+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T02:25:01+03:00"}
+{"datatype":"csv","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"products","time":"2024-03-18T02:25:53+03:00"}
+{"datatype":"csv","group":"export/import","level":"info","msg":"Successful export","subgroup":"export","table":"products","time":"2024-03-18T02:25:53+03:00"}
+{"datatype":"xlsx","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"products","time":"2024-03-18T02:26:05+03:00"}
+{"datatype":"xlsx","group":"export/import","level":"info","msg":"Successful export","subgroup":"export","table":"products","time":"2024-03-18T02:26:05+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T02:27:15+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T02:27:15+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T02:27:15+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T02:27:15+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T02:27:15+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T02:27:15+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T02:27:15+03:00"}
+{"datatype":"csv","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"products","time":"2024-03-18T02:27:25+03:00"}
+{"error":"remove export/products.csv: The process cannot access the file because it is being used by another process.","group":"errors","level":"error","msg":"remove export/products.csv: The process cannot access the file because it is being used by another process.","time":"2024-03-18T02:27:25+03:00"}
+{"datatype":"csv","error":"remove export/products.csv: The process cannot access the file because it is being used by another process.","group":"export/import","level":"error","msg":"Export error","subgroup":"export","table":"products","time":"2024-03-18T02:27:25+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T02:28:04+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T02:28:04+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T02:28:04+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T02:28:04+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T02:28:04+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T02:28:04+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T02:28:04+03:00"}
+{"datatype":"csv","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"products","time":"2024-03-18T02:28:09+03:00"}
+{"datatype":"csv","group":"export/import","level":"info","msg":"Successful export","subgroup":"export","table":"products","time":"2024-03-18T02:28:09+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-18T02:28:59+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-18T02:28:59+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-18T02:28:59+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-18T02:28:59+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-18T02:28:59+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-18T02:28:59+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-18T02:28:59+03:00"}
+{"datatype":"csv","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"products","time":"2024-03-18T02:29:04+03:00"}
+{"datatype":"csv","group":"export/import","level":"info","msg":"Successful export","subgroup":"export","table":"products","time":"2024-03-18T02:29:04+03:00"}
+{"datatype":"xlsx","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"products","time":"2024-03-18T02:29:05+03:00"}
+{"datatype":"xlsx","group":"export/import","level":"info","msg":"Successful export","subgroup":"export","table":"products","time":"2024-03-18T02:29:05+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-19T09:30:51+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-19T09:30:51+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-19T09:30:51+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-19T09:30:51+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-19T09:30:52+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-19T09:30:52+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-19T09:30:52+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-19T13:31:39+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-19T13:31:39+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-19T13:31:39+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-19T13:31:39+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-19T13:31:39+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-19T13:31:39+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-19T13:31:39+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-19T13:32:21+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-19T13:32:21+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-19T13:32:21+03:00","type-request":"GET","url":"/carts"}
+{"error":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","time":"2024-03-19T13:32:25+03:00"}
+{"error":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","time":"2024-03-19T13:32:46+03:00"}
+{"error":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","time":"2024-03-19T13:32:54+03:00"}
+{"error":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: profile.html:69:14: executing \"profile.html\" at \u003ceq .BaseObject.CurrentUser.Role \"Клиент\"\u003e: error calling eq: incompatible types for comparison","time":"2024-03-19T13:33:57+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-19T14:03:42+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-19T14:03:42+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-19T14:03:42+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-19T14:03:42+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-19T14:03:42+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-19T14:03:42+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-19T14:03:42+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-19T14:03:45+03:00","type-request":"GET","url":"/carts"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-19T14:04:51+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-19T14:04:53+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-19T14:04:53+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-19T14:04:53+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-19T14:04:53+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-19T14:05:18+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-19T14:05:19+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-19T14:05:19+03:00","type-request":"GET","url":"/carts"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-19T14:24:51+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-19T14:24:51+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-19T14:24:51+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-19T14:24:51+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-19T14:24:52+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-19T14:24:52+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-19T14:24:52+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-19T14:29:27+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-19T14:33:42+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-19T14:35:49+03:00","type-request":"GET","url":"/carts"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T10:16:08+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T10:16:08+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T10:16:08+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T10:16:08+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T10:16:09+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T10:16:09+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T10:16:09+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-20T10:16:18+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-20T10:16:18+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:16:19+03:00","type-request":"GET","url":"/carts"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"trace","msg":"Sending password change request...","new_password":"Pa$$w0rd1","old_password":"Pa$$w0rd","repeat_password":"Pa$$w0rd1","time":"2024-03-20T10:19:14+03:00"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"info","msg":"Successful password change","new_password":"Pa$$w0rd1","old_password":"Pa$$w0rd","repeat_password":"Pa$$w0rd1","time":"2024-03-20T10:19:14+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-20T10:19:18+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-20T10:19:20+03:00"}
+{"email":"qwerty@mail.com","error":"Неверные данные авторизации","group":"authorization","level":"error","msg":"Authorization error","subgroup":"login","time":"2024-03-20T10:19:20+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-20T10:19:23+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-20T10:19:24+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:19:24+03:00","type-request":"GET","url":"/carts"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"trace","msg":"Sending password change request...","new_password":"Pa$$w0rd","old_password":"Pa$$w0rd1","repeat_password":"Pa$$w0rd","time":"2024-03-20T10:19:33+03:00"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"info","msg":"Successful password change","new_password":"Pa$$w0rd","old_password":"Pa$$w0rd1","repeat_password":"Pa$$w0rd","time":"2024-03-20T10:19:33+03:00"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"trace","msg":"Sending password change request...","new_password":"Pa$$w0rd","old_password":"Pa$$w0rd","repeat_password":"Pa$$w0rd","time":"2024-03-20T10:19:38+03:00"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"info","msg":"Successful password change","new_password":"Pa$$w0rd","old_password":"Pa$$w0rd","repeat_password":"Pa$$w0rd","time":"2024-03-20T10:19:38+03:00"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"trace","msg":"Sending password change request...","new_password":"Pa$$w0rd","old_password":"Pa$$w0rd","repeat_password":"Pa$$w0rd1","time":"2024-03-20T10:19:43+03:00"}
+{"email":"qwerty@mail.com","group":"profile","id":1,"level":"trace","msg":"Sending password change request...","new_password":"Pa$$w0rd","old_password":"Pa$$w0rd1","repeat_password":"Pa$$w0rd","time":"2024-03-20T10:19:48+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:20:01+03:00","type-request":"GET","url":"/carts"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T10:23:54+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T10:23:54+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T10:23:54+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T10:23:54+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T10:23:54+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T10:23:54+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T10:23:54+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-20T10:28:59+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-20T10:29:00+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-20T10:29:00+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:29:00+03:00","type-request":"GET","url":"/carts"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-20T10:29:08+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-20T10:29:09+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-20T10:29:09+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:29:09+03:00","type-request":"GET","url":"/carts"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-20T10:29:12+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-20T10:33:07+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-20T10:33:07+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:33:07+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:50:28+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:58:56+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:59:34+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T10:59:58+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:00:32+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:00:35+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:00:36+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:00:36+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:01:02+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:01:11+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:02:28+03:00","type-request":"GET","url":"/carts"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"er","relation":0,"table":"characteristic","time":"2024-03-20T11:02:43+03:00","type":"INT"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"er","relation":0,"table":"characteristic","time":"2024-03-20T11:02:43+03:00","type":"INT"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:02:43+03:00","type-request":"GET","url":"/carts"}
+{"group":"crud","id":12,"level":"trace","method":"DELETE","msg":"Sending database change request...","name":"","relation":0,"table":"characteristic","time":"2024-03-20T11:02:49+03:00","type":"Physical"}
+{"group":"crud","id":12,"level":"info","method":"DELETE","msg":"Successful database change","name":"","relation":0,"table":"characteristic","time":"2024-03-20T11:02:49+03:00","type":"Physical"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:02:49+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:03:50+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:04:12+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:04:23+03:00","type-request":"GET","url":"/carts"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"AAA TESt","relation":0,"table":"characteristic","time":"2024-03-20T11:04:41+03:00","type":"SET"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"AAA TESt","relation":0,"table":"characteristic","time":"2024-03-20T11:04:41+03:00","type":"SET"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:04:41+03:00","type-request":"GET","url":"/carts"}
+{"group":"crud","id":13,"level":"trace","method":"DELETE","msg":"Sending database change request...","name":"","relation":0,"table":"characteristic","time":"2024-03-20T11:04:51+03:00","type":"Physical"}
+{"group":"crud","id":13,"level":"info","method":"DELETE","msg":"Successful database change","name":"","relation":0,"table":"characteristic","time":"2024-03-20T11:04:51+03:00","type":"Physical"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:04:51+03:00","type-request":"GET","url":"/carts"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:12:46+03:00","type-request":"GET","url":"/carts"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:23:56+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:23:56+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:23:56+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:23:56+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:23:57+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:23:57+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:23:57+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:23:57+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:24:07+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:24:07+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:24:07+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":0,"group":"crud","id":6,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:25:03+03:00"}
+{"characteristic_id":0,"group":"crud","id":6,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:25:03+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:25:03+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:25:15+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:26:32+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:26:32+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":0,"group":"crud","id":7,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:26:36+03:00"}
+{"characteristic_id":0,"group":"crud","id":7,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:26:36+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:26:36+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:26:42+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:29:30+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:29:38+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":0,"group":"crud","id":8,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:29:52+03:00"}
+{"characteristic_id":0,"group":"crud","id":8,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:29:52+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:29:52+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:30:30+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:31:40+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:31:46+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:31:54+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:32:56+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:32:56+03:00","type-request":"GET","url":"/carts"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:36:34+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:36:34+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:36:34+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:36:34+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:36:34+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:36:34+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:36:34+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:36:35+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:36:42+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:36:49+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:36:49+03:00","type-request":"GET","url":"/carts"}
+{"characteristic_id":0,"group":"crud","id":9,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:36:56+03:00"}
+{"characteristic_id":0,"group":"crud","id":9,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:36:56+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /carts","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-20T11:36:56+03:00","type-request":"GET","url":"/carts"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:37:09+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:37:09+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:37:09+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:37:09+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:37:09+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:37:09+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:37:09+03:00"}
+{"characteristic_id":0,"group":"crud","id":11,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:37:15+03:00"}
+{"characteristic_id":0,"group":"crud","id":11,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:37:15+03:00"}
+{"characteristic_id":0,"group":"crud","id":10,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:37:17+03:00"}
+{"characteristic_id":0,"group":"crud","id":10,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:37:17+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:37:29+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:37:51+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:39:10+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:39:10+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:39:10+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:39:10+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:39:10+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:39:10+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:39:10+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:39:16+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:39:51+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:40:18+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:40:18+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:40:18+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:40:18+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:40:18+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:40:18+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:40:18+03:00"}
+{"characteristic_id":0,"group":"crud","id":12,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:40:27+03:00"}
+{"characteristic_id":0,"group":"crud","id":12,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:40:27+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:40:31+03:00"}
+{"characteristic_id":3,"error":"This characteristic has already been assigned to the product","group":"crud","id":0,"level":"error","method":"POST","msg":"Failed database change","product_id":0,"table":"set","time":"2024-03-20T11:40:31+03:00"}
+{"characteristic_id":3,"error":"This characteristic has already been assigned to the product","group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:40:31+03:00"}
+{"characteristic_id":0,"group":"crud","id":13,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:40:39+03:00"}
+{"characteristic_id":0,"group":"crud","id":13,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:40:39+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:41:24+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:41:24+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:41:24+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:41:24+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:41:25+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:41:25+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:41:25+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:41:33+03:00"}
+{"characteristic_id":3,"error":"This characteristic has already been assigned to the product","group":"crud","id":0,"level":"error","method":"POST","msg":"Failed database change","product_id":0,"table":"set","time":"2024-03-20T11:41:33+03:00"}
+{"characteristic_id":4,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:41:41+03:00"}
+{"characteristic_id":4,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:41:41+03:00"}
+{"characteristic_id":0,"group":"crud","id":14,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:41:50+03:00"}
+{"characteristic_id":0,"group":"crud","id":14,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:41:50+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:45:15+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:45:15+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:45:15+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:45:15+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:45:15+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:45:15+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:45:15+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:45:21+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:45:21+03:00"}
+{"characteristic_id":0,"group":"crud","id":15,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:45:25+03:00"}
+{"characteristic_id":0,"group":"crud","id":15,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:45:25+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T11:46:10+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T11:46:10+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T11:46:10+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T11:46:10+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T11:46:11+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T11:46:11+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T11:46:11+03:00"}
+{"characteristic_id":3,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:46:15+03:00"}
+{"characteristic_id":3,"error":"This characteristic has already been assigned to the product","group":"crud","id":0,"level":"error","method":"POST","msg":"Failed database change","product_id":0,"table":"set","time":"2024-03-20T11:46:15+03:00"}
+{"characteristic_id":4,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:46:22+03:00"}
+{"characteristic_id":4,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:46:22+03:00"}
+{"characteristic_id":0,"group":"crud","id":16,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:46:26+03:00"}
+{"characteristic_id":0,"group":"crud","id":16,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:46:26+03:00"}
+{"characteristic_id":4,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:46:37+03:00"}
+{"characteristic_id":4,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:47:53+03:00"}
+{"characteristic_id":0,"group":"crud","id":17,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-03-20T11:47:57+03:00"}
+{"characteristic_id":0,"group":"crud","id":17,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-03-20T11:47:57+03:00"}
+{"group":"crud","level":"trace","method":"DELETE","msg":"Removing image from server...","table":"images","time":"2024-03-20T12:15:56+03:00"}
+{"group":"crud","level":"info","method":"DELETE","msg":"Successful image submission","table":"images","time":"2024-03-20T12:15:56+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-20T12:25:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-20T12:25:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-20T12:25:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-20T12:25:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-20T12:25:07+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-20T12:25:07+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-20T12:25:07+03:00"}
+{"email":"qwerty1@mail.com","gender":"","group":"crud","id":0,"last_name":"","level":"trace","method":"POST","middle_name":"","msg":"Sending database change request...","name":"","phone":"","role_id":2,"table":"user","time":"2024-03-20T13:22:01+03:00"}
+{"email":"qwerty1@mail.com","gender":"","group":"crud","id":0,"last_name":"","level":"info","method":"POST","middle_name":"","msg":"Successful database change","name":"","phone":"","role_id":2,"table":"user","time":"2024-03-20T13:22:01+03:00"}
+{"email":"","gender":"","group":"crud","id":4,"last_name":"","level":"trace","method":"DELETE","middle_name":"","msg":"Sending database change request...","name":"","phone":"","role_id":0,"table":"user","time":"2024-03-20T13:22:17+03:00"}
+{"email":"","gender":"","group":"crud","id":4,"last_name":"","level":"info","method":"DELETE","middle_name":"","msg":"Successful database change","name":"","phone":"","role_id":0,"table":"user","time":"2024-03-20T13:22:17+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-21T10:47:35+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-21T10:47:35+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-21T10:47:35+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-21T10:47:35+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-21T10:47:35+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-21T10:47:35+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-21T10:47:35+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59578: wsasend: An existing connection was forcibly closed by the remote host.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59578: wsasend: An existing connection was forcibly closed by the remote host.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:65271: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:65271: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59592: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59592: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50934: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50934: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59896: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59896: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:49908: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:49908: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62050: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62050: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60357: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60357: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60753: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60753: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59840: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59840: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62446: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62446: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60064: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60064: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64991: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64991: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:51199: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:51199: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61162: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61162: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:52248: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:52248: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59662: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59662: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62887: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62887: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50455: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50455: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:49668: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:49668: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64478: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64478: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64753: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64753: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61475: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61475: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61008: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61008: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60274: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60274: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61841: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:61841: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60189: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60189: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59692: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59692: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59605: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59605: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:63425: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:63425: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60877: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60877: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60635: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60635: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50203: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50203: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62227: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62227: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60008: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60008: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60526: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60526: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59797: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59797: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60123: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:60123: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59723: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59723: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:63673: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:63673: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59764: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59764: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59620: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59620: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62675: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62675: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:49418: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:49418: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:65527: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:65527: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59955: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59955: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59587: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:59587: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-21T10:53:07+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-23T20:13:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-23T20:13:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-23T20:13:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-23T20:13:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-23T20:13:08+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-23T20:13:08+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-23T20:13:08+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-23T20:14:59+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-23T20:14:59+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-24T14:17:48+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-24T14:17:48+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-24T14:17:48+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-24T14:17:48+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-24T14:58:04+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-03-24T14:58:04+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-24T14:58:31+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-24T14:58:34+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-24T14:58:34+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-25T03:03:15+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-25T03:03:15+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-25T03:03:15+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-25T03:03:15+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-25T03:03:15+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-25T03:03:15+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-25T03:03:15+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-25T09:03:37+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-25T09:03:37+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-25T09:03:37+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-25T09:03:37+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-25T09:03:37+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-25T09:03:37+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-25T09:03:37+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-25T09:04:43+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-25T09:04:43+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-25T09:21:22+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-25T09:21:22+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-25T09:21:22+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-25T09:21:22+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-25T09:21:22+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-25T09:21:22+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-25T09:21:22+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-25T09:29:15+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-25T09:29:15+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-25T09:29:15+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-25T09:29:15+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-25T09:29:16+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-25T09:29:16+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-25T09:29:16+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-25T09:35:41+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-25T09:35:41+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-25T09:35:41+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-25T09:35:41+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-25T09:35:41+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-25T09:35:41+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-25T09:35:41+03:00"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"dfghg","relation":0,"table":"category","time":"2024-03-25T09:51:23+03:00"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"dfghg","relation":0,"table":"category","time":"2024-03-25T09:51:23+03:00"}
+{"group":"crud","id":7,"level":"trace","method":"DELETE","msg":"Sending database change request...","name":"","relation":0,"table":"category","time":"2024-03-25T09:51:29+03:00"}
+{"group":"crud","id":7,"level":"info","method":"DELETE","msg":"Successful database change","name":"","relation":0,"table":"category","time":"2024-03-25T09:51:29+03:00"}

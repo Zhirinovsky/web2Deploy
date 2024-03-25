@@ -1,0 +1,38 @@
+{{define "tableImage"}}
+<table id="tableImage" class="table table-striped caption-top datatable ">
+    <caption class="display-6 mx-1">Список изображений</caption>
+    <thead>
+    <tr>
+        <td>Иденитификатор</td>
+        <td>Название/Ссылка</td>
+        <td>Просмотр</td>
+        <td>Функции</td>
+    </tr>
+    </thead>
+    <tfoot>
+    <tr>
+        <td>Иденитификатор</td>
+        <td>Название/Ссылка</td>
+    </tr>
+    </tfoot>
+    <tbody>
+    {{ range $key, $image := .Images }}
+    <tr>
+        <td></td>
+        <td>{{ .Name }}</td>
+        <td>
+            <img src="{{ .Path }}" alt="{{ .Path }}" height="38" class="showImage" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .Path }}"/>
+        </td>
+        <td>
+            <form action="/images" method="post">
+                {{$.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="DELETE">
+                <input hidden type="text" name="Path" value="{{ .Path }}">
+                <button class="btn btn-danger" type="submit">Удалить</button>
+            </form>
+        </td>
+    </tr>
+    {{ end }}
+    </tbody>
+</table>
+{{end}}

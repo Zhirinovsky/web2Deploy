@@ -1,0 +1,51 @@
+time="2024-03-18T01:49:13+03:00" level=error msg="Failed database change" amount=3333 category_id=2 discount=343 error="pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"correct_discount\"" group=crud id=0 image_link=/images/vacuum_cleaner_1.jpg method=POST name="кау" price=34343 table=product
+time="2024-03-18T02:24:28+03:00" level=error msg="open logs.log: The system cannot find the file specified." error="open logs.log: The system cannot find the file specified." group=errors
+time="2024-03-18T02:27:25+03:00" level=error msg="remove export/products.csv: The process cannot access the file because it is being used by another process." error="remove export/products.csv: The process cannot access the file because it is being used by another process." group=errors
+time="2024-03-18T02:27:25+03:00" level=error msg="Export error" datatype=csv error="remove export/products.csv: The process cannot access the file because it is being used by another process." group=export/import subgroup=export table=products
+time="2024-03-19T13:32:21+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-19T14:03:45+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-19T14:05:19+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-19T14:29:27+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-19T14:33:42+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-19T14:35:49+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:16:19+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:19:20+03:00" level=error msg="Authorization error" email=qwerty@mail.com error="Неверные данные авторизации" group=authorization subgroup=login
+time="2024-03-20T10:19:24+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:20:01+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:29:00+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:29:09+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:33:07+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:50:28+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:58:56+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:59:34+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T10:59:58+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:00:32+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:00:35+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:00:36+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:00:36+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:01:02+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:01:11+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:02:28+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:02:43+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:02:49+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:03:50+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:04:12+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:04:23+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:04:41+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:04:51+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:12:46+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:23:57+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:24:07+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:25:03+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:26:32+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:26:36+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:29:38+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:29:52+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:31:46+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:32:56+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:36:35+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:36:49+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:36:56+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /carts" group=errors type-request=GET url=/carts
+time="2024-03-20T11:40:31+03:00" level=error msg="Failed database change" characteristic_id=3 error="This characteristic has already been assigned to the product" group=crud id=0 method=POST product_id=0 table=set
+time="2024-03-20T11:41:33+03:00" level=error msg="Failed database change" characteristic_id=3 error="This characteristic has already been assigned to the product" group=crud id=0 method=POST product_id=0 table=set
+time="2024-03-20T11:46:15+03:00" level=error msg="Failed database change" characteristic_id=3 error="This characteristic has already been assigned to the product" group=crud id=0 method=POST product_id=0 table=set

@@ -1,0 +1,171 @@
+{{define "cudPosition"}}
+<div class="modal modal-lg fade" id="orderPositions" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение содержимого заказа</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div id="allTablesPositions" class="modal-body table-wrapper-scroll-y">
+                {{ range $key, $order := .Orders }}
+                {{template "tablePosition" .}}
+                <button id="btnp{{ .ID }}" type="button" class="btn btn-primary mx-1 createPosition" data-bs-toggle="modal" data-bs-target="#positionCreate" data-id="{{ .ID }}">Добавить товар</button>
+                {{ end }}
+            </div>
+            <div class="modal-footer">
+                <div class="row">
+                    <div class="col-auto px-1 ">
+                        <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Импорт</button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form class="col-auto px-1" enctype="multipart/form-data" action="/import" method="post">
+                                    {{.BaseObject.CsrfField}}
+                                    <input type="hidden" name="Table" value="positions">
+                                    <input class="form-control" onchange="form.submit()" type="file" name="File">
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-auto px-1 ">
+                        <button class="btn btn-outline-info dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Экспорт</button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <form class="col-auto px-1" action="/export">
+                                    <input type="hidden" name="Table" value="positions">
+                                    <input type="hidden" name="Type" value="csv">
+                                    <button type="submit" class="dropdown-item">.csv</button>
+                                </form>
+                            </li>
+                            <li>
+                                <form class="col-auto px-1" action="/export">
+                                    <input type="hidden" name="Table" value="positions">
+                                    <input type="hidden" name="Type" value="xlsx">
+                                    <button type="submit" class="dropdown-item">.xlsx</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="positionCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Добавление позиции в заказ</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/positions" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="POST">
+                <input id="order" hidden type="text" name="Order.Id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <select id="positionSelectorCreate" required class="form-select" name="Product.Id">
+                            <option value="" selected disabled>Товар</option>
+                            {{ range $key, $item := .Products }}
+                            {{ if eq .IsExist true }}
+                            <option value="{{ .ID }}">{{ .Name }}: {{ .Price }} руб</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="positionPriceCreate" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="number" placeholder="A" name="Price">
+                            <label>Цена</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="positionAmountCreate" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="number" step="any" placeholder="A" name="Amount">
+                            <label>Количество</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Добавить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="positionEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение позиции заказа</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/positions" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="PUT">
+                <input id="positionId" hidden type="text" name="Id">
+                <input id="positionOrder" hidden type="text" name="Order.Id">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <select id="positionProduct" required class="form-select" name="Product.Id">
+                            <option value="" selected disabled>Товар</option>
+                            {{ range $key, $item := .Products }}
+                            {{ if eq .IsExist true }}
+                            <option value="{{ .ID }}">{{ .Name }}: {{ .Price }} руб</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="positionPrice" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="number" placeholder="A" name="Price">
+                            <label>Цена</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="positionAmount" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="number" step="any" placeholder="A" name="Amount">
+                            <label>Количество</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="positionDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Удаление позиции заказа</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/positions" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="DELETE">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="positionIdDel" hidden type="text" name="Id">
+                            <input id="positionProductDel" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" readonly required type="text" placeholder="A" name="Product">
+                            <label>Товар</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{end}}

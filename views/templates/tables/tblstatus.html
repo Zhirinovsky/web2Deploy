@@ -1,0 +1,32 @@
+{{define "tableStatus"}}
+<table id="tableStatus" class="table table-striped caption-top datatable">
+<caption class="display-6 mx-1">Список статусов</caption>
+<thead>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+  <td>Функции</td>
+</tr>
+</thead>
+<tfoot>
+<tr>
+  <td>Идентификатор</td>
+  <td>Наименование</td>
+</tr>
+</tfoot>
+<tbody>
+{{ range $key, $status := .Statuses }}
+{{ if eq .IsExist true }}
+<tr>
+  <td>{{ .ID }}</td>
+  <td>{{ .Status }}</td>
+  <td>
+    <button type="button" class="btn btn-sm btn-primary editStatus" data-bs-toggle="modal" data-bs-target="#statusEdit" data-id="{{ .ID }}" data-status="{{ .Status }}">Изменить</button>
+    <button type="button" class="btn btn-sm btn-danger deleteStatus" data-bs-toggle="modal" data-bs-target="#statusDelete" data-id="{{ .ID }}" data-status="{{ .Status }}">Удалить</button>
+  </td>
+</tr>
+{{ end }}
+{{ end }}
+</tbody>
+</table>
+{{end}}

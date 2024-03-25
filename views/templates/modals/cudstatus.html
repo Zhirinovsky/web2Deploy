@@ -1,0 +1,102 @@
+{{define "cudStatus"}}
+<div class="modal modal-lg fade" id="statusCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Создание статуса</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/statuses" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="text" placeholder="A" name="Status">
+                            <label>Статус</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Создать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="statusEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение статуса</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/statuses" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="PUT">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="statusId" hidden type="text" name="Id">
+                            <input id="statusStatus" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="text" placeholder="A" name="Status">
+                            <label>Статус</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="statusDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Удаление статуса</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <div class="form-floating">
+                        <input id="statusStatusDel" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" readonly required type="text" placeholder="A" name="Status">
+                        <label>Статус</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                {{ if eq .BaseObject.CurrentUser.Role.Name "Администратор" }}
+                <form action="/statuses" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="statusIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Physical">
+                    <button type="submit" class="btn btn-danger">Физическое удаление</button>
+                </form>
+                <form action="/statuses" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="statusIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Logical">
+                    <button type="submit" class="btn btn-danger">Логическое удаление</button>
+                </form>
+                {{ else }}
+                <form action="/statuses" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="statusIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Logical">
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </form>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}

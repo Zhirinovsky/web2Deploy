@@ -1,0 +1,174 @@
+{{define "cudProduct"}}
+<div class="modal modal-lg fade" id="productCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Создание продукта</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/products" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="POST">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="text" placeholder="A" name="Name">
+                            <label>Наименование</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required min="1" type="number" step="any" placeholder="A" name="Price">
+                            <label>Стоимость</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required min="1" type="number" step="1" placeholder="A" name="Amount">
+                            <label>Количество</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" min="0" max="100" type="number" step="1" placeholder="A" name="Discount">
+                            <label>Скидка</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" name="Image">
+                            <option value="" selected disabled>Изображение</option>
+                            {{ range $key, $item := .Images }}
+                            <option>{{ .Path }}</option>
+                            {{ end }}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select required class="form-select" name="Category.Id">
+                            <option value="" selected disabled>Категория</option>
+                            {{ range $key, $item := .Categories }}
+                            {{ if and (ne .Relation 0) (eq .IsExist true) }}
+                            <option value="{{ .ID }}">{{ .Name }}</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Создать</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="productEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Изменение продукта</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <form action="/products" method="post" class="form">
+                {{.BaseObject.CsrfField}}
+                <input hidden type="text" name="Method" value="PUT">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="productId" hidden type="text" name="Id">
+                            <input id="productName" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" required type="text" placeholder="A" name="Name">
+                            <label>Наименование</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="productPrice" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" min="1" step="any" required type="text" placeholder="A" name="Price">
+                            <label>Стоимость</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="productAmount" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" min="1" step="any" required type="number" placeholder="A" name="Amount">
+                            <label>Количество</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-floating">
+                            <input id="productDiscount" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" min="0" max="100" type="number" step="any" placeholder="A" name="Discount">
+                            <label>Скидка</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <select id="productImage" class="form-select" name="Image">
+                            <option value="" selected disabled>Изображение</option>
+                            {{ range $key, $item := .Images }}
+                            <option>{{ .Path }}</option>
+                            {{ end }}
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <select required id="productCategory"  class="form-select" name="Category.Id">
+                            <option value="" selected disabled>Категория</option>
+                            {{ range $key, $item := .Categories }}
+                            {{ if and (ne .Relation 0) (eq .IsExist true) }}
+                            <option value="{{ .ID }}">{{ .Name }}</option>
+                            {{ end }}
+                            {{ end }}
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                    <button type="submit" class="btn btn-primary">Изменить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal modal-lg fade" id="productDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Удаление продукта</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                    <div class="form-floating">
+                        <input id="productNameDel" class="form-control" style="border: none; border-bottom: 1px solid #000000; border-radius: 0;" readonly required type="text" placeholder="A" name="Name">
+                        <label>Наименование</label>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                {{ if eq .BaseObject.CurrentUser.Role.Name "Администратор" }}
+                <form action="/products" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="productIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Physical">
+                    <button type="submit" class="btn btn-danger">Физическое удаление</button>
+                </form>
+                <form action="/products" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="productIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Logical">
+                    <button type="submit" class="btn btn-danger">Логическое удаление</button>
+                </form>
+                {{ else }}
+                <form action="/products" method="post" class="form">
+                    {{.BaseObject.CsrfField}}
+                    <input class="productIdDel" hidden type="text" name="Id">
+                    <input hidden type="text" name="Method" value="DELETE">
+                    <input hidden type="text" name="Type" value="Logical">
+                    <button type="submit" class="btn btn-danger">Удалить</button>
+                </form>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</div>
+{{end}}
