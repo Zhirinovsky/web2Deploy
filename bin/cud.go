@@ -51,7 +51,7 @@ func CudProduct(w http.ResponseWriter, r *http.Request) {
 			response = Request("/products/"+r.FormValue("Id"), "DELETE", GetCurrentToken(w, r), nil, &result)
 		} else {
 			var item models.Product
-			response = Request("/products/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
+			Request("/products/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
 			item.IsExist = false
 			response = Request("/products/"+r.FormValue("Id"), "PUT", GetCurrentToken(w, r), item, &result)
 		}
@@ -96,13 +96,13 @@ func CudSet(w http.ResponseWriter, r *http.Request) {
 				check = false
 			}
 		}
-		if check == false {
+		if !check {
 			GlobalError = "Данная характеристика уже присвоена продукту"
 			requestSet["error"] = "This characteristic has already been assigned to the product"
 			SaveLog(requestSet, log.ErrorLevel, "Failed database change")
 		}
 	}
-	if check == true {
+	if check {
 		switch r.FormValue("Method") {
 		case "POST":
 			set.ProductID, _ = strconv.Atoi(r.FormValue("Product.Id"))
@@ -162,7 +162,7 @@ func CudCharacteristic(w http.ResponseWriter, r *http.Request) {
 			response = Request("/characteristics/"+r.FormValue("Id"), "DELETE", GetCurrentToken(w, r), nil, &result)
 		} else {
 			var item models.Characteristic
-			response = Request("/characteristics/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
+			Request("/characteristics/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
 			item.IsExist = false
 			response = Request("/characteristics/"+r.FormValue("Id"), "PUT", GetCurrentToken(w, r), item, &result)
 		}
@@ -207,7 +207,7 @@ func CudCategory(w http.ResponseWriter, r *http.Request) {
 			response = Request("/categories/"+r.FormValue("Id"), "DELETE", GetCurrentToken(w, r), nil, &result)
 		} else {
 			var item models.Category
-			response = Request("/categories/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
+			Request("/categories/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
 			item.IsExist = false
 			response = Request("/categories/"+r.FormValue("Id"), "PUT", GetCurrentToken(w, r), item, &result)
 		}
@@ -242,8 +242,8 @@ func CudImages(w http.ResponseWriter, r *http.Request) {
 		files := r.MultipartForm.File["File"]
 		for _, fileHeader := range files {
 			if fileHeader.Size > MaxUploadSize {
-				GlobalError = "Загружаемый файл слишком большой: " + strconv.FormatInt(fileHeader.Size, 64) + ". Пожалуйста, выбирите файл размером меньше 15MB."
-				requestImage["error"] = "The size of uploaded file is too big: " + strconv.FormatInt(fileHeader.Size, 64)
+				GlobalError = "Загружаемый файл слишком большой: " + strconv.Itoa(int(fileHeader.Size)) + ". Пожалуйста, выбирите файл размером меньше 15MB."
+				requestImage["error"] = "The size of uploaded file is too big: " + strconv.Itoa(int(fileHeader.Size))
 				SaveLog(requestImage, log.ErrorLevel, "Failed image submission")
 				http.Redirect(w, r, "/admin", http.StatusSeeOther)
 				return
@@ -342,7 +342,7 @@ func CudStatus(w http.ResponseWriter, r *http.Request) {
 			response = Request("/statuses/"+r.FormValue("Id"), "DELETE", GetCurrentToken(w, r), nil, &result)
 		} else {
 			var item models.Status
-			response = Request("/statuses/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
+			Request("/statuses/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
 			item.IsExist = false
 			response = Request("/statuses/"+r.FormValue("Id"), "PUT", GetCurrentToken(w, r), item, &result)
 		}
@@ -384,7 +384,7 @@ func CudRole(w http.ResponseWriter, r *http.Request) {
 			response = Request("/roles/"+r.FormValue("Id"), "DELETE", GetCurrentToken(w, r), nil, &result)
 		} else {
 			var item models.Role
-			response = Request("/roles/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
+			Request("/roles/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
 			item.IsExist = false
 			response = Request("/roles/"+r.FormValue("Id"), "PUT", GetCurrentToken(w, r), item, &result)
 		}
@@ -448,7 +448,7 @@ func CudUser(w http.ResponseWriter, r *http.Request) {
 			response = Request("/users/"+r.FormValue("Id"), "DELETE", GetCurrentToken(w, r), nil, &result)
 		} else {
 			var item models.User
-			response = Request("/users/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
+			Request("/users/"+r.FormValue("Id"), "GET", GetCurrentToken(w, r), nil, &item)
 			item.IsExist = false
 			response = Request("/users/"+r.FormValue("Id"), "PUT", GetCurrentToken(w, r), item, &result)
 		}

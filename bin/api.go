@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"encoding/json"
 	log "github.com/sirupsen/logrus"
-	"io/ioutil"
+	"io"
 	"net/http"
 )
 
@@ -18,8 +18,9 @@ func Request(url string, typeReq string, token string, bodyReq any, bodyResp any
 	client := &http.Client{}
 	response, _ := client.Do(req)
 	if response != nil {
-		body, _ := ioutil.ReadAll(response.Body)
-		json.Unmarshal(body, bodyResp)
+		body, _ := io.ReadAll(response.Body)
+		err := json.Unmarshal(body, bodyResp)
+		GlobalCheck(err)
 	} else {
 		SaveLog(log.Fields{
 			"group": "server",

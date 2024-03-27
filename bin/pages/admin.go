@@ -83,7 +83,6 @@ func getAdminData() AdminPageObject {
 	response = bin.Request("/positions", "GET", bin.ServerToken, nil, &pageObject.Positions)
 	bin.ResponseCheck(response, "/positions", "GET")
 	dir, err := os.Open("./images")
-	defer dir.Close()
 	bin.NullErrorCheck(&pageObject.BaseObject.ErrorStr, err)
 	files, err := dir.Readdir(-1)
 	bin.NullErrorCheck(&pageObject.BaseObject.ErrorStr, err)
