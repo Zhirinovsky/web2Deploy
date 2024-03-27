@@ -23,8 +23,8 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Lint Go Code
-        run: |
-          golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@v3
+
 
   build:
     name: Build
