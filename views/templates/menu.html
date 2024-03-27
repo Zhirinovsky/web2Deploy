@@ -36,18 +36,20 @@
                     <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Главная страница</span>
                 </a>
             </li>
+            {{ if .BaseObject.CurrentUser.Email }}
             <li class="nav-item">
                 <a href="/profile" class="nav-link align-middle px-0">
                     <i class="fs-4 bi-person-circle"></i> <span class="ms-1 d-none d-sm-inline">Профиль</span>
                 </a>
             </li>
+            {{ if or (eq .BaseObject.CurrentUser.Role.Name "Администратор") (eq .BaseObject.CurrentUser.Role.Name "Товарный менеджер") }}
             <li>
                 <a href="#submenu1" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
                     <i class="fs-4 bi-database-exclamation"></i>  <span class="ms-1 d-none d-sm-inline">Панель управления</span>
                 </a>
                 <ul class="collapse nav flex-column ms-1" id="submenu1" data-bs-parent="#menu">
                     <li class="w-100">
-                        <a href="/admin#nav-product" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Продукты</span> </a>
+                        <a href="/admin#nav-product" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Товары</span> </a>
                     </li>
                     <li>
                         <a href="/admin#nav-characteristic" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Характеристики</span> </a>
@@ -61,12 +63,14 @@
                     <li>
                         <a href="/admin#nav-status" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Статусы</span> </a>
                     </li>
+                    {{ if eq .BaseObject.CurrentUser.Role.Name "Администратор" }}
                     <li>
-                        <a href="/admin#nav-user" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Заказы</span> </a>
+                        <a href="/admin#nav-user" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Пользователи</span> </a>
                     </li>
                     <li>
-                        <a href="/admin#nav-role" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Статусы</span> </a>
+                        <a href="/admin#nav-role" class="nav-link px-0"> <i class="bi-table"></i> <span class="d-none d-sm-inline">Роли</span> </a>
                     </li>
+                    {{ end }}
                     <li>
                         <a href="/admin#nav-image" class="nav-link px-0"> <i class="bi-image"></i> <span class="d-none d-sm-inline">Изображения</span> </a>
                     </li>
@@ -78,6 +82,8 @@
                     </li>
                 </ul>
             </li>
+            {{ end }}
+            {{ end }}
         </ul>
     </div>
 </div>

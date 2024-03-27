@@ -439,3 +439,192 @@
 {"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"dfghg","relation":0,"table":"category","time":"2024-03-25T09:51:23+03:00"}
 {"group":"crud","id":7,"level":"trace","method":"DELETE","msg":"Sending database change request...","name":"","relation":0,"table":"category","time":"2024-03-25T09:51:29+03:00"}
 {"group":"crud","id":7,"level":"info","method":"DELETE","msg":"Successful database change","name":"","relation":0,"table":"category","time":"2024-03-25T09:51:29+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-25T23:07:06+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-25T23:07:06+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-25T23:07:06+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-25T23:07:06+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-25T23:07:06+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-25T23:07:06+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-25T23:07:06+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-25T23:08:47+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-25T23:08:47+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/products"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/products"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/products"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/products"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/products"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/products"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/products"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/characteristics"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /products","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:40:20+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:40:20+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:40:20+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:40:21+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-26T00:40:23+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-26T00:40:24+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64656: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:64656: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-26T00:40:30+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62284: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62284: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-26T00:40:30+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62260: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:62260: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-26T00:40:30+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-26T00:42:06+03:00"}
+{"error":"Ошибка при получении данных таблицы из Api по адресу: /categories","group":"errors","level":"error","msg":"Error while retrieving table data","time":"2024-03-26T00:42:06+03:00","type-request":"GET","url":"/categories"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T00:42:07+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-26T00:42:18+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-26T00:42:18+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:51168: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:51168: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-26T00:42:22+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50812: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:50812: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-26T00:42:22+03:00"}
+{"error":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:51037: wsasend: An established connection was aborted by the software in your host machine.","group":"errors","level":"panic","msg":"write tcp 127.0.0.1:8080-\u003e127.0.0.1:51037: wsasend: An established connection was aborted by the software in your host machine.","time":"2024-03-26T00:42:22+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-03-26T00:43:09+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-26T00:52:56+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-26T00:52:56+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-03-26T14:41:21+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-03-26T14:41:21+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-03-26T14:41:21+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-03-26T14:41:21+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-03-26T14:41:22+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-03-26T14:41:22+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-03-26T14:41:22+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-03-26T14:41:31+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-03-26T14:41:31+03:00"}

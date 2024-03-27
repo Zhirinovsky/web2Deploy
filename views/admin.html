@@ -29,7 +29,7 @@
     <!-- Модальное окно показа Изображений -->
     {{template "showImage" .}}
 
-    <!-- Модальные окна манипулирования Продуктами -->
+    <!-- Модальные окна манипулирования Товарами -->
     {{template "cudProduct" .}}
 
     <!-- Модальные окна манипулирования Характеристиками -->
@@ -44,11 +44,13 @@
     <!-- Модальные окна манипулирования Статусами -->
     {{template "cudStatus" .}}
 
+    {{ if eq .BaseObject.CurrentUser.Role.Name "Администратор" }}
     <!-- Модальные окна манипулирования Ролями -->
     {{template "cudRole" .}}
 
     <!-- Модальные окна манипулирования Пользователями -->
     {{template "cudUser" .}}
+    {{ end }}
 
     <!-- Модальные окна манипулирования Заказами -->
     {{template "cudOrder" .}}
@@ -66,9 +68,9 @@
     {{ if or (eq .BaseObject.CurrentUser.Role.Name "Администратор")  (eq .BaseObject.CurrentUser.Role.Name "Товарный менеджер") }}
     <nav class="nav nav-tabs" id="nav-tab" role="tablist">
         <div class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" role="button">Продукты</a>
+            <a class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" role="button">Товары</a>
             <ul class="dropdown-menu">
-                <a class="nav-link active" id="nav-product-tab" data-bs-toggle="tab" href="#nav-product" role="tab" aria-controls="nav-product" aria-selected="true">Продукты</a>
+                <a class="nav-link active" id="nav-product-tab" data-bs-toggle="tab" href="#nav-product" role="tab" aria-controls="nav-product" aria-selected="true">Товары</a>
                 <a class="nav-link" id="nav-characteristic-tab" data-bs-toggle="tab" href="#nav-characteristic" role="tab" aria-controls="nav-characteristic" aria-selected="false">Характеристики</a>
                 <a class="nav-link" id="nav-category-tab" data-bs-toggle="tab" href="#nav-category" role="tab" aria-controls="nav-category" aria-selected="false">Категории</a>
                 <a class="nav-link" id="nav-image-tab" data-bs-toggle="tab" href="#nav-image" role="tab" aria-controls="nav-image" aria-selected="false">Изображения</a>
