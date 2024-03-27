@@ -24,6 +24,8 @@ jobs:
 
       - name: Lint Go Code
         uses: golangci/golangci-lint-action@v3
+        with:
+          skip-pkg-cache: true
 
 
   build:
