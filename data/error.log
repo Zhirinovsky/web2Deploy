@@ -81,3 +81,7 @@ time="2024-03-26T00:40:20+03:00" level=error msg="Error while retrieving table d
 time="2024-03-26T00:40:20+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /categories" group=errors type-request=GET url=/categories
 time="2024-03-26T00:40:20+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /categories" group=errors type-request=GET url=/categories
 time="2024-03-26T00:42:06+03:00" level=error msg="Error while retrieving table data" error="Ошибка при получении данных таблицы из Api по адресу: /categories" group=errors type-request=GET url=/categories
+time="2024-03-28T15:54:35+03:00" level=error msg="json: cannot unmarshal bool into Go value of type string" error="json: cannot unmarshal bool into Go value of type string" group=errors
+time="2024-03-28T15:55:56+03:00" level=error msg="json: cannot unmarshal bool into Go value of type string" error="json: cannot unmarshal bool into Go value of type string" group=errors
+time="2024-03-28T15:56:46+03:00" level=error msg="json: Unmarshal(nil)" error="json: Unmarshal(nil)" group=errors
+time="2024-03-28T15:56:49+03:00" level=error msg="json: Unmarshal(nil)" error="json: Unmarshal(nil)" group=errors

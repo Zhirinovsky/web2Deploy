@@ -137,9 +137,56 @@ CREATE TABLE Order_Position (
     Product_ID integer REFERENCES Product (ID)
 );
 
-drop table Order_Position, "Order", Status, Cart_Position, Discount_Card, "User", Role, Set, Characteristic, Product, Category;
+---------------------------------------------------------------------
 
-select * from "User";
+CREATE OR REPLACE FUNCTION remove_product_amount_fnc()
+    RETURNS trigger AS
+$$
+BEGIN
+    UPDATE Product set Amount = Product.Amount - NEW.Amount;
+    RETURN NEW;
+END;
+$$
+    LANGUAGE 'plpgsql';
 
-select * from Characteristic;
+CREATE OR REPLACE TRIGGER add_order_trg
+    AFTER INSERT ON Order_Position
+    FOR EACH ROW
+EXECUTE PROCEDURE remove_product_amount_fnc();
+
+---------------------------------------------------------------------
+
+CREATE OR REPLACE VIEW product_list
+AS select Product.Id, Product.Id + 1000 as product_number, Product.Name as product_name, Price, Amount, Category.Name as category_name, Category.Id  as category_id, string_agg(Characteristic.Name, ', ')  as categories, Image_Link
+   from Product
+            left join Set on Set.Product_ID = Product.ID
+            left join Characteristic on Set.Characteristic_ID = Characteristic.ID
+            inner join Category on Product.Category_ID = Category.ID
+   group by Product.Id, Product.Id + 1000, Product.Name, Price, Amount, Category.Name, Category.Id, Image_Link;
+
+CREATE OR REPLACE VIEW users_info
+AS select "User".Id, "User".Email, "User".Phone, CONCAT(Last_Name, ' ', "User".Name, ' ', Middle_Name) as User_FIO, Role.Name as Role_Name
+   from "User" inner join Role on Role.Id = "User".Role_ID;
+
+CREATE OR REPLACE VIEW order_list
+AS select "Order".Id, "Order".Id + 1000 as order_number, "Order".Date, "Order".Address, string_agg(concat(Product.Name, ': ', Order_Position.Checkout_Price, ' руб, ', Order_Position.Amount, ' шт'), '; ')  as content
+   from "Order"
+            left join Order_Position on "Order".ID = Order_Position.Order_ID
+            inner join Product on Product.ID = Order_Position.Product_ID
+   group by "Order".Id, "Order".Id + 1000, "Order".Date, "Order".Address;
+
+---------------------------------------------------------------------
+
+CREATE OR REPLACE PROCEDURE registration(last_name text, name text, middle_name text, gender text, email text, phone text, password text, role text) language plpgsql as $$
+BEGIN
+    SELECT * FROM Role where name = role;
+    IF NOT FOUND THEN
+        INSERT INTO Role (Name) VALUES (role) returning id as role_id;
+    ELSE
+        SELECT id as role_id  FROM Role where name = role;
+    END IF;
+    INSERT INTO "User" (Last_Name, Name, Middle_Name, Gender, Email, Phone, Password, Role_ID)
+    VALUES (last_name, name, middle_name, gender, email, phone, password, role_id) returning id as staff_id;
+END;
+$$;
 

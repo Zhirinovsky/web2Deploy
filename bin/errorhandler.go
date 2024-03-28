@@ -41,7 +41,6 @@ func GlobalCheck(error error) {
 			"group": "errors",
 			"error": error,
 		}, log.ErrorLevel, error.Error())
-		Failures.With(prometheus.Labels{"error": error.Error()}).Inc()
 		if GlobalError == "" {
 			GlobalError = error.Error()
 		}
