@@ -20,8 +20,7 @@ func Request(url string, typeReq string, token string, bodyReq any, bodyResp any
 	if response != nil {
 		body, _ := io.ReadAll(response.Body)
 		err := json.Unmarshal(body, bodyResp)
-		if err != nil {
-		}
+		err.Error()
 	} else {
 		SaveLog(log.Fields{
 			"group": "server",
