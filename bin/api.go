@@ -19,8 +19,7 @@ func Request(url string, typeReq string, token string, bodyReq any, bodyResp any
 	response, _ := client.Do(req)
 	if response != nil {
 		body, _ := io.ReadAll(response.Body)
-		err := json.Unmarshal(body, bodyResp)
-		err.Error()
+		_ = json.Unmarshal(body, bodyResp)
 	} else {
 		SaveLog(log.Fields{
 			"group": "server",
