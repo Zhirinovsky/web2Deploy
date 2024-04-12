@@ -33,13 +33,13 @@
                 {{.BaseObject.CsrfField}}
                 <div class="m-3 col-3">
                     <div class="form-floating">
-                        <input class="form-control form-control-lg" required type="text" name="LastName" placeholder="" value="{{ .BaseObject.CurrentUser.LastName }}">
+                        <input class="form-control form-control-lg" type="text" name="LastName" placeholder="" value="{{ .BaseObject.CurrentUser.LastName }}">
                         <label>Фамилия</label>
                     </div>
                 </div>
                 <div class="m-3 col-3">
                     <div class="form-floating">
-                        <input class="form-control form-control-lg" required type="text" name="Name" placeholder="" value="{{ .BaseObject.CurrentUser.Name }}">
+                        <input class="form-control form-control-lg" type="text" name="Name" placeholder="" value="{{ .BaseObject.CurrentUser.Name }}">
                         <label>Имя</label>
                     </div>
                 </div>
@@ -57,7 +57,7 @@
                 </div>
                 <div class="m-3 col-3">
                     <div class="form-floating">
-                        <input class="form-control form-control-lg mask-phone" required type="text" name="Phone" placeholder="" value="{{ .BaseObject.CurrentUser.Phone }}">
+                        <input class="form-control form-control-lg mask-phone" type="text" name="Phone" placeholder="" value="{{ .BaseObject.CurrentUser.Phone }}">
                         <label>Телефон</label>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
     </div>
     {{ else }}
     <div class="alert alert-danger text-center fs-5 mt-3 fade show" role="alert">
-        <img src="/icons/exclamation-triangle-fill.svg" width="24"> Для доступа к данной странице необходимо авторизироваться!
+        <i class="fs-4 bi-exclamation-triangle-fill"></i> Для доступа к данной странице необходимо авторизироваться! <i class="fs-4 bi-exclamation-triangle-fill"></i>
     </div>
     {{ end }}
     <script src="/static/js/custom/masks.js"></script>

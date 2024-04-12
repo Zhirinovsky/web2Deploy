@@ -16,34 +16,34 @@ func main() {
 	bin.SaveLog(log.Fields{"group": "server"}, log.TraceLevel, "Server startup...")
 	r := mux.NewRouter()
 	//Страницы
-	r.HandleFunc("/", pages.MainPage)
-	r.HandleFunc("/login", pages.Login)
-	r.HandleFunc("/registration", pages.Registration)
-	r.HandleFunc("/admin", pages.Admin)
-	r.HandleFunc("/profile", pages.Profile)
+	r.HandleFunc("/", pages.MainPage)                 //Основная страница
+	r.HandleFunc("/login", pages.Login)               //Страница авторизации
+	r.HandleFunc("/registration", pages.Registration) //Страница регистрация
+	r.HandleFunc("/admin", pages.Admin)               //Панель управления
+	r.HandleFunc("/profile", pages.Profile)           //Профиль
 	//Методы сессии
-	r.HandleFunc("/logout", bin.Logout)
+	r.HandleFunc("/logout", bin.Logout) //Выход из учётной записи
 	//Методы главной страницы
-	r.HandleFunc("/search", pages.SearchProduct)
-	r.HandleFunc("/category", pages.SetCategory)
+	r.HandleFunc("/search", pages.SearchProduct) //Метод поиска продукта на основной странице
+	r.HandleFunc("/category", pages.SetCategory) //Метод фильтрации продуктов по категориям
 	//Методы профиля
-	r.HandleFunc("/personalisation", pages.ChangePersonalData)
-	r.HandleFunc("/change-password", pages.ChangePassword)
+	r.HandleFunc("/personalisation", pages.ChangePersonalData) //Метод изменения персональных данных
+	r.HandleFunc("/change-password", pages.ChangePassword)     //Метод смены пароля
 	//Cud действия
-	r.HandleFunc("/products", bin.CudProduct)
-	r.HandleFunc("/characteristics", bin.CudCharacteristic)
-	r.HandleFunc("/categories", bin.CudCategory)
-	r.HandleFunc("/sets", bin.CudSet)
-	r.HandleFunc("/images", bin.CudImages)
-	r.HandleFunc("/statuses", bin.CudStatus)
-	r.HandleFunc("/roles", bin.CudRole)
-	r.HandleFunc("/users", bin.CudUser)
-	r.HandleFunc("/orders", bin.CudOrder)
-	r.HandleFunc("/positions", bin.CudPosition)
-	r.HandleFunc("/cards", bin.CudCard)
+	r.HandleFunc("/products", bin.CudProduct)               //Методы CRUD действий над продуктами
+	r.HandleFunc("/characteristics", bin.CudCharacteristic) //Методы CRUD действий над характеристиками
+	r.HandleFunc("/categories", bin.CudCategory)            //Методы CRUD действий над категориями
+	r.HandleFunc("/sets", bin.CudSet)                       //Методы CRUD действий над наборами
+	r.HandleFunc("/images", bin.CudImages)                  //Методы CRUD действий над изображениями
+	r.HandleFunc("/statuses", bin.CudStatus)                //Методы CRUD действий над статусами
+	r.HandleFunc("/roles", bin.CudRole)                     //Методы CRUD действий над ролями
+	r.HandleFunc("/users", bin.CudUser)                     //Методы CRUD действий над пользователями
+	r.HandleFunc("/orders", bin.CudOrder)                   //Методы CRUD действий над заказами
+	r.HandleFunc("/positions", bin.CudPosition)             //Методы CRUD действий над позициямми заказов
+	r.HandleFunc("/cards", bin.CudCard)                     //Методы CRUD действий над скидочными картами
 	//Импорт и экспорт
-	r.HandleFunc("/export", bin.Export)
-	r.HandleFunc("/import", bin.Import)
+	r.HandleFunc("/export", bin.Export) //Метод фильтрации продуктов по категориям
+	r.HandleFunc("/import", bin.Import) //Метод фильтрации продуктов по категориям
 	//Загрузка bootstrap, модальных окон, изображений и иконок
 	r.PathPrefix("/static/").Handler(http.StripPrefix("/static", http.FileServer(http.Dir("static"))))
 	r.PathPrefix("/images/").Handler(http.StripPrefix("/images", http.FileServer(http.Dir("images"))))

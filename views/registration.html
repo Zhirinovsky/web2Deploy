@@ -5,6 +5,7 @@
     <title>Регистрация</title>
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/static/css/password.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
     <script src="/static/js/lib/bootstrap.js"></script>
     <script src="/static/js/lib/jquery.js"></script>
     <script src="/static/js/custom/password.js"></script>
@@ -27,13 +28,13 @@
                     <label>Почта</label>
                 </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-3">
                 <div class="form-floating">
                     <input class="form-control" id="password" required minlength="8" type="password" placeholder="A" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать по меньшей мере одну цифру, одну большую и одну маленькую буквы латинского алфавита и быть в длину не менее 8 символов">
                     <label>Пароль</label>
                 </div>
             </div>
-            <div class="mb-4">
+            <div class="mb-3">
                 <div class="form-floating">
                     <input class="form-control" required minlength="8" type="password" placeholder="A" name="passwordAgain" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Пароль должен содержать по меньшей мере одну цифру, одну большую и одну маленькую буквы латинского алфавита и быть в длину не менее 8 символов">
                     <label>Повтор пароля</label>
@@ -41,9 +42,9 @@
             </div>
             <button class="btn btn-lg btn-primary" type="submit">Зарегистрироваться</button>
         </form>
-        <a class="btn btn-outline-primary btn-lg mt-4" href="/login">Перейти на страницу авторизации</a>
+        <a class="btn btn-outline-primary btn-lg mt-3" href="/login">Перейти на страницу авторизации</a>
         <div id="message">
-            <h3>Пароль должен содержать:</h3>
+            <h4 style="width: 600px">Пароль должен содержать:</h4>
             <p id="letter" class="invalid"><b>Маленькую</b> букву</p>
             <p id="capital" class="invalid"><b>Заглавную (большую)</b> букву</p>
             <p id="number" class="invalid"><b>Цифру</b></p>

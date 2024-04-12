@@ -164,6 +164,18 @@ func Import(w http.ResponseWriter, r *http.Request) {
 							IsExist: exist,
 						}
 						Request("/roles", "POST", GetCurrentToken(w, r), role, nil)
+					case "sets":
+						id, _ := strconv.Atoi(info[i][0])
+						value, _ := strconv.ParseFloat(info[i][1], 64)
+						productid, _ := strconv.Atoi(info[i][2])
+						characteristicid, _ := strconv.Atoi(info[i][3])
+						set := SetExport{
+							ID:               id,
+							Value:            value,
+							ProductID:        productid,
+							CharacteristicID: characteristicid,
+						}
+						Request("/sets", "POST", GetCurrentToken(w, r), set, nil)
 					}
 				}
 			case "application/zip":
@@ -215,6 +227,12 @@ func Import(w http.ResponseWriter, r *http.Request) {
 					GlobalCheck(err)
 					for _, item := range items {
 						Request("/roles", "POST", GetCurrentToken(w, r), item, nil)
+					}
+				case "sets":
+					items, err := excelx.Parse[SetExport](file)
+					GlobalCheck(err)
+					for _, item := range items {
+						Request("/sets", "POST", GetCurrentToken(w, r), item, nil)
 					}
 				}
 			}

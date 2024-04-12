@@ -77,6 +77,13 @@ type RoleExport struct {
 	IsExist bool   `header:"IsExist" no:"3"`
 }
 
+type SetExport struct {
+	ID               int     `header:"ID" no:"1"`
+	Value            float64 `header:"Value" no:"2"`
+	ProductID        int     `header:"ProductID" no:"3"`
+	CharacteristicID int     `header:"CharacteristicID" no:"4"`
+}
+
 func Export(w http.ResponseWriter, r *http.Request) {
 	SaveLog(log.Fields{
 		"group":    "export/import",
@@ -133,6 +140,12 @@ func Export(w http.ResponseWriter, r *http.Request) {
 		var roles []RoleExport
 		Request("/"+r.FormValue("Table"), "GET", ServerToken, nil, &roles)
 		for _, item := range roles {
+			items = append(items, item)
+		}
+	case "sets":
+		var sets []SetExport
+		Request("/"+r.FormValue("Table"), "GET", ServerToken, nil, &sets)
+		for _, item := range sets {
 			items = append(items, item)
 		}
 	}

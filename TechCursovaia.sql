@@ -137,6 +137,8 @@ CREATE TABLE Order_Position (
     Product_ID integer REFERENCES Product (ID)
 );
 
+select * from Order_Position
+
 ---------------------------------------------------------------------
 
 CREATE OR REPLACE FUNCTION remove_product_amount_fnc()
@@ -153,6 +155,21 @@ CREATE OR REPLACE TRIGGER add_order_trg
     AFTER INSERT ON Order_Position
     FOR EACH ROW
 EXECUTE PROCEDURE remove_product_amount_fnc();
+
+CREATE OR REPLACE FUNCTION add_product_amount_fnc()
+    RETURNS trigger AS
+$$
+BEGIN
+    UPDATE Product set Amount = Product.Amount + OLD.Amount;
+    RETURN OLD;
+END;
+$$
+    LANGUAGE 'plpgsql';
+
+CREATE OR REPLACE TRIGGER remove_order_trg
+    BEFORE DELETE ON Order_Position
+    FOR EACH ROW
+EXECUTE PROCEDURE add_product_amount_fnc();
 
 ---------------------------------------------------------------------
 

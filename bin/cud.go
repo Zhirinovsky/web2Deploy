@@ -71,7 +71,8 @@ func CudSet(w http.ResponseWriter, r *http.Request) {
 	var set models.Set
 	set.ID = id
 	if r.FormValue("ValueSet"+r.FormValue("Characteristic.Id")) == "" {
-		set.CharacteristicID, _ = strconv.Atoi(r.FormValue("ValueInt"))
+		set.CharacteristicID, _ = strconv.Atoi(r.FormValue("Characteristic.Id"))
+		set.Value, _ = strconv.ParseFloat(r.FormValue("ValueInt"), 64)
 	} else {
 		set.CharacteristicID, _ = strconv.Atoi(r.FormValue("ValueSet" + r.FormValue("Characteristic.Id")))
 	}
