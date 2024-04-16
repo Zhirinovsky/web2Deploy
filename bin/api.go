@@ -30,6 +30,7 @@ func Request(url string, typeReq string, token string, bodyReq any, bodyResp any
 	return response
 }
 
+// Метод подключения и проверки доступа к API
 func ConnectAPI() {
 	SaveLog(log.Fields{
 		"group": "server",
