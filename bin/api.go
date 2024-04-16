@@ -10,6 +10,7 @@ import (
 
 var GlobalUrl, ServerToken, GlobalError string
 
+// Оснвной универсальный метод отправки запросов в API
 func Request(url string, typeReq string, token string, bodyReq any, bodyResp any) *http.Response {
 	jsonReq, _ := json.Marshal(bodyReq)
 	req, _ := http.NewRequest(typeReq, GlobalUrl+url, bytes.NewBuffer(jsonReq))
