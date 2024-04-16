@@ -1015,3 +1015,21 @@
 {"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-13T01:09:20+03:00"}
 {"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-13T01:09:24+03:00"}
 {"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-13T01:09:24+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-13T12:17:37+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-13T12:17:37+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-13T12:17:37+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-13T12:17:37+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-13T12:17:37+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-13T12:17:37+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-13T12:17:37+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-13T12:17:49+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-13T12:17:49+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-15T22:46:40+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-15T22:46:40+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-15T22:46:40+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-15T22:46:40+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-15T22:46:41+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-15T22:46:41+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-15T22:46:41+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-16T00:38:34+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-16T00:38:35+03:00"}
