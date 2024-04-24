@@ -106,7 +106,6 @@ VALUES (3, 0);
 CREATE TABLE Cart_Position (
     ID serial PRIMARY KEY,
     Amount integer NULL default(1),
-    Visibility boolean NULL default(True),
     Product_ID integer REFERENCES Product (ID),
     User_ID integer REFERENCES "User" (ID)
 );
@@ -129,6 +128,8 @@ CREATE TABLE "Order" (
     User_ID integer REFERENCES "User" (ID)
 );
 
+select * from Discount_Card
+
 CREATE TABLE Order_Position (
     ID serial PRIMARY KEY,
     Checkout_Price numeric NOT NULL,
@@ -137,7 +138,7 @@ CREATE TABLE Order_Position (
     Product_ID integer REFERENCES Product (ID)
 );
 
-select * from Order_Position
+select * from Status
 
 ---------------------------------------------------------------------
 

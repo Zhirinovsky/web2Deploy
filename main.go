@@ -27,8 +27,10 @@ func main() {
 	r.HandleFunc("/search", pages.SearchProduct) //Метод поиска продукта на основной странице
 	r.HandleFunc("/category", pages.SetCategory) //Метод фильтрации продуктов по категориям
 	//Методы профиля
-	r.HandleFunc("/personalisation", pages.ChangePersonalData) //Метод изменения персональных данных
-	r.HandleFunc("/change-password", pages.ChangePassword)     //Метод смены пароля
+	r.HandleFunc("/profile/personalisation", pages.ChangePersonalData) //Метод изменения персональных данных
+	r.HandleFunc("/profile/change-password", pages.ChangePassword)     //Метод смены пароля
+	r.HandleFunc("/profile/card-create", pages.CreateCard)             //Метод создания скидочной карты
+	r.HandleFunc("/profile/card-delete", pages.DeleteCard)             //Метод удаления скидочной карты
 	//Cud действия
 	r.HandleFunc("/products", bin.CudProduct)               //Методы CRUD действий над продуктами
 	r.HandleFunc("/characteristics", bin.CudCharacteristic) //Методы CRUD действий над характеристиками

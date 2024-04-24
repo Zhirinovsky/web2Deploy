@@ -27,7 +27,7 @@
     {{ if .BaseObject.CurrentUser.Email }}
     <div class="justify-content-center align-items-center text-center d-flex flex-column">
         <h1 class="display-6 mt-2 mb-4">Личные данные</h1>
-        <form class="form" action="/personalisation" method="post">
+        <form class="form" action="/profile/personalisation" method="post">
             <div class="row form justify-content-center align-items-center">
                 <input type="hidden" name="Role" value="Сотрудник">
                 {{.BaseObject.CsrfField}}
@@ -84,60 +84,58 @@
         </form>
         {{ if eq .BaseObject.CurrentUser.Role.Name "Клиент" }}
         <h1 class="display-6 my-4 text-center">Список заказов</h1>
-        {{ range $key, $order := .Orders }}
-        {{ if eq $.BaseObject.CurrentUser.Email .User.Email }}
-        <div class="justify-content-center align-items-center p-2 px-4 w-100">
-            <div class="align-items-center border border-primary border-2 rounded-5 row p-4 pt-3 justify-content-center">
-                <div class="col-3">
-                    <p class="text-center fs-4 m-0">Заказ №{{ .Number }}</p>
-                </div>
-                <div class="col-auto">
-                    <p class="text-center fs-4 m-0"> | </p>
-                </div>
-                <div class="col-3">
-                    {{ range $key, $product := .Products }}
-                    <p class="text-center fs-4 m-0">{{ .Name }}, {{ .Price }} руб, {{ .Amount }} шт</p>
-                    {{ end }}
-                </div>
-                <div class="col-auto">
-                    <p class="text-center fs-4 m-0"> | </p>
-                </div>
-                <div class="col-3 justify-content-center align-items-center">
-                    <p class="text-center fs-4 m-0">Общая стоимость: {{ .Price }} руб</p>
-                </div>
-                <div class="col-3 justify-content-center align-items-center pt-3">
-                    <p class="text-center fs-4 m-0">Дата: {{ .Date }}</p>
-                </div>
-                <div class="col-auto pt-3">
-                    <p class="text-center fs-4 m-0"> | </p>
-                </div>
-                <div class="col-3 justify-content-center align-items-center pt-3">
-                    <p class="text-center fs-4 m-0">Статус: {{ .Status }}</p>
-                </div>
-                <div class="col-auto pt-3">
-                    <p class="text-center fs-4 m-0"> | </p>
-                </div>
-                <div class="col-3 justify-content-center align-items-center pt-3">
-                    <p class="text-center fs-4 m-0">Оплачен: {{ .Payment }}</p>
+        <div class="row">
+            {{ range $key, $order := .Orders }}
+            {{ if eq $.BaseObject.CurrentUser.Email .User.Email }}
+            <div class="col">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h4 class="card-title">Заказ №{{ add .ID 1000 }}</h4>
+                    </div>
+                    <div class="card-body">
+                        {{ $price := 0 }}
+                        {{ range $key, $position := .Positions }}
+                        {{ $price = (addf $price ( mulf .CheckoutPrice .Amount )) }}
+                        {{ end }}
+                        <ul class="list-group border-0">
+                            <li class="list-group-item border-0">Общая стоимость: {{ $price }} руб</li>
+                            <li class="list-group-item border-0">Дата: {{ .Date }}</li>
+                            <li class="list-group-item border-0">Статус: {{ .Status.Status }}</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <h5 class="card-text mb-0">Содержимое</h5>
+                        <ul class="list-group border-0">
+                            {{ range $key, $position := .Positions }}
+                            <li class="list-group-item border-0">{{ .Product.Name }}, {{ .CheckoutPrice }} руб, {{ .Amount }} шт</li>
+                            {{ end }}
+                        </ul>
+                    </div>
                 </div>
             </div>
+            {{ end }}
+            {{ end }}
         </div>
-        {{ end }}
-        {{ end }}
         <h1 class="display-6 my-4 text-center">Скидочная карта</h1>
-        {{ if .DiscountCard.Number }}
-        <div class="justify-content-center align-items-center p-2 px-4 w-50">
-            <div class="align-items-center border border-primary border-2 rounded-5 p-4 bg-info bg-opacity-25 row">
-                <p class="text-center fs-1 my-4">Скидка: {{ .DiscountCard.Discount }}%</p>
-                <p class="text-start fs-3 m-0 col">Номер: {{ .DiscountCard.Number }}</p>
-                <p class="text-end fs-3 m-0 col">{{ .DiscountCard.Date }}</p>
+        {{ if .BaseObject.CurrentUser.Card.ID }}
+        <div class="justify-content-center align-items-center p-2 px-4">
+            <div class="align-items-center border border-primary border-2 rounded-4 p-4 bg-primary bg-gradient">
+                <div class="row m-0 mb-lg-5">
+                    <p class="text-start text-light fs-3 col ">Номер: {{ add .BaseObject.CurrentUser.Card.ID 1000 }}</p>
+                    <img class="col-auto rounded bg-light bg-opacity-50 p-1" src="/images/icons.png" alt="" height="60"/>
+                </div>
+                <div class="row m-0">
+                    <p class="text-start text-light fs-3 col-auto m-0">Скидка: {{ .BaseObject.CurrentUser.Card.Discount }}%</p>
+                    <p class="col-auto"></p>
+                    <p class="col-auto"></p>
+                    <p class="text-end text-light fs-3 col-auto m-0">Дата оформления: {{ .BaseObject.CurrentUser.Card.Date }}</p>
+                </div>
             </div>
         </div>
-        <a href="/deleteCard" class="btn btn-lg btn-danger my-3" >Удалить скидочную карту</a>
+        <a href="/profile/card-delete" class="btn btn-lg btn-danger my-3" >Удалить скидочную карту</a>
         {{ else }}
-        <p class="text-decoration-underline fs-5">Для создания скидочной карты необходимы полностью заполненные персональные данные пользователя</p>
-        <a href="/createCard" {{ if not .Full }} class="btn btn-lg btn-success disabled" {{ else }} class="btn btn-lg btn-success" {{ end }}>Создать скидочную карту</a>
-        <p class="text-decoration-underline fs-5"> </p>
+        <h4 class="mb-3 p-2 border rounded bg-warning bg-opacity-75 bg-gradient">Для создания скидочной карты необходимо заполнить все поля личных данных текущего пользователя</h4>
+        <a href="/profile/card-create" class="btn btn-lg btn-success disabled my-3">Создать скидочную карту</a>
         {{ end }}
         {{ end }}
     </div>

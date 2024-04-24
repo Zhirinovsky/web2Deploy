@@ -1033,3 +1033,121 @@
 {"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-15T22:46:41+03:00"}
 {"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-16T00:38:34+03:00"}
 {"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-16T00:38:35+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-22T10:32:24+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-22T10:32:24+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-22T10:32:24+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-22T10:32:24+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-22T10:32:25+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-22T10:32:25+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-22T10:32:25+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-22T10:34:51+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-22T10:34:52+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-23T09:40:53+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-23T09:40:53+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-23T09:40:53+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-23T09:40:53+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-23T09:40:54+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-23T09:40:54+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-23T09:40:54+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T09:41:08+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-23T09:41:09+03:00"}
+{"error":"template: profile.html:92:69: executing \"profile.html\" at \u003c.Number\u003e: can't evaluate field Number in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:92:69: executing \"profile.html\" at \u003c.Number\u003e: can't evaluate field Number in type models.Order","time":"2024-04-23T09:41:10+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:42:13+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T09:42:21+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T09:42:23+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-23T09:42:24+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T09:42:36+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T09:42:38+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-23T09:42:39+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:42:39+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:43:58+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T09:44:22+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T09:44:24+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-23T09:44:24+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T09:44:32+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T09:44:35+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-23T09:44:35+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:44:36+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:22+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:24+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:24+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:24+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:24+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:27+03:00"}
+{"error":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:98:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:27+03:00"}
+{"error":"template: profile.html:99:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:99:47: executing \"profile.html\" at \u003c.Products\u003e: can't evaluate field Products in type models.Order","time":"2024-04-23T09:46:38+03:00"}
+{"error":"template: profile.html:99:55: executing \"profile.html\" at \u003c.ProductId\u003e: can't evaluate field ProductId in type models.Position","group":"errors","level":"panic","msg":"template: profile.html:99:55: executing \"profile.html\" at \u003c.ProductId\u003e: can't evaluate field ProductId in type models.Position","time":"2024-04-23T09:48:31+03:00"}
+{"error":"template: profile.html:125:71: executing \"profile.html\" at \u003c.Payment\u003e: can't evaluate field Payment in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:125:71: executing \"profile.html\" at \u003c.Payment\u003e: can't evaluate field Payment in type models.Order","time":"2024-04-23T09:48:50+03:00"}
+{"error":"template: profile.html:126:27: executing \"profile.html\" at \u003c.DiscountCard.Number\u003e: can't evaluate field DiscountCard in type pages.ProfilePageObject","group":"errors","level":"panic","msg":"template: profile.html:126:27: executing \"profile.html\" at \u003c.DiscountCard.Number\u003e: can't evaluate field DiscountCard in type pages.ProfilePageObject","time":"2024-04-23T09:49:11+03:00"}
+{"error":"template: profile.html:126:27: executing \"profile.html\" at \u003c.DiscountCard.ID\u003e: can't evaluate field DiscountCard in type pages.ProfilePageObject","group":"errors","level":"panic","msg":"template: profile.html:126:27: executing \"profile.html\" at \u003c.DiscountCard.ID\u003e: can't evaluate field DiscountCard in type pages.ProfilePageObject","time":"2024-04-23T09:50:12+03:00"}
+{"error":"template: profile.html:126:19: executing \"profile.html\" at \u003c.Card.ID\u003e: can't evaluate field Card in type pages.ProfilePageObject","group":"errors","level":"panic","msg":"template: profile.html:126:19: executing \"profile.html\" at \u003c.Card.ID\u003e: can't evaluate field Card in type pages.ProfilePageObject","time":"2024-04-23T09:50:23+03:00"}
+{"error":"template: profile.html:126:19: executing \"profile.html\" at \u003c.User.Card.ID\u003e: can't evaluate field User in type pages.ProfilePageObject","group":"errors","level":"panic","msg":"template: profile.html:126:19: executing \"profile.html\" at \u003c.User.Card.ID\u003e: can't evaluate field User in type pages.ProfilePageObject","time":"2024-04-23T09:51:13+03:00"}
+{"error":"template: profile.html:137:40: executing \"profile.html\" at \u003c.Full\u003e: can't evaluate field Full in type pages.ProfilePageObject","group":"errors","level":"panic","msg":"template: profile.html:137:40: executing \"profile.html\" at \u003c.Full\u003e: can't evaluate field Full in type pages.ProfilePageObject","time":"2024-04-23T09:51:31+03:00"}
+{"error":"template: profile.html:129:79: executing \"profile.html\" at \u003c.DiscountCard.Discount\u003e: can't evaluate field DiscountCard in type pages.ProfilePageObject","group":"errors","level":"panic","msg":"template: profile.html:129:79: executing \"profile.html\" at \u003c.DiscountCard.Discount\u003e: can't evaluate field DiscountCard in type pages.ProfilePageObject","time":"2024-04-23T09:54:33+03:00"}
+{"error":"template: profile.html:119:76: executing \"profile.html\" at \u003c.Status.Name\u003e: can't evaluate field Name in type models.Status","group":"errors","level":"panic","msg":"template: profile.html:119:76: executing \"profile.html\" at \u003c.Status.Name\u003e: can't evaluate field Name in type models.Status","time":"2024-04-23T09:59:12+03:00"}
+{"error":"template: profile.html:124:60: executing \"profile.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Order","group":"errors","level":"panic","msg":"template: profile.html:124:60: executing \"profile.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Order","time":"2024-04-23T10:06:16+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T10:09:36+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T10:09:39+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-23T10:09:39+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T10:10:21+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-23T10:10:22+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-23T10:10:37+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-23T10:10:37+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-23T10:10:37+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-23T10:10:37+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-23T10:10:38+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-23T10:10:38+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-23T10:10:38+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T10:10:41+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-23T10:10:41+03:00"}
+{"address":"tyjtrkuy","date":"2024-04-22T10:11","group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","status_id":2,"table":"order","time":"2024-04-23T10:11:50+03:00","user_id":3}
+{"address":"tyjtrkuy","date":"2024-04-22T10:11","group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","status_id":2,"table":"order","time":"2024-04-23T10:11:50+03:00","user_id":3}
+{"amount":1,"checkout_price":44000,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","order_id":4,"product_id":1,"table":"position","time":"2024-04-23T10:12:00+03:00"}
+{"amount":1,"checkout_price":44000,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","order_id":4,"product_id":1,"table":"position","time":"2024-04-23T10:12:00+03:00"}
+{"amount":2,"checkout_price":70000,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","order_id":4,"product_id":3,"table":"position","time":"2024-04-23T10:12:12+03:00"}
+{"amount":2,"checkout_price":70000,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","order_id":4,"product_id":3,"table":"position","time":"2024-04-23T10:12:12+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T10:12:27+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T10:12:28+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-23T10:12:29+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T12:07:17+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T12:07:21+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-23T12:07:22+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T12:08:13+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T12:08:15+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-23T12:08:16+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-23T12:59:30+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-23T12:59:30+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-23T12:59:30+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-23T12:59:31+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T13:19:58+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T13:20:03+03:00"}
+{"email":"New@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-23T13:20:03+03:00"}
+{"email":"New@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T13:46:35+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T13:46:37+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-23T13:46:37+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-23T14:29:51+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-23T14:29:53+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-23T14:29:53+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-24T09:38:37+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-24T09:38:37+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-24T09:38:37+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-24T09:38:37+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-24T09:38:37+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-24T09:38:37+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-24T09:38:37+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-24T09:38:58+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-24T09:38:59+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-24T10:06:59+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-24T10:07:01+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-24T10:07:01+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-24T10:07:30+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-24T10:07:30+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-24T10:07:30+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-24T10:07:30+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-24T10:07:30+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-24T10:07:30+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-24T10:07:30+03:00"}
+{"email":"User@mail.com","group":"profile","level":"trace","msg":"Sending discount card deletion request...","time":"2024-04-24T10:07:39+03:00"}
+{"email":"User@mail.com","group":"profile","level":"info","msg":"Successful discount card deletion","time":"2024-04-24T10:07:39+03:00"}
+{"date":"2024-04-24 10:07:58","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"trace","msg":"Sending discount card creation request...","time":"2024-04-24T10:07:58+03:00"}
+{"date":"2024-04-24 10:07:58","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"info","msg":"Successful discount card creation","time":"2024-04-24T10:07:58+03:00"}

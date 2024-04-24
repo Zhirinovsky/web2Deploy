@@ -8,6 +8,7 @@ import (
 	"html/template"
 	"net/http"
 	"strconv"
+	"time"
 	"web2/bin"
 	"web2/bin/models"
 	"web2/bin/structures"
@@ -110,6 +111,52 @@ func ChangePassword(w http.ResponseWriter, r *http.Request) {
 		requestPassword["error"] = "Incorrect password."
 		bin.SaveLog(requestPassword, log.ErrorLevel, "Failed password change")
 		bin.GlobalError = "Введён неверный пароль"
+	}
+	http.Redirect(w, r, "/profile", http.StatusSeeOther)
+}
+
+func CreateCard(w http.ResponseWriter, r *http.Request) {
+	user := bin.GetCurrentUser(w, r)
+	card := models.Card{
+		ID:       user.ID,
+		Date:     time.Now().Format(time.DateTime),
+		Discount: 0,
+	}
+	requestCard := log.Fields{
+		"group":    "profile",
+		"email":    user.Email,
+		"id":       card.ID,
+		"date":     card.Date,
+		"discount": card.Discount,
+	}
+	bin.SaveLog(requestCard, log.TraceLevel, "Sending discount card creation request...")
+	var result map[string]string
+	response := bin.Request("/cards", "POST", bin.GetCurrentToken(w, r), card, &result)
+	if !(response.StatusCode == 200 || response.StatusCode == 201) {
+		bin.GlobalError = result["message"]
+		requestCard["error"] = result["message"]
+		bin.SaveLog(requestCard, log.ErrorLevel, "Failed discount card creation")
+	} else {
+		bin.SaveLog(requestCard, log.InfoLevel, "Successful discount card creation")
+	}
+	http.Redirect(w, r, "/profile", http.StatusSeeOther)
+}
+
+func DeleteCard(w http.ResponseWriter, r *http.Request) {
+	user := bin.GetCurrentUser(w, r)
+	requestCard := log.Fields{
+		"group": "profile",
+		"email": user.Email,
+	}
+	bin.SaveLog(requestCard, log.TraceLevel, "Sending discount card deletion request...")
+	var result map[string]string
+	response := bin.Request("/cards/"+strconv.Itoa(user.ID), "DELETE", bin.GetCurrentToken(w, r), nil, &result)
+	if !(response.StatusCode == 200 || response.StatusCode == 201) {
+		bin.GlobalError = result["message"]
+		requestCard["error"] = result["message"]
+		bin.SaveLog(requestCard, log.ErrorLevel, "Failed discount card deletion")
+	} else {
+		bin.SaveLog(requestCard, log.InfoLevel, "Successful discount card deletion")
 	}
 	http.Redirect(w, r, "/profile", http.StatusSeeOther)
 }
