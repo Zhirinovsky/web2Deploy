@@ -21,16 +21,22 @@ func main() {
 	r.HandleFunc("/registration", pages.Registration) //Страница регистрация
 	r.HandleFunc("/admin", pages.Admin)               //Панель управления
 	r.HandleFunc("/profile", pages.Profile)           //Профиль
+	r.HandleFunc("/cart", pages.Cart)                 //Корзина
 	//Методы сессии
 	r.HandleFunc("/logout", bin.Logout) //Выход из учётной записи
 	//Методы главной страницы
-	r.HandleFunc("/search", pages.SearchProduct) //Метод поиска продукта на основной странице
-	r.HandleFunc("/category", pages.SetCategory) //Метод фильтрации продуктов по категориям
+	r.HandleFunc("/main/search", pages.SearchProduct) //Метод поиска продукта на основной странице
+	r.HandleFunc("/main/category", pages.Filter)      //Метод фильтрации продуктов по категориям
+	r.HandleFunc("/main/add-cart", pages.AddCart)     //Метод добавления товара в корзину
 	//Методы профиля
 	r.HandleFunc("/profile/personalisation", pages.ChangePersonalData) //Метод изменения персональных данных
 	r.HandleFunc("/profile/change-password", pages.ChangePassword)     //Метод смены пароля
 	r.HandleFunc("/profile/card-create", pages.CreateCard)             //Метод создания скидочной карты
 	r.HandleFunc("/profile/card-delete", pages.DeleteCard)             //Метод удаления скидочной карты
+	//Методы корзины
+	r.HandleFunc("/cart/remove-cart", pages.RemoveCart) //Метод удаления товара из корзины
+	r.HandleFunc("/cart/change-cart", pages.ChangeCart) //Метод изменения количества товара в корзине
+	r.HandleFunc("/cart/make-order", pages.MakeOrder)   //Метод оформления заказа
 	//Cud действия
 	r.HandleFunc("/products", bin.CudProduct)               //Методы CRUD действий над продуктами
 	r.HandleFunc("/characteristics", bin.CudCharacteristic) //Методы CRUD действий над характеристиками

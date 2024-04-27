@@ -9,6 +9,7 @@
     <script src="/static/js/lib/bootstrap.bundle.js"></script>
     <script src="/static/js/lib/jquery.js"></script>
     <script src="/static/js/custom/errorWindow.js"></script>
+    <script src="/static/js/custom/messageWindow.js"></script>
     <script src="/static/js/custom/modals.js"></script>
 </head>
 <body>
@@ -17,6 +18,9 @@
 
     <!-- Модальное окно вывода ошибки -->
     {{template "errorWindow" .}}
+
+    <!-- Модальное окно вывода сообщений -->
+    {{template "messageWindow" .}}
 
     <!-- Модальное окно показа Изображений -->
     {{template "showImage" .}}
@@ -27,7 +31,7 @@
     <h1 class="display-5 mb-3 text-center mt-5 pt-5">Каталог товаров</h1>
 
     <div class="py-2 mx-4 pb-4">
-        <form action="/search" method="post" class="input-group p-10">
+        <form action="/main/search" method="post" class="input-group p-10">
             {{.BaseObject.CsrfField}}
             <input placeholder="Найти" class="form-control form-control-lg rounded-start" type="text" name="SearchText">
             <button type="submit" class="btn btn-primary btn-lg input-group-btn">Поиск</button>
@@ -39,7 +43,7 @@
             <div class="col-2 mt-2">
                 <div class="border border-2 rounded p-2">
                     <a href="#submenucategories" data-bs-toggle="collapse" class="nav-link text-center fs-5 text-bg-primary rounded p-1 mb-2">Категории</a>
-                    <form class="px-1" action="/category">
+                    <form class="px-1" action="/main/category">
                         <ul class="collapse nav" id="submenucategories" data-bs-parent="#menu">
                             {{ range $key, $category := .Categories }}
                             {{ if and (eq .Relation 0) (eq .IsExist true) }}
@@ -85,7 +89,7 @@
                                 <button type="button" class="btn btn-outline-primary col mx-4 infoProduct" data-bs-toggle="modal" data-bs-target="#infoProduct" data-id="{{ .ID }}" data-name="{{ .Name }}" data-number="{{ add .ID 1000 }}" data-price="{{ subf .Price (mulf .Price (divf .Discount 100)) }}" data-amount="{{ .Amount }}" data-image="{{ .ImageLink }}" data-category="{{ .Category.Name }}">Подробно</button>
                                 {{ end }}
                             </div>
-                            <form class="visually-hidden" id="addCart{{ .ID }}" action="/addCart">
+                            <form class="visually-hidden" id="addCart{{ .ID }}" action="/main/add-cart">
                                 <input type="hidden" value="{{ .ID }}" name="Id">
                             </form>
                         </div>

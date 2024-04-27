@@ -5,6 +5,7 @@ import (
 	"github.com/gorilla/csrf"
 	"html/template"
 	"net/http"
+	"strconv"
 	"strings"
 	"web2/bin"
 	"web2/bin/models"
@@ -30,6 +31,8 @@ func MainPage(w http.ResponseWriter, r *http.Request) {
 		if pageObject.BaseObject.ErrorStr == "" {
 			pageObject.BaseObject.ErrorStr = bin.GetError(&bin.GlobalError)
 		}
+		pageObject.BaseObject.MessageStr = bin.GlobalMessage
+		bin.GlobalMessage = ""
 		bin.Refresh(w, r)
 		t, err := template.New("main.html").Funcs(sprig.FuncMap()).ParseFiles("views/main.html")
 		template.Must(t.ParseGlob("views/templates/*.html"))
@@ -79,13 +82,51 @@ func SearchProduct(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }
 
-func SetCategory(w http.ResponseWriter, r *http.Request) {
+func Filter(w http.ResponseWriter, r *http.Request) {
 	var categories []models.Category
 	response := bin.Request("/categories", "GET", bin.ServerToken, nil, &categories)
 	bin.ResponseCheck(response, "/categories", "GET")
 	for _, category := range categories {
 		if r.FormValue(category.Name) == "1" {
 			SetCategories = append(SetCategories, category)
+		}
+	}
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+
+func AddCart(w http.ResponseWriter, r *http.Request) {
+	idProduct, _ := strconv.ParseInt(r.FormValue("Id"), 0, 10)
+	user := bin.GetCurrentUser(w, r)
+	if user.ID != 0 {
+		var carts []models.Cart
+		response := bin.Request("/carts", "GET", bin.ServerToken, nil, &carts)
+		bin.ResponseCheck(response, "/carts", "GET")
+		check := true
+		for _, cart := range carts {
+			if cart.UserID == user.ID && cart.ProductID == int(idProduct) {
+				check = false
+			}
+		}
+		if check {
+			var product models.Product
+			response = bin.Request("/products/"+r.FormValue("Id"), "GET", bin.ServerToken, nil, &product)
+			bin.ResponseCheck(response, "/products/"+r.FormValue("Id"), "GET")
+			if product.Amount > 0 {
+				cart := models.Cart{
+					ID:        0,
+					Amount:    1,
+					Active:    true,
+					ProductID: int(idProduct),
+					UserID:    user.ID,
+				}
+				var result map[string]string
+				response = bin.Request("/carts", "POST", bin.GetCurrentToken(w, r), cart, &result)
+				if !(response.StatusCode == 200 || response.StatusCode == 201) {
+					bin.GlobalError = result["message"]
+				} else {
+					bin.GlobalMessage = "Товар успешно добавлен в корзину"
+				}
+			}
 		}
 	}
 	http.Redirect(w, r, "/", http.StatusSeeOther)

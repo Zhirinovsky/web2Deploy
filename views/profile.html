@@ -29,23 +29,22 @@
         <h1 class="display-6 mt-2 mb-4">Личные данные</h1>
         <form class="form" action="/profile/personalisation" method="post">
             <div class="row form justify-content-center align-items-center">
-                <input type="hidden" name="Role" value="Сотрудник">
                 {{.BaseObject.CsrfField}}
                 <div class="m-3 col-3">
                     <div class="form-floating">
-                        <input class="form-control form-control-lg" type="text" name="LastName" placeholder="" value="{{ .BaseObject.CurrentUser.LastName }}">
+                        <input class="form-control form-control-lg" type="text" name="LastName" placeholder="" required minlength="3" value="{{ .BaseObject.CurrentUser.LastName }}">
                         <label>Фамилия</label>
                     </div>
                 </div>
                 <div class="m-3 col-3">
                     <div class="form-floating">
-                        <input class="form-control form-control-lg" type="text" name="Name" placeholder="" value="{{ .BaseObject.CurrentUser.Name }}">
+                        <input class="form-control form-control-lg" type="text" name="Name" placeholder="" required minlength="3" value="{{ .BaseObject.CurrentUser.Name }}">
                         <label>Имя</label>
                     </div>
                 </div>
                 <div class="m-3 col-3">
                     <div class="form-floating">
-                        <input class="form-control form-control-lg" type="text" name="MiddleName" placeholder="" value="{{ .BaseObject.CurrentUser.MiddleName }}">
+                        <input class="form-control form-control-lg" type="text" name="MiddleName" minlength="3" placeholder="" value="{{ .BaseObject.CurrentUser.MiddleName }}">
                         <label>Отчество</label>
                     </div>
                 </div>
@@ -135,7 +134,7 @@
         <a href="/profile/card-delete" class="btn btn-lg btn-danger my-3" >Удалить скидочную карту</a>
         {{ else }}
         <h4 class="mb-3 p-2 border rounded bg-warning bg-opacity-75 bg-gradient">Для создания скидочной карты необходимо заполнить все поля личных данных текущего пользователя</h4>
-        <a href="/profile/card-create" class="btn btn-lg btn-success disabled my-3">Создать скидочную карту</a>
+        <a href="/profile/card-create" class="btn btn-lg btn-success my-3{{ if not .AllData }} disabled{{ end }}">Создать скидочную карту</a>
         {{ end }}
         {{ end }}
     </div>

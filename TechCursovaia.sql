@@ -106,6 +106,7 @@ VALUES (3, 0);
 CREATE TABLE Cart_Position (
     ID serial PRIMARY KEY,
     Amount integer NULL default(1),
+    Active boolean NULL default(true),
     Product_ID integer REFERENCES Product (ID),
     User_ID integer REFERENCES "User" (ID)
 );

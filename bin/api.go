@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-var GlobalUrl, ServerToken, GlobalError string
+var GlobalUrl, ServerToken, GlobalError, GlobalMessage string
 
 // Оснвной универсальный метод отправки запросов в API
 func Request(url string, typeReq string, token string, bodyReq any, bodyResp any) *http.Response {

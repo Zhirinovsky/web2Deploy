@@ -36,7 +36,7 @@
   <td>
     {{ if eq .Role.Name "Клиент" }}
       {{ if ne .Card.ID 0 }}
-        <button type="button" class="btn btn-sm btn-primary mx-3 editCard" data-bs-toggle="modal" data-bs-target="#editCard" data-id="{{ .Card.ID }}" data-number="{{ add .Card.ID 1000 }}" data-discount="{{ .Card.Discount }}" data-date="{{ .Card.Date }}">Номер: {{ add .Card.ID 1000 }}, скидка: {{ .Card.Discount }}, дата: {{ .Card.Date }}</button>
+        <button type="button" class="btn btn-sm btn-primary mx-3 editCard" data-bs-toggle="modal" data-bs-target="#editCard" data-id="{{ .Card.ID }}" data-number="{{ add .Card.ID 1000 }}" data-discount="{{ .Card.Discount }}" data-date="{{ .Card.Date }}">Номер: {{ add .Card.ID 1000 }}, скидка: {{ .Card.Discount }}</button>
       {{ else }}
         <form action="/cards">
           {{$.BaseObject.CsrfField}}

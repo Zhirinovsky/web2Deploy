@@ -13,7 +13,7 @@
     </div>
     <div class="col text-end">
         {{ if .BaseObject.CurrentUser.Email }}
-        <a hidden="hidden" class="btn btn-outline-primary mx-1" type="button" href="/cart">Корзина <i class="bi-cart4"></i></a>
+        <a class="btn btn-outline-primary mx-1" type="button" href="/cart">Корзина <i class="bi-cart4"></i></a>
         <a class="btn btn-outline-primary mx-1" type="button" href="/profile">Профиль <i class="bi-person-circle"></i></a>
         <p class="d-inline-block px-3 m-0">Вы авторизованы под почтой: {{ .BaseObject.CurrentUser.Email }}</p>
         <a href="/logout" class="btn btn-outline-danger">Выйти</a>
@@ -37,6 +37,11 @@
                 </a>
             </li>
             {{ if .BaseObject.CurrentUser.Email }}
+            <li class="nav-item">
+                <a href="/cart" class="nav-link align-middle px-0">
+                    <i class="fs-4 bi-cart4"></i> <span class="ms-1 d-none d-sm-inline">Корзина</span>
+                </a>
+            </li>
             <li class="nav-item">
                 <a href="/profile" class="nav-link align-middle px-0">
                     <i class="fs-4 bi-person-circle"></i> <span class="ms-1 d-none d-sm-inline">Профиль</span>

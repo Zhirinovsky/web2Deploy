@@ -190,6 +190,8 @@ func getLogs(pageObject *AdminPageObject) {
 					v = strconv.Itoa(v.(int))
 				case reflect.Float64:
 					v = strconv.FormatFloat(v.(float64), 'f', -1, 64)
+				case reflect.Bool:
+					v = strconv.FormatBool(v.(bool))
 				}
 				if log.Data != "" {
 					log.Data += ", " + k + "=" + v.(string)

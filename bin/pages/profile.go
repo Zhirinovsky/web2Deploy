@@ -17,12 +17,12 @@ import (
 type ProfilePageObject struct {
 	BaseObject structures.BaseObject
 	Orders     []models.Order
+	AllData    bool
 }
 
 func Profile(w http.ResponseWriter, r *http.Request) {
 	bin.RefreshAPI()
-	pageObject := getProfileData()
-	pageObject.BaseObject.CurrentUser = bin.GetCurrentUser(w, r)
+	pageObject := getProfileData(bin.GetCurrentUser(w, r))
 	pageObject.BaseObject.CsrfField = csrf.TemplateField(r)
 	if pageObject.BaseObject.ErrorStr == "" {
 		pageObject.BaseObject.ErrorStr = bin.GetError(&bin.GlobalError)
@@ -36,10 +36,16 @@ func Profile(w http.ResponseWriter, r *http.Request) {
 	bin.CheckErr(err)
 }
 
-func getProfileData() ProfilePageObject {
+func getProfileData(user models.User) ProfilePageObject {
 	var pageObject ProfilePageObject
 	response := bin.Request("/orders", "GET", bin.ServerToken, nil, &pageObject.Orders)
 	bin.ResponseCheck(response, "/orders", "GET")
+	pageObject.BaseObject.CurrentUser = user
+	if user.Email == "" || user.LastName == "" || user.Name == "" || user.Phone == "" || user.Gender == "" || user.Role.Name == "" {
+		pageObject.AllData = false
+	} else {
+		pageObject.AllData = true
+	}
 	return pageObject
 }
 

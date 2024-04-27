@@ -3,87 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>Корзина</title>
-    <link rel="stylesheet" type="text/css" href="/static/bootstrap.css">
-    <script src="/static/bootstrap.js"></script>
-    <script src="/static/bootstrap.bundle.js"></script>
-    <script src="/static/jquery.js"></script>
-    <script src="/static/modals.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/static/bootstrap-icons-1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/map.css">
+    <script src="/static/js/lib/bootstrap.js"></script>
+    <script src="/static/js/lib/bootstrap.bundle.js"></script>
+    <script src="/static/js/lib/jquery.js"></script>
+    <script src="/static/js/custom/errorWindow.js"></script>
+    <script src="/static/js/custom/messageWindow.js"></script>
+    <script src="/static/js/custom/modals.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=313f8a90-3f7f-4c8a-afdc-7347cce50892" type="text/javascript"></script>
+    <script src="/static/js/custom/event_reverse_geocode.js"></script>
 </head>
 <body>
-    <!-- Шапка -->
-    {{template "header" .}}
-
-    <!-- Модальное окно подробноц информации о продукте -->
-    {{template "infoProduct" .}}
+    <!-- Шапка и боковая панель -->
+    {{template "menu" .}}
 
     <!-- Модальное окно вывода ошибки -->
     {{template "errorWindow" .}}
 
-    {{ if and (.CurrentUser.Email)  (eq .CurrentUser.Role "Клиент") }}
-    <h1 class="display-5 my-4 text-center">Корзина</h1>
+    <!-- Модальное окно вывода сообщений -->
+    {{template "messageWindow" .}}
+
+    <!-- Модальное окно показа Изображений -->
+    {{template "showImage" .}}
+
+    <!-- Модальное окно подробной информации о Товаре -->
+    {{template "infoProduct" .}}
+
+    <h1 class="display-4 my-4 text-center mt-5 pt-5">Корзина</h1>
+
+    {{ if and (.BaseObject.CurrentUser.Email)  (eq .BaseObject.CurrentUser.Role.Name "Клиент") }}
     <div class="row mx-4 mt-5">
         <div class="col">
+            {{template "tableCart" .}}
             {{ range $key, $cart := .Carts }}
-            <div class="justify-content-center align-items-center p-2 px-4">
+            <div class="justify-content-center align-items-center p-2 px-4" hidden="hidden">
                 <div class="justify-content-center align-items-center border border-primary border-2 rounded-5 row">
                     <div class="col">
-                        <img class="m-1 mx-auto d-block" src="/images/{{ .Product.ImageLink }}" alt="" width="120" height="120"/>
+                        <img class="m-1 mx-auto d-block" src="{{ .Product.ImageLink }}" alt="" height="120"/>
                     </div>
                     <div class="col">
                         <p class="text-center fs-4 m-0">{{ .Product.Name }}</p>
-                        <p class="text-center fs-4 m-0">{{ multiply .Product.Price .Amount }} руб</p>
+                        <p class="text-center fs-4 m-0">{{ mulf (subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100))) .Amount }} руб</p>
                     </div>
                     <div class="row col-3 justify-content-center align-items-center">
-                        <button type="submit" class="btn btn-sm btn-outline-primary col-3 rounded-circle fs-5" style="width: 2.5rem; height: 2.5rem;" form="removeAmount{{ .Id }}">
-                            <img src="/icons/dash-lg.svg">
+                        <button type="submit" class="btn btn-sm btn-outline-primary col-3 rounded-circle fs-5" style="width: 2.5rem; height: 2.5rem;" form="removeAmount{{ .ID }}">
+                            <i class="bi-dash-lg"></i>
                         </button>
                         <p class="text-center fs-4 col-5 m-0">{{ .Amount }} шт</p>
-                        <button type="submit" class="btn btn-sm btn-outline-primary col-3 rounded-circle fs-5" style="width: 2.5rem; height: 2.5rem;"  form="addAmount{{ .Id }}">
-                            <img src="/icons/plus-lg.svg">
+                        <button type="submit" class="btn btn-sm btn-outline-primary col-3 rounded-circle fs-5" style="width: 2.5rem; height: 2.5rem;"  form="addAmount{{ .ID }}">
+                            <i class="bi-plus-lg"></i>
                         </button>
                     </div>
                     <div class="row col mx-2 justify-content-center align-items-center">
-                        <button id="" type="button" class="btn col btn-outline-primary mx-2 infoProduct" data-bs-toggle="modal" data-bs-target="#infoProduct" data-id="{{ .Product.Id }}" data-number="{{ .Product.Number }}" data-name="{{ .Product.Name }}" data-price="{{ .Product.Price }}" data-amount="{{ .Product.Amount }}" data-supplier="{{ .Product.Supplier.Name }}" data-storage="{{ .Product.Storage.Address }}" data-event="{{ .Product.Event.Name }}"  data-image="{{ .Product.ImageLink }}">Подробно</button>
-                        <button type="submit" class="btn col btn-outline-danger mx-2" form="removeCart{{ .Id }}">Убрать</button>
+                        <button type="button" class="btn btn-outline-primary col mx-4 infoProduct" data-bs-toggle="modal" data-bs-target="#infoProduct" data-id="{{ .Product.ID }}" data-name="{{ .Product.Name }}" data-number="{{ add .Product.ID 1000 }}" data-price="{{ subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100)) }}" data-amount="{{ .Product.Amount }}" data-image="{{ .Product.ImageLink }}" data-category="{{ .Product.Category.Name }}">Подробно</button>
+                        <button type="submit" class="btn col btn-outline-danger mx-2" form="removeCart{{ .ID }}">Убрать</button>
                     </div>
                 </div>
-                <form class="visually-hidden" id="removeCart{{ .Id }}" action="/removeCart">
-                    <input type="hidden" value="{{ .Id }}" name="Id">
+                <form class="visually-hidden" id="removeCart{{ .ID }}" action="/cart/remove-cart">
+                    <input type="hidden" value="{{ .ID }}" name="Id">
                 </form>
-                <form class="visually-hidden" id="addAmount{{ .Id }}" action="/changeCart">
-                    <input type="hidden" value="{{ .Id }}" name="Id">
+                <form class="visually-hidden" id="addAmount{{ .ID }}" action="/cart/change-cart">
+                    <input type="hidden" value="{{ .ID }}" name="Id">
+                    <input type="hidden" value="{{ .Product.ID }}" name="ProductId">
+                    <input type="hidden" value="{{ .Active }}" name="Active">
                     <input type="hidden" value="Add" name="Operation">
                     <input type="hidden" value="{{ .Amount }}" name="Amount">
                 </form>
-                <form class="visually-hidden" id="removeAmount{{ .Id }}" action="/changeCart">
-                    <input type="hidden" value="{{ .Id }}" name="Id">
+                <form class="visually-hidden" id="removeAmount{{ .ID }}" action="/cart/change-cart">
+                    <input type="hidden" value="{{ .ID }}" name="Id">
+                    <input type="hidden" value="{{ .Product.ID }}" name="ProductId">
+                    <input type="hidden" value="{{ .Active }}" name="Active">
                     <input type="hidden" value="Remove" name="Operation">
                     <input type="hidden" value="{{ .Amount }}" name="Amount">
                 </form>
             </div>
             {{ end }}
         </div>
-        <div class="col-3 mx-2">
-            <div class="justify-content-center align-items-center border border-primary border-2 rounded-5 row">
+        <div class="col-3 mx-2 mb-5">
+            <div class="border rounded-5">
                 <p class="text-center fs-4 mt-2">Информация о заказе: </p>
-                <div class="row">
-                    Стоимость заказа: {{ .Price }} руб
+                {{ $price := 0 }}
+                {{ range $key, $cart := .Carts }}
+                    {{ if .Active }}
+                        {{ $price = (addf $price ( mulf (subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100))) .Amount )) }}
+                    {{ end }}
+                {{ end }}
+                <div class="ms-3">
+                    Стоимость заказа: {{ round $price 2 }} руб
                 </div>
-                <div class="row">
-                    Скидка: {{ .Discount }}%
+                <div class="ms-3">
+                    Скидка: {{ .BaseObject.CurrentUser.Card.Discount }}%
                 </div>
-                <div class="row">
-                    Итоговая стоимость: {{ .PriceFinal }} руб
+                <div class="ms-3">
+                    {{ $final_price := (subf $price ( divf $price .BaseObject.CurrentUser.Card.Discount )) }}
+                    Итоговая стоимость: {{ round $final_price 2 }} руб
                 </div>
-                <form action="/makeOrder">
-                    <input type="hidden" value="{{ .PriceFinal }}" name="PriceFinal">
-                    <div class="row my-3 mx-1">
-                        <select class="form-select" aria-label="Пункт выдачи" name="Delivery">
-                            <option value="" selected disabled>Пункт выдачи</option>
-                            {{ range $key, $item := .DeliverPoints }}
-                            <option value="{{ .Id }}">{{ .Address }}</option>
-                            {{ end }}
-                        </select>
+                <div class="fs-5 m-3 mb-2 text-light bg-primary bg-opacity-75 bg-gradient rounded d-flex align-items-center justify-content-center">
+                    Выберите место доставки заказа
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div id="map"></div>
+                </div>
+                <form action="/cart/make-order" method="post">
+                    {{.BaseObject.CsrfField}}
+                    <div class="m-3">
+                        <input id="address" class="form-control form-control-sm" required type="text" placeholder="Адрес" name="Address">
                     </div>
                     <div class="row my-3">
                         <button type="submit" class="btn btn-outline-primary w-50 mx-auto">Оформить заказ</button>
@@ -94,9 +120,8 @@
     </div>
     {{ else }}
     <div class="alert alert-warning text-center fs-5 mt-3 fade show" role="alert">
-        <img src="/icons/exclamation-triangle-fill.svg" width="24"> Для доступа к данной странице авторизуйтесь с аккаунта покупателя!
+        <i class="fs-4 bi-exclamation-triangle-fill"></i> Для доступа к данной странице авторизуйтесь с аккаунта покупателя! <i class="fs-4 bi-exclamation-triangle-fill"></i>
     </div>
     {{ end }}
-    <button class="errorBtn visually-hidden" data-bs-toggle="modal" data-bs-target="#errorMassage" tabindex="-1"></button>
 </body>
 </html>
