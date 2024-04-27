@@ -42,25 +42,57 @@
         <div class="row mt-3">
             <div class="col-2 mt-2">
                 <div class="border border-2 rounded p-2">
-                    <a href="#submenucategories" data-bs-toggle="collapse" class="nav-link text-center fs-5 text-bg-primary rounded p-1 mb-2">Категории</a>
-                    <form class="px-1" action="/main/category">
-                        <ul class="collapse nav" id="submenucategories" data-bs-parent="#menu">
+                    <form action="/main/category">
+                        <a href="#submenucategories" data-bs-toggle="collapse" class="nav-link text-center fs-5 text-bg-primary rounded p-1 mb-2">Категории</a>
+                        <ul class="collapse nav px-1" id="submenucategories" data-bs-parent="#menu">
                             {{ range $key, $category := .Categories }}
                             {{ if and (eq .Relation 0) (eq .IsExist true) }}
-                            <li class="text-center text-bg-primary bg-opacity-75 p-1 w-100 my-2">{{ .Name }}</li>
-                            {{ range $key1, $category1 := $.Categories }}
-                            {{ if and (eq .Relation $category.ID) (eq .IsExist true) }}
                             <li class="w-100">
-                                <div class="checkbox">
-                                    <label><input type="checkbox" value="1" name="{{ .Name }}"> {{ .Name }} </label>
-                                </div>
+                                <a href="#submenucategories{{ .ID }}" data-bs-toggle="collapse" class="nav-link text-center text-bg-primary bg-opacity-75 p-1 w-100 my-2">{{ .Name }}</a>
+                                <ul class="collapse nav" id="submenucategories{{ .ID }}" data-bs-parent="#menu">
+                                    {{ range $key1, $category1 := $.Categories }}
+                                    {{ if and (eq .Relation $category.ID) (eq .IsExist true) }}
+                                    <li class="w-100">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="1" name="{{ .Name }}"> {{ .Name }} </label>
+                                        </div>
+                                    </li>
+                                    {{ end }}
+                                    {{ end }}
+                                </ul>
                             </li>
                             {{ end }}
                             {{ end }}
+                        </ul>
+                        <a href="#submenucharacteristics" data-bs-toggle="collapse" class="nav-link text-center fs-5 text-bg-primary rounded p-1 mb-2">Характеристики</a>
+                        <ul class="collapse nav px-1" id="submenucharacteristics" data-bs-parent="#menu">
+                            {{ range $key, $characteristic := .Characteristics }}
+                            {{ if and (eq .Relation 0) (eq .IsExist true) }}
+                            <li class="w-100">
+                                <a href="#submenucharacteristics{{ .ID }}" data-bs-toggle="collapse" class="nav-link text-center text-bg-primary bg-opacity-75 p-1 w-100 my-2">{{ .Name }}</a>
+                                <ul class="collapse nav" id="submenucharacteristics{{ .ID }}" data-bs-parent="#menu">
+                                    {{ if eq $characteristic.Type "SET" }}
+                                    {{ range $key, $characteristic1 := $.Characteristics }}
+                                    {{ if and (eq .Relation $characteristic.ID) (eq .IsExist true) }}
+                                    <li class="w-100">
+                                        <div class="checkbox">
+                                            <label><input type="checkbox" value="1" name="{{ .Name }}"> {{ .Name }} </label>
+                                        </div>
+                                    </li>
+                                    {{ end }}
+                                    {{ end }}
+                                    {{ else }}
+                                    <li class="w-100 row mx-auto">
+                                        <input class="form-control form-control-sm col me-1" type="number" placeholder="От" name="{{ .Name }}|Min">
+                                        <input class="form-control form-control-sm col ms-1" type="number" placeholder="До" name="{{ .Name }}|Max">
+                                    </li>
+                                    {{ end }}
+                                </ul>
+                            </li>
                             {{ end }}
                             {{ end }}
                         </ul>
-                        <div class="row mt-3">
+                        <div class="row mt-3 mx-1">
                             <button type="submit" class="btn btn-outline-primary mx-auto">Применить</button>
                         </div>
                     </form>
@@ -69,12 +101,14 @@
             <div class="col row row-cols-1 row-cols-md-4 p-2">
                 {{ range $key, $product := .Products }}
                 {{ if eq .IsExist true }}
-                <div class="col">
+                <div class="col mb-4">
                     <div class="card h-100">
-                        <img class="card-img-top p-1 showImage" src="{{ .ImageLink }}" alt="{{ .ImageLink }}" height="350" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .ImageLink }}"/>
-                        <div class="card-body">
+                        <div class="card-img-top h-100 d-flex align-items-center justify-content-center">
+                            <img class="col-auto p-1 showImage" style="max-width: 280px; max-height: 330px" src="{{ .ImageLink }}" alt="{{ .ImageLink }}" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .ImageLink }}"/>
+                        </div>
+                        <div class="card-body py-1">
                             <h4 class="card-title">{{ .Name }}</h4>
-                            <p class="card-text">{{ .Category.Name }}</p>
+                            <strong class="card-text">{{ .Category.Name }}</strong>
                         </div>
                         <ul class="list-group border-0">
                             <li class="list-group-item border-0">Цена: {{ subf .Price (mulf .Price (divf .Discount 100)) }} руб{{ if ne .Discount 0 }} ({{ .Discount}}% Скидка){{ end }}</li>

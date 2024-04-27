@@ -112,6 +112,19 @@ func ChangeCart(w http.ResponseWriter, r *http.Request) {
 	http.Redirect(w, r, "/cart", http.StatusSeeOther)
 }
 
+func ChangeActive(w http.ResponseWriter, r *http.Request) {
+	var cart models.Cart
+	response := bin.Request("/carts/"+r.FormValue("Id"), "GET", bin.GetCurrentToken(w, r), nil, &cart)
+	bin.ResponseCheck(response, "/carts/"+r.FormValue("Id"), "GET")
+	cart.Active = !cart.Active
+	var result map[string]string
+	response = bin.Request("/carts/"+r.FormValue("Id"), "PUT", bin.GetCurrentToken(w, r), cart, &result)
+	if !(response.StatusCode == 200 || response.StatusCode == 201) {
+		bin.GlobalError = result["message"]
+	}
+	http.Redirect(w, r, "/cart", http.StatusSeeOther)
+}
+
 func MakeOrder(w http.ResponseWriter, r *http.Request) {
 	user := bin.GetCurrentUser(w, r)
 	var result map[string]any

@@ -605,3 +605,127 @@
 {"group":"server","level":"info","msg":"Received server token","time":"2024-04-27T18:22:33+03:00"}
 {"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-27T18:22:33+03:00"}
 {"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-27T18:22:33+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-27T18:38:45+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-27T18:38:48+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-27T18:38:48+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-27T19:03:55+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-27T19:03:55+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-27T19:03:55+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-27T19:03:55+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-27T19:03:55+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-27T19:03:55+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-27T19:03:55+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-27T22:57:42+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-27T22:57:42+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-27T22:57:42+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-27T22:57:43+03:00"}
+{"error":"template: main.html:74: function \"SET\" not defined","group":"errors","level":"error","msg":"template: main.html:74: function \"SET\" not defined","time":"2024-04-28T00:46:15+03:00"}
+{"error":"template: main.html:74: function \"SET\" not defined","group":"errors","level":"error","msg":"template: main.html:74: function \"SET\" not defined","time":"2024-04-28T00:46:16+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T00:59:46+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T00:59:46+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T00:59:46+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T00:59:47+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T01:37:26+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T01:37:26+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T01:37:26+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T01:37:26+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T01:37:26+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T01:37:26+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T01:37:26+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T01:38:57+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T01:38:57+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T01:38:57+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T01:38:57+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T01:38:57+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T01:38:57+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T01:38:57+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T01:40:54+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T01:40:54+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T01:40:54+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T01:40:54+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T01:40:55+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T01:40:55+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T01:40:55+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T01:45:11+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T01:45:11+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T01:45:11+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T01:45:11+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T01:45:11+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T01:45:11+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T01:45:11+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T01:48:56+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T01:48:56+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T01:48:56+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T01:48:56+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T01:48:57+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T01:48:57+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T01:48:57+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T02:01:15+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T02:01:15+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T02:01:15+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T02:01:15+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T02:01:15+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T02:01:15+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T02:01:15+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T02:04:42+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T02:04:42+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T02:04:42+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T02:04:42+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T02:04:43+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T02:04:43+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T02:04:43+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T02:14:22+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T02:14:22+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T02:14:22+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T02:14:22+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T02:14:23+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T02:14:23+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T02:14:23+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-28T02:14:42+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-28T02:14:43+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-28T02:17:57+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-28T02:17:57+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-28T02:17:57+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-28T02:17:57+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-28T02:17:57+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-28T02:17:57+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-28T02:17:57+03:00"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"Холодильники","relation":0,"table":"category","time":"2024-04-28T02:22:50+03:00"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"Холодильники","relation":0,"table":"category","time":"2024-04-28T02:22:50+03:00"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"Двухкамерный","relation":8,"table":"category","time":"2024-04-28T02:23:15+03:00"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"Двухкамерный","relation":8,"table":"category","time":"2024-04-28T02:23:15+03:00"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"Трёхкамерные","relation":8,"table":"category","time":"2024-04-28T02:23:29+03:00"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"Трёхкамерные","relation":8,"table":"category","time":"2024-04-28T02:23:29+03:00"}
+{"group":"crud","id":9,"level":"trace","method":"PUT","msg":"Sending database change request...","name":"Двухкамерные","relation":8,"table":"category","time":"2024-04-28T02:23:35+03:00"}
+{"group":"crud","id":9,"level":"info","method":"PUT","msg":"Successful database change","name":"Двухкамерные","relation":8,"table":"category","time":"2024-04-28T02:23:35+03:00"}
+{"group":"crud","level":"trace","method":"POST","msg":"Sending image to server...","table":"images","time":"2024-04-28T02:26:56+03:00"}
+{"group":"crud","level":"info","method":"POST","msg":"Successful image submission","table":"images","time":"2024-04-28T02:26:56+03:00"}
+{"amount":120,"category_id":"9","discount":0,"group":"crud","id":0,"image_link":"/images/refrigerator.jpg","level":"trace","method":"POST","msg":"Sending database change request...","name":"Indesit ITR 4180 W Total No Frost","price":31000,"table":"product","time":"2024-04-28T02:27:49+03:00"}
+{"amount":120,"category_id":"9","discount":0,"group":"crud","id":0,"image_link":"/images/refrigerator.jpg","level":"info","method":"POST","msg":"Successful database change","name":"Indesit ITR 4180 W Total No Frost","price":31000,"table":"product","time":"2024-04-28T02:27:49+03:00"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"Объем (общий)","relation":0,"table":"characteristic","time":"2024-04-28T02:28:33+03:00","type":"INT"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"Объем (общий)","relation":0,"table":"characteristic","time":"2024-04-28T02:28:33+03:00","type":"INT"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"Класс энергопотребления","relation":0,"table":"characteristic","time":"2024-04-28T02:28:56+03:00","type":"SET"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"Класс энергопотребления","relation":0,"table":"characteristic","time":"2024-04-28T02:28:56+03:00","type":"SET"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"A+++","relation":11,"table":"characteristic","time":"2024-04-28T02:29:14+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"A+++","relation":11,"table":"characteristic","time":"2024-04-28T02:29:14+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"A++","relation":11,"table":"characteristic","time":"2024-04-28T02:29:20+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"A++","relation":11,"table":"characteristic","time":"2024-04-28T02:29:20+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"A+","relation":11,"table":"characteristic","time":"2024-04-28T02:29:25+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"A+","relation":11,"table":"characteristic","time":"2024-04-28T02:29:25+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"A","relation":11,"table":"characteristic","time":"2024-04-28T02:29:32+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"A","relation":11,"table":"characteristic","time":"2024-04-28T02:29:32+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"B","relation":11,"table":"characteristic","time":"2024-04-28T02:29:36+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"B","relation":11,"table":"characteristic","time":"2024-04-28T02:29:36+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"C","relation":11,"table":"characteristic","time":"2024-04-28T02:29:40+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"C","relation":11,"table":"characteristic","time":"2024-04-28T02:29:40+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"D","relation":11,"table":"characteristic","time":"2024-04-28T02:29:44+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"D","relation":11,"table":"characteristic","time":"2024-04-28T02:29:44+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"E","relation":11,"table":"characteristic","time":"2024-04-28T02:29:54+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"E","relation":11,"table":"characteristic","time":"2024-04-28T02:29:54+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"F","relation":11,"table":"characteristic","time":"2024-04-28T02:29:58+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"F","relation":11,"table":"characteristic","time":"2024-04-28T02:29:58+03:00","type":"END"}
+{"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","name":"G","relation":11,"table":"characteristic","time":"2024-04-28T02:30:02+03:00","type":"END"}
+{"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","name":"G","relation":11,"table":"characteristic","time":"2024-04-28T02:30:02+03:00","type":"END"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-28T02:34:58+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-28T02:35:00+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-28T02:35:01+03:00"}

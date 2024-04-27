@@ -4,6 +4,7 @@ import (
 	"github.com/Masterminds/sprig/v3"
 	"github.com/gorilla/csrf"
 	"html/template"
+	"math"
 	"net/http"
 	"strconv"
 	"strings"
@@ -13,13 +14,21 @@ import (
 )
 
 var SearchText string
-var SetCategories []models.Category
+var FilterCategories []models.Category
+var FilterCharacteristicSets []models.Characteristic
+var FilterCharacteristicNumbers []FilterCharacteristicInt
 
 type MainPageObject struct {
 	BaseObject      structures.BaseObject
 	Products        []models.Product
 	Categories      []models.Category
 	Characteristics []models.Characteristic
+}
+
+type FilterCharacteristicInt struct {
+	Characteristic models.Characteristic
+	ValueMax       float64
+	ValueMin       float64
 }
 
 func MainPage(w http.ResponseWriter, r *http.Request) {
@@ -60,20 +69,89 @@ func searchHandle(unfilteredProducts []models.Product) []models.Product {
 	var Products []models.Product
 	for _, product := range unfilteredProducts {
 		if strings.Contains(product.Name, SearchText) {
-			if len(SetCategories) == 0 {
-				Products = append(Products, product)
-			} else {
-				for _, category := range SetCategories {
-					if category.Name == product.Category.Name {
+			if len(FilterCategories) == 0 {
+				if len(FilterCharacteristicSets) == 0 {
+					if len(FilterCharacteristicNumbers) == 0 {
 						Products = append(Products, product)
-						break
+					} else {
+						for _, characteristic := range FilterCharacteristicNumbers {
+							for _, set := range product.Sets {
+								if characteristic.Characteristic.Name == set.Characteristic.Name && characteristic.ValueMin <= set.Value && characteristic.ValueMax >= set.Value {
+									Products = append(Products, product)
+									goto exit
+								}
+							}
+						}
+					}
+				} else {
+					for _, characteristic := range FilterCharacteristicSets {
+						for _, set := range product.Sets {
+							if characteristic.Name == set.Characteristic.Name {
+								if len(FilterCharacteristicNumbers) == 0 {
+									Products = append(Products, product)
+									goto exit
+								} else {
+									for _, characteristic := range FilterCharacteristicNumbers {
+										for _, set := range product.Sets {
+											if characteristic.Characteristic.Name == set.Characteristic.Name && characteristic.ValueMin <= set.Value && characteristic.ValueMax >= set.Value {
+												Products = append(Products, product)
+												goto exit
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			} else {
+				for _, category := range FilterCategories {
+					if category.Name == product.Category.Name {
+						if len(FilterCharacteristicSets) == 0 {
+							if len(FilterCharacteristicNumbers) == 0 {
+								Products = append(Products, product)
+								goto exit
+							} else {
+								for _, characteristic := range FilterCharacteristicNumbers {
+									for _, set := range product.Sets {
+										if characteristic.Characteristic.Name == set.Characteristic.Name && characteristic.ValueMin <= set.Value && characteristic.ValueMax >= set.Value {
+											Products = append(Products, product)
+											goto exit
+										}
+									}
+								}
+							}
+						} else {
+							for _, characteristic := range FilterCharacteristicSets {
+								for _, set := range product.Sets {
+									if characteristic.Name == set.Characteristic.Name {
+										if len(FilterCharacteristicNumbers) == 0 {
+											Products = append(Products, product)
+											goto exit
+										} else {
+											for _, characteristic := range FilterCharacteristicNumbers {
+												for _, set := range product.Sets {
+													if characteristic.Characteristic.Name == set.Characteristic.Name && characteristic.ValueMin <= set.Value && characteristic.ValueMax >= set.Value {
+														Products = append(Products, product)
+														goto exit
+													}
+												}
+											}
+										}
+									}
+								}
+							}
+						}
 					}
 				}
 			}
 		}
+	exit:
 	}
 	SearchText = ""
-	SetCategories = nil
+	FilterCategories = nil
+	FilterCharacteristicSets = nil
+	FilterCharacteristicNumbers = nil
 	return Products
 }
 
@@ -88,7 +166,31 @@ func Filter(w http.ResponseWriter, r *http.Request) {
 	bin.ResponseCheck(response, "/categories", "GET")
 	for _, category := range categories {
 		if r.FormValue(category.Name) == "1" {
-			SetCategories = append(SetCategories, category)
+			FilterCategories = append(FilterCategories, category)
+		}
+	}
+	var characteristics []models.Characteristic
+	response = bin.Request("/characteristics", "GET", bin.ServerToken, nil, &characteristics)
+	bin.ResponseCheck(response, "/characteristics", "GET")
+	for _, characteristic := range characteristics {
+		if r.FormValue(characteristic.Name) == "1" {
+			FilterCharacteristicSets = append(FilterCharacteristicSets, characteristic)
+		}
+		valueMin, errMin := strconv.ParseFloat(r.FormValue(characteristic.Name+"|Min"), 64)
+		valueMax, errMax := strconv.ParseFloat(r.FormValue(characteristic.Name+"|Max"), 64)
+		if errMin == nil || errMax == nil {
+			if errMin != nil {
+				valueMin = -math.MaxFloat64
+			}
+			if errMax != nil {
+				valueMax = math.MaxFloat64
+			}
+			characteristicNumber := FilterCharacteristicInt{
+				Characteristic: characteristic,
+				ValueMax:       valueMax,
+				ValueMin:       valueMin,
+			}
+			FilterCharacteristicNumbers = append(FilterCharacteristicNumbers, characteristicNumber)
 		}
 	}
 	http.Redirect(w, r, "/", http.StatusSeeOther)

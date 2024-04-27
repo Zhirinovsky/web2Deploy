@@ -116,3 +116,5 @@ time="2024-04-27T15:54:01+03:00" level=error msg="Failed order position creation
 time="2024-04-27T15:54:55+03:00" level=error msg="strconv.Atoi: parsing \"\": invalid syntax" error="strconv.Atoi: parsing \"\": invalid syntax" group=errors
 time="2024-04-27T15:56:03+03:00" level=error msg="Failed order position creation" address="Московская область, Ленинский городской округ, Видное, гаражный кооператив Колхозник, с191" date="2024-04-27 15:54:15" email=User@mail.com group=ordering status_id=1 user_id=3
 time="2024-04-27T15:56:03+03:00" level=error msg="Failed order position creation" address="Московская область, Ленинский городской округ, Видное, гаражный кооператив Колхозник, с191" date="2024-04-27 15:54:15" email=User@mail.com group=ordering status_id=1 user_id=3
+time="2024-04-28T00:46:15+03:00" level=error msg="template: main.html:74: function \"SET\" not defined" error="template: main.html:74: function \"SET\" not defined" group=errors
+time="2024-04-28T00:46:16+03:00" level=error msg="template: main.html:74: function \"SET\" not defined" error="template: main.html:74: function \"SET\" not defined" group=errors

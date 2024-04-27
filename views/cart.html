@@ -64,6 +64,9 @@
                 <form class="visually-hidden" id="removeCart{{ .ID }}" action="/cart/remove-cart">
                     <input type="hidden" value="{{ .ID }}" name="Id">
                 </form>
+                <form class="visually-hidden" id="active{{ .ID }}" action="/cart/change-active">
+                    <input type="hidden" value="{{ .ID }}" name="Id">
+                </form>
                 <form class="visually-hidden" id="addAmount{{ .ID }}" action="/cart/change-cart">
                     <input type="hidden" value="{{ .ID }}" name="Id">
                     <input type="hidden" value="{{ .Product.ID }}" name="ProductId">

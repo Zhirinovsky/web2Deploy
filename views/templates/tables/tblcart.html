@@ -3,9 +3,12 @@
 <tbody>
 {{ range $key, $cart := .Carts }}
 <tr>
+  <td class="align-middle">
+    <input class="form-check-input form-check m-1" type="checkbox" form="active{{ .ID }}" onChange="this.form.submit()" {{ if .Active }} checked="checked" {{ end }}>
+  </td>
   <td class="align-middle row">
-    <img class="col-auto" src="{{ .Product.ImageLink }}" alt="" height="120"/>
-    <div class="col mx-auto row align-items-cente">
+    <img class="col-auto ms-3" src="{{ .Product.ImageLink }}" alt="" height="120"/>
+    <div class="col mx-auto row align-items-center">
       <p class="m-auto text-center fs-4 pt-3">{{ .Product.Name }}</p>
       <p class="m-auto text-center fs-4 pb-3">{{ round (subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100))) 2 }} руб</p>
     </div>

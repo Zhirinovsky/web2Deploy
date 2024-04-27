@@ -34,9 +34,10 @@ func main() {
 	r.HandleFunc("/profile/card-create", pages.CreateCard)             //Метод создания скидочной карты
 	r.HandleFunc("/profile/card-delete", pages.DeleteCard)             //Метод удаления скидочной карты
 	//Методы корзины
-	r.HandleFunc("/cart/remove-cart", pages.RemoveCart) //Метод удаления товара из корзины
-	r.HandleFunc("/cart/change-cart", pages.ChangeCart) //Метод изменения количества товара в корзине
-	r.HandleFunc("/cart/make-order", pages.MakeOrder)   //Метод оформления заказа
+	r.HandleFunc("/cart/remove-cart", pages.RemoveCart)     //Метод удаления товара из корзины
+	r.HandleFunc("/cart/change-cart", pages.ChangeCart)     //Метод изменения количества товара в корзине
+	r.HandleFunc("/cart/change-active", pages.ChangeActive) //Метод изменения статуса товара в заказе
+	r.HandleFunc("/cart/make-order", pages.MakeOrder)       //Метод оформления заказа
 	//Cud действия
 	r.HandleFunc("/products", bin.CudProduct)               //Методы CRUD действий над продуктами
 	r.HandleFunc("/characteristics", bin.CudCharacteristic) //Методы CRUD действий над характеристиками
