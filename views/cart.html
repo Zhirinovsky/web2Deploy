@@ -87,7 +87,7 @@
         <div class="col-3 mx-2 mb-5">
             <div class="border rounded-5">
                 <p class="text-center fs-4 mt-2">Информация о заказе: </p>
-                {{ $price := 0 }}
+                {{ $price := 0.0 }}
                 {{ range $key, $cart := .Carts }}
                     {{ if .Active }}
                         {{ $price = (addf $price ( mulf (subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100))) .Amount )) }}
@@ -115,7 +115,7 @@
                         <input id="address" class="form-control form-control-sm" required type="text" placeholder="Адрес" name="Address">
                     </div>
                     <div class="row my-3">
-                        <button type="submit" class="btn btn-outline-primary w-50 mx-auto">Оформить заказ</button>
+                        <button type="submit" class="btn btn-outline-primary w-50 mx-auto {{ if eq $price 0.0 }} disabled {{ end }}">Оформить заказ</button>
                     </div>
                 </form>
             </div>
