@@ -908,3 +908,61 @@
 {"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-29T18:02:07+03:00"}
 {"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T18:02:09+03:00"}
 {"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-29T18:02:09+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T20:51:14+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T20:51:14+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T20:51:14+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T20:51:14+03:00"}
+{"group":"server","level":"error","msg":"No response from API","time":"2024-04-29T20:51:14+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T20:51:45+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T20:51:46+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T20:51:46+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T20:51:46+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T20:51:46+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T20:52:56+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T20:52:56+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T20:52:56+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T20:52:56+03:00"}
+{"group":"server","level":"error","msg":"No response from API","time":"2024-04-29T20:52:56+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T20:53:17+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T20:53:17+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T20:53:17+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T20:53:17+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-29T20:53:17+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-29T20:53:17+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-29T20:53:17+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T20:53:23+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-29T20:53:24+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T21:01:59+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T21:01:59+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T21:01:59+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T21:01:59+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T21:02:00+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T21:02:39+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T21:02:39+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T21:02:39+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T21:02:39+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T21:02:40+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T21:03:38+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T21:03:38+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T21:03:38+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T21:03:38+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T21:03:38+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T21:04:26+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T21:04:26+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T21:04:26+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T21:04:26+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T21:04:26+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T21:05:04+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T21:05:04+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T21:05:04+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T21:05:04+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-29T21:05:04+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-29T21:05:04+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-29T21:05:04+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T21:05:54+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API...","time":"2024-04-29T21:05:54+03:00"}
+{"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T21:05:54+03:00"}
+{"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T21:05:54+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-29T21:05:55+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-29T21:05:55+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-29T21:05:55+03:00"}
