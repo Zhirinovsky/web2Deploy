@@ -1,3 +1,3 @@
-Api: http://127.0.0.1:8079
+Api: https://apideploy-production-827f.up.railway.app
 Login: qwerty@mail.com
 Password: Pa$$w0rd
