@@ -6,6 +6,7 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	log "github.com/sirupsen/logrus"
 	"net/http"
+	"os"
 	"web2/bin"
 	"web2/bin/pages"
 )
@@ -67,7 +68,11 @@ func main() {
 	CSRF := csrf.Protect([]byte("my-current-secret-key-5467"), csrf.SameSite(csrf.SameSiteStrictMode))
 	//err = http.ListenAndServeTLS(":8080", "cert.pem", "key.pem", CSRF(r))
 	bin.SaveLog(log.Fields{"group": "server"}, log.InfoLevel, "The server is running successfully")
-	err := http.ListenAndServe(":8080", CSRF(r))
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	err := http.ListenAndServe(":"+port, CSRF(r))
 	if err != nil {
 		bin.SaveLog(log.Fields{
 			"group": "server",
