@@ -136,3 +136,4 @@ time="2024-04-29T21:02:00+03:00" level=error msg="Server token was not received"
 time="2024-04-29T21:02:40+03:00" level=error msg="Server token was not received" group=server
 time="2024-04-29T21:03:38+03:00" level=error msg="Server token was not received" group=server
 time="2024-04-29T21:04:26+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T21:34:42+03:00" level=error msg="Server token was not received" group=server
