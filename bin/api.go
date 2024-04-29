@@ -3,12 +3,16 @@ package bin
 import (
 	"bytes"
 	"encoding/json"
+	"github.com/redis/go-redis/v9"
 	log "github.com/sirupsen/logrus"
 	"io"
 	"net/http"
+	"strconv"
 )
 
 var GlobalUrl, ServerToken, GlobalError, GlobalMessage string
+var data = GetConfigData()
+var Client = redis.NewClient(&redis.Options{})
 
 // Оснвной универсальный метод отправки запросов в API
 func Request(url string, typeReq string, token string, bodyReq any, bodyResp any) *http.Response {
@@ -34,8 +38,14 @@ func Request(url string, typeReq string, token string, bodyReq any, bodyResp any
 func ConnectAPI() {
 	SaveLog(log.Fields{
 		"group": "server",
-	}, log.TraceLevel, "Connecting to API...")
-	data := GetConfigData()
+	}, log.TraceLevel, "Connecting to API and Redis...")
+	db, err := strconv.Atoi(data["RedisDB"])
+	CheckErr(err)
+	Client = redis.NewClient(&redis.Options{
+		Addr:     data["RedisAddr"],
+		Password: data["RedisPassword"],
+		DB:       db,
+	})
 	GlobalUrl = data["Api"]
 	user := map[string]string{
 		"Email":    data["Login"],
