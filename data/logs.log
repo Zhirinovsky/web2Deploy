@@ -991,3 +991,8 @@
 {"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-29T22:47:25+03:00"}
 {"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T22:47:31+03:00"}
 {"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-29T22:47:31+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T23:01:13+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-04-29T23:01:14+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-29T23:01:14+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-29T23:01:14+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-29T23:01:14+03:00"}

@@ -100,7 +100,7 @@
                     Скидка: {{ .BaseObject.CurrentUser.Card.Discount }}%
                 </div>
                 <div class="ms-3">
-                    {{ $final_price := (subf $price ( divf $price .BaseObject.CurrentUser.Card.Discount )) }}
+                    {{ $final_price := (subf $price ( mulf $price ( divf .BaseObject.CurrentUser.Card.Discount 100 ))) }}
                     Итоговая стоимость: {{ round $final_price 2 }} руб
                 </div>
                 <div class="fs-5 m-3 mb-2 text-light bg-primary bg-opacity-75 bg-gradient rounded d-flex align-items-center justify-content-center">
