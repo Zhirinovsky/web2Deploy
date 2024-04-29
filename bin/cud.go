@@ -175,7 +175,7 @@ func CudCharacteristic(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestCharacteristic, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-characteristic", http.StatusSeeOther)
 }
 
 func CudCategory(w http.ResponseWriter, r *http.Request) {
@@ -220,7 +220,7 @@ func CudCategory(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestCategory, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-category", http.StatusSeeOther)
 }
 
 func CudImages(w http.ResponseWriter, r *http.Request) {
@@ -313,7 +313,7 @@ func CudImages(w http.ResponseWriter, r *http.Request) {
 		}
 		SaveLog(requestImage, log.InfoLevel, "Successful image submission")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-image", http.StatusSeeOther)
 }
 
 func CudStatus(w http.ResponseWriter, r *http.Request) {
@@ -355,7 +355,7 @@ func CudStatus(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestStatus, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-status", http.StatusSeeOther)
 }
 
 func CudRole(w http.ResponseWriter, r *http.Request) {
@@ -397,7 +397,7 @@ func CudRole(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestRole, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-role", http.StatusSeeOther)
 }
 
 func CudUser(w http.ResponseWriter, r *http.Request) {
@@ -461,7 +461,7 @@ func CudUser(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestUser, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-user", http.StatusSeeOther)
 }
 
 func CudCard(w http.ResponseWriter, r *http.Request) {
@@ -499,7 +499,7 @@ func CudCard(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestCard, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-user", http.StatusSeeOther)
 }
 
 func CudOrder(w http.ResponseWriter, r *http.Request) {
@@ -545,7 +545,7 @@ func CudOrder(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestOrder, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-order", http.StatusSeeOther)
 }
 
 func CudPosition(w http.ResponseWriter, r *http.Request) {
@@ -589,5 +589,5 @@ func CudPosition(w http.ResponseWriter, r *http.Request) {
 	} else {
 		SaveLog(requestPosition, log.InfoLevel, "Successful database change")
 	}
-	http.Redirect(w, r, "/admin", http.StatusSeeOther)
+	http.Redirect(w, r, "/admin#nav-order", http.StatusSeeOther)
 }

@@ -83,11 +83,11 @@
         </form>
         {{ if eq .BaseObject.CurrentUser.Role.Name "Клиент" }}
         <h1 class="display-6 my-4 text-center">Список заказов</h1>
-        <div class="row">
+        <div class="row row-cols-1 row-cols-md-4 m-2">
             {{ range $key, $order := .Orders }}
             {{ if eq $.BaseObject.CurrentUser.Email .User.Email }}
             <div class="col">
-                <div class="card">
+                <div class="card mb-2">
                     <div class="card-header pb-0">
                         <h4 class="card-title">Заказ №{{ add .ID 1000 }}</h4>
                     </div>
@@ -96,7 +96,7 @@
                         {{ range $key, $position := .Positions }}
                         {{ $price = (addf $price ( mulf .CheckoutPrice .Amount )) }}
                         {{ end }}
-                        <ul class="list-group border-0">
+                        <ul class="list-group border-0 fs-5">
                             <li class="list-group-item border-0">Общая стоимость: {{ $price }} руб</li>
                             <li class="list-group-item border-0">Дата: {{ .Date }}</li>
                             <li class="list-group-item border-0">Статус: {{ .Status.Status }}</li>

@@ -11,6 +11,7 @@
     <script src="/static/js/custom/errorWindow.js"></script>
     <script src="/static/js/custom/messageWindow.js"></script>
     <script src="/static/js/custom/modals.js"></script>
+    <script src="/static/js/lib/purePajinate.js"></script>
 </head>
 <body>
     <!-- Шапка и боковая панель -->
@@ -30,7 +31,7 @@
 
     <h1 class="display-5 mb-3 text-center mt-5 pt-5">Каталог товаров</h1>
 
-    <div class="py-2 mx-4 pb-4">
+    <div class="py-2 mx-4 pb-3">
         <form action="/main/search" method="post" class="input-group p-10">
             {{.BaseObject.CsrfField}}
             <input placeholder="Найти" class="form-control form-control-lg rounded-start" type="text" name="SearchText">
@@ -43,6 +44,7 @@
             <div class="col-2 mt-2">
                 <div class="border border-2 rounded p-2">
                     <form action="/main/category">
+                        <p class="text-center fs-4">Фильтрация</p>
                         <a href="#submenucategories" data-bs-toggle="collapse" class="nav-link text-center fs-5 text-bg-primary rounded p-1 mb-2">Категории</a>
                         <ul class="collapse nav px-1" id="submenucategories" data-bs-parent="#menu">
                             {{ range $key, $category := .Categories }}
@@ -64,7 +66,7 @@
                             {{ end }}
                             {{ end }}
                         </ul>
-                        <a href="#submenucharacteristics" data-bs-toggle="collapse" class="nav-link text-center fs-5 text-bg-primary rounded p-1 mb-2">Характеристики</a>
+                        <a href="#submenucharacteristics" data-bs-toggle="collapse" class="nav-link text-center fs-5 text-bg-primary rounded p-1 my-2">Характеристики</a>
                         <ul class="collapse nav px-1" id="submenucharacteristics" data-bs-parent="#menu">
                             {{ range $key, $characteristic := .Characteristics }}
                             {{ if and (eq .Relation 0) (eq .IsExist true) }}
@@ -98,11 +100,11 @@
                     </form>
                 </div>
             </div>
-            <div class="col row row-cols-1 row-cols-md-4 p-2">
+            <div class="col row row-cols-1 row-cols-md-4 p-2 items" style="height: 600px">
                 {{ range $key, $product := .Products }}
                 {{ if eq .IsExist true }}
-                <div class="col mb-4">
-                    <div class="card h-100">
+                <div class="col mb-4 item">
+                    <div class="card" style="height: 600px">
                         <div class="card-img-top h-100 d-flex align-items-center justify-content-center">
                             <img class="col-auto p-1 showImage" style="max-width: 280px; max-height: 330px" src="{{ .ImageLink }}" alt="{{ .ImageLink }}" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .ImageLink }}"/>
                         </div>
@@ -131,8 +133,10 @@
                 </div>
                 {{ end }}
                 {{ end }}
+                <div class="page_navigation d-flex justify-content-center align-items-center mt-3 w-100"></div>
             </div>
         </div>
     </div>
+    <script src="/static/js/custom/pagination.js"></script>
 </body>
 </html>

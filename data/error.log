@@ -118,3 +118,14 @@ time="2024-04-27T15:56:03+03:00" level=error msg="Failed order position creation
 time="2024-04-27T15:56:03+03:00" level=error msg="Failed order position creation" address="Московская область, Ленинский городской округ, Видное, гаражный кооператив Колхозник, с191" date="2024-04-27 15:54:15" email=User@mail.com group=ordering status_id=1 user_id=3
 time="2024-04-28T00:46:15+03:00" level=error msg="template: main.html:74: function \"SET\" not defined" error="template: main.html:74: function \"SET\" not defined" group=errors
 time="2024-04-28T00:46:16+03:00" level=error msg="template: main.html:74: function \"SET\" not defined" error="template: main.html:74: function \"SET\" not defined" group=errors
+time="2024-04-29T16:31:29+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:29+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:29+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:30+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:30+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:30+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:31+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:32+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:31:37+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:32:08+03:00" level=error msg="Server token was not received" group=server
+time="2024-04-29T16:35:54+03:00" level=error msg="Server token was not received" group=server

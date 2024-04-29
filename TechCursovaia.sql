@@ -139,8 +139,9 @@ CREATE TABLE Order_Position (
     Product_ID integer REFERENCES Product (ID)
 );
 
-select * from Status
+select * from "User";
 
+update "User" set email = 'qwerty@mail.com', password = '$2a$10$j40OMhwBf56pQqiz8eoyI.UyRH8XCuBs17q3pUZuwkzPg5KySqn1q' where ID = 1
 ---------------------------------------------------------------------
 
 CREATE OR REPLACE FUNCTION remove_product_amount_fnc()
