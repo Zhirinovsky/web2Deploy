@@ -971,3 +971,23 @@
 {"group":"server","level":"trace","msg":"Collecting configuration data...","time":"2024-04-29T21:34:41+03:00"}
 {"group":"server","level":"info","msg":"Configuration data collected","time":"2024-04-29T21:34:41+03:00"}
 {"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T21:34:42+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T22:42:46+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-04-29T22:42:46+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T22:42:47+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T22:43:13+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-04-29T22:43:13+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T22:43:14+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T22:44:00+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-04-29T22:44:00+03:00"}
+{"group":"server","level":"error","msg":"Server token was not received","time":"2024-04-29T22:44:00+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T22:46:26+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-04-29T22:46:27+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-29T22:46:27+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-29T22:46:27+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-29T22:46:27+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-29T22:46:42+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T22:46:44+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-29T22:46:45+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-29T22:47:25+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T22:47:31+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-29T22:47:31+03:00"}

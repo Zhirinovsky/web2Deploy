@@ -1,0 +1,13 @@
+Api: https://apideploy-production-57c1.up.railway.app
+Login: qwerty@mail.com
+Password: Pa$$w0rd
+RedisAddr: monorail.proxy.rlwy.net:58289
+RedisPassword: nwRocaqIVMdEBgNcaPkhwBXzKbyTcvYF
+RedisDB: 0
+
+Api: http://127.0.0.1:8079
+Login: qwerty@mail.com
+Password: Pa$$w0rd
+RedisAddr: localhost:6379
+RedisPassword: -
+RedisDB: 0

@@ -41,9 +41,15 @@ func ConnectAPI() {
 	}, log.TraceLevel, "Connecting to API and Redis...")
 	db, err := strconv.Atoi(data["RedisDB"])
 	CheckErr(err)
+	var password string
+	if data["RedisPassword"] == "-" {
+		password = ""
+	} else {
+		password = data["RedisPassword"]
+	}
 	Client = redis.NewClient(&redis.Options{
 		Addr:     data["RedisAddr"],
-		Password: data["RedisPassword"],
+		Password: password,
 		DB:       db,
 	})
 	GlobalUrl = data["Api"]
