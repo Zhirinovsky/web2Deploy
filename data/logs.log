@@ -996,3 +996,89 @@
 {"group":"server","level":"info","msg":"Received server token","time":"2024-04-29T23:01:14+03:00"}
 {"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-29T23:01:14+03:00"}
 {"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-29T23:01:14+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-29T23:19:04+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-04-29T23:19:04+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-29T23:19:04+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-29T23:19:04+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-29T23:19:04+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-29T23:19:09+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T23:19:13+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-29T23:19:13+03:00"}
+{"email":"User@mail.com","group":"profile","level":"trace","msg":"Sending discount card deletion request...","time":"2024-04-29T23:19:37+03:00"}
+{"email":"User@mail.com","group":"profile","level":"info","msg":"Successful discount card deletion","time":"2024-04-29T23:19:37+03:00"}
+{"error":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0\u003e: error calling eq: incompatible types for comparison","time":"2024-04-29T23:20:35+03:00"}
+{"error":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0\u003e: error calling eq: incompatible types for comparison","time":"2024-04-29T23:20:38+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T23:25:55+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-29T23:25:55+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T23:26:31+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-29T23:26:31+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-29T23:28:54+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T23:28:58+03:00"}
+{"email":"New@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-29T23:28:58+03:00"}
+{"address":"Москва, Никольская улица, 4/5","date":"2024-04-29 23:29:11","email":"New@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-04-29T23:29:11+03:00","user_id":5}
+{"address":"Москва, Никольская улица, 4/5","date":"2024-04-29 23:29:11","email":"New@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-04-29T23:29:11+03:00","user_id":5}
+{"amount":1,"checkout_price":10000,"email":"New@mail.com","group":"ordering","level":"info","msg":"Successful order position creation","order_id":22,"product_id":4,"time":"2024-04-29T23:29:11+03:00"}
+{"active":true,"amount":1,"email":"New@mail.com","group":"ordering","id":19,"level":"info","msg":"Successful cart position deletion","product_id":4,"time":"2024-04-29T23:29:11+03:00","user_id":5}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T23:42:12+03:00"}
+{"email":"New@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-29T23:42:12+03:00"}
+{"error":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0\u003e: error calling eq: incompatible types for comparison","time":"2024-04-29T23:42:35+03:00"}
+{"error":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq (round $price 1) 0\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq (round $price 1) 0\u003e: error calling eq: incompatible types for comparison","time":"2024-04-29T23:43:17+03:00"}
+{"error":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq (round $price 0) 0\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq (round $price 0) 0\u003e: error calling eq: incompatible types for comparison","time":"2024-04-29T23:43:22+03:00"}
+{"error":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0.0\u003e: error calling eq: incompatible types for comparison","group":"errors","level":"panic","msg":"template: cart.html:118:96: executing \"cart.html\" at \u003ceq $price 0.0\u003e: error calling eq: incompatible types for comparison","time":"2024-04-29T23:45:30+03:00"}
+{"email":"New@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-29T23:49:14+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-29T23:49:18+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-04-29T23:49:18+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-04-30T00:04:13+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-04-30T00:04:13+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-04-30T00:04:13+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-04-30T00:04:13+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-04-30T00:04:13+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-04-30T00:04:37+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-04-30T00:04:40+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-04-30T00:04:40+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-03T10:29:59+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-03T10:29:59+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-03T10:30:00+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-03T10:30:00+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-03T10:30:00+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-03T10:30:53+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-03T10:30:54+03:00"}
+{"address":"Московская область, Подольск, Симферопольская улица, 17","date":"2024-05-03 10:32:39","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-03T10:32:39+03:00","user_id":3}
+{"address":"Московская область, Подольск, Симферопольская улица, 17","date":"2024-05-03 10:32:39","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-03T10:32:39+03:00","user_id":3}
+{"amount":1,"checkout_price":70000,"email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order position creation","order_id":23,"product_id":3,"time":"2024-05-03T10:32:39+03:00"}
+{"active":true,"amount":1,"email":"User@mail.com","group":"ordering","id":22,"level":"info","msg":"Successful cart position deletion","product_id":3,"time":"2024-05-03T10:32:39+03:00","user_id":3}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-04T01:12:28+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-04T01:12:28+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-04T01:12:29+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-04T01:12:29+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-04T01:12:29+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-04T01:14:33+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-04T01:14:34+03:00"}
+{"date":"2024-05-04 01:35:52","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"trace","msg":"Sending discount card creation request...","time":"2024-05-04T01:35:52+03:00"}
+{"date":"2024-05-04 01:35:52","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"info","msg":"Successful discount card creation","time":"2024-05-04T01:35:52+03:00"}
+{"error":"template: cart.html:44:182: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","group":"errors","level":"panic","msg":"template: cart.html:44:182: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","time":"2024-05-04T01:38:27+03:00"}
+{"error":"template: cart.html:44:182: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","group":"errors","level":"panic","msg":"template: cart.html:44:182: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","time":"2024-05-04T01:38:28+03:00"}
+{"error":"template: cart.html:44:182: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","group":"errors","level":"panic","msg":"template: cart.html:44:182: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","time":"2024-05-04T01:38:35+03:00"}
+{"error":"template: cart.html:44:106: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","group":"errors","level":"panic","msg":"template: cart.html:44:106: executing \"cart.html\" at \u003c.ImageLink\u003e: can't evaluate field ImageLink in type models.Cart","time":"2024-05-04T01:39:45+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-04T01:41:23+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-04T01:41:23+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-04T01:41:23+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-04T01:41:23+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-04T01:41:23+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-04T20:16:45+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-04T20:16:45+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-04T20:16:46+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-04T20:16:46+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-04T20:16:46+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-04T20:16:53+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-04T20:16:53+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-04T20:28:59+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-04T20:29:08+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-04T20:29:09+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-06T01:42:12+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-06T01:42:12+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-06T01:42:13+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-06T01:42:13+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-06T01:42:13+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-06T01:42:30+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-06T01:42:31+03:00"}

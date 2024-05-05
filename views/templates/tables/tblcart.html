@@ -7,7 +7,7 @@
     <input class="form-check-input form-check m-1" type="checkbox" form="active{{ .ID }}" onChange="this.form.submit()" {{ if .Active }} checked="checked" {{ end }}>
   </td>
   <td class="align-middle mx-auto" style="width: 50px">
-    <img class="mx-auto" src="{{ .Product.ImageLink }}" height="120"/>
+    <img class="mx-auto showImage" src="{{ .Product.ImageLink }}" alt="{{ .Product.ImageLink }}" height="120" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .Product.ImageLink }}"/>
   </td>
   <td class="align-middle mx-auto align-items-center">
     <p class="m-auto text-center fs-4 pt-3">{{ .Product.Name }}</p>

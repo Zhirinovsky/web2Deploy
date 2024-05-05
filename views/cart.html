@@ -41,7 +41,7 @@
             <div class="justify-content-center align-items-center p-2 px-4" hidden="hidden">
                 <div class="justify-content-center align-items-center border border-primary border-2 rounded-5 row">
                     <div class="col">
-                        <img class="m-1 mx-auto d-block" src="{{ .Product.ImageLink }}" alt="" height="120"/>
+                        <img class="m-1 mx-auto d-block showImage" src="{{ .Product.ImageLink }}" alt="{{ .Product.ImageLink }}" height="120" data-bs-toggle="modal" data-bs-target="#imageShow" data-src="{{ .Product.ImageLink }}"/>
                     </div>
                     <div class="col">
                         <p class="text-center fs-4 m-0">{{ .Product.Name }}</p>
