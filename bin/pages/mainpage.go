@@ -228,7 +228,11 @@ func AddCart(w http.ResponseWriter, r *http.Request) {
 				} else {
 					bin.GlobalMessage = "Товар успешно добавлен в корзину"
 				}
+			} else {
+				bin.GlobalError = "Товар отсутствует на складе"
 			}
+		} else {
+			bin.GlobalError = "Товар уже имеется в корзине"
 		}
 	}
 	http.Redirect(w, r, "/", http.StatusSeeOther)
