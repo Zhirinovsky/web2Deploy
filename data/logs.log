@@ -1333,3 +1333,10 @@
 {"group":"crud","level":"trace","method":"POST","msg":"Sending image to server...","table":"images","time":"2024-05-14T01:03:17+03:00"}
 {"date":"","discount":0,"group":"crud","id":3,"level":"trace","method":"POST","msg":"Sending database change request...","table":"card","time":"2024-05-14T01:11:17+03:00"}
 {"date":"","discount":0,"group":"crud","id":3,"level":"info","method":"POST","msg":"Successful database change","table":"card","time":"2024-05-14T01:11:17+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-14T21:50:19+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-14T21:50:19+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-14T21:50:19+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-14T21:50:19+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-14T21:50:19+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-14T21:50:27+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-14T21:50:28+03:00"}
