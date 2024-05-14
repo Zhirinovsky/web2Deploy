@@ -1,6 +1,6 @@
-Api: http://127.0.0.1:8079
+Api: https://apideploy-production-57c1.up.railway.app
 Login: qwerty@mail.com
-Password: Pa$$w0rd
-RedisAddr: localhost:6379
-RedisPassword: -
+Password: Pa$$w0rdAdmin
+RedisAddr: monorail.proxy.rlwy.net:58289
+RedisPassword: nwRocaqIVMdEBgNcaPkhwBXzKbyTcvYF
 RedisDB: 0
