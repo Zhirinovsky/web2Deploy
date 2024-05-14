@@ -12,6 +12,7 @@ import (
 )
 
 func main() {
+	pages.PagePagination = 4
 	//Настройка логов
 	bin.ConfigLogs()
 	bin.SaveLog(log.Fields{"group": "server"}, log.TraceLevel, "Server startup...")
@@ -26,9 +27,10 @@ func main() {
 	//Методы сессии
 	r.HandleFunc("/logout", bin.Logout) //Выход из учётной записи
 	//Методы главной страницы
-	r.HandleFunc("/main/search", pages.SearchProduct) //Метод поиска продукта на основной странице
-	r.HandleFunc("/main/category", pages.Filter)      //Метод фильтрации продуктов по категориям
-	r.HandleFunc("/main/add-cart", pages.AddCart)     //Метод добавления товара в корзину
+	r.HandleFunc("/main/search", pages.SearchProduct)      //Метод поиска продукта на основной странице
+	r.HandleFunc("/main/category", pages.Filter)           //Метод фильтрации продуктов по категориям
+	r.HandleFunc("/main/add-cart", pages.AddCart)          //Метод добавления товара в корзину
+	r.HandleFunc("/main/paginate", pages.ChangePagination) //Метод изменения кол-ва отображаемых товаров
 	//Методы профиля
 	r.HandleFunc("/profile/personalisation", pages.ChangePersonalData) //Метод изменения персональных данных
 	r.HandleFunc("/profile/change-password", pages.ChangePassword)     //Метод смены пароля

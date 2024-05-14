@@ -1,5 +1,5 @@
 new purePajinate({
-    itemsPerPage: 4,
+    itemsPerPage: $('#pageSelect').val(),
     wrapAround: true,
     navLabelFirst: '<i class="bi bi-skip-start-fill"></i>',
     navLabelPrev: '<i class="bi-caret-left-fill"></i>',

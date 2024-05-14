@@ -140,3 +140,14 @@ time="2024-04-29T21:34:42+03:00" level=error msg="Server token was not received"
 time="2024-04-29T22:42:47+03:00" level=error msg="Server token was not received" group=server
 time="2024-04-29T22:43:14+03:00" level=error msg="Server token was not received" group=server
 time="2024-04-29T22:44:00+03:00" level=error msg="Server token was not received" group=server
+time="2024-05-13T17:57:38+03:00" level=error msg="template: main.html:104: unexpected {{end}}" error="template: main.html:104: unexpected {{end}}" group=errors
+time="2024-05-13T17:57:38+03:00" level=error msg="template: main.html:104: unexpected {{end}}" error="template: main.html:104: unexpected {{end}}" group=errors
+time="2024-05-13T17:57:39+03:00" level=error msg="template: main.html:104: unexpected {{end}}" error="template: main.html:104: unexpected {{end}}" group=errors
+time="2024-05-13T18:22:27+03:00" level=error msg="Failed order position creation" amount=3 checkout_price=10000 email=User@mail.com error="pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"" group=ordering order_id=24 product_id=4
+time="2024-05-13T23:39:24+03:00" level=error msg="Failed order position creation" amount=3 checkout_price=10000 email=User@mail.com error="pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"" group=ordering order_id=25 product_id=4
+time="2024-05-13T23:42:55+03:00" level=error msg="Failed order position creation" amount=3 checkout_price=10000 email=User@mail.com error="pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"" group=ordering order_id=26 product_id=4
+time="2024-05-13T23:43:03+03:00" level=error msg="Failed order position creation" amount=3 checkout_price=10000 email=User@mail.com error="pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"" group=ordering order_id=27 product_id=4
+time="2024-05-13T23:48:02+03:00" level=error msg="Failed order position creation" amount=3 checkout_price=10000 email=User@mail.com error="pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"" group=ordering order_id=28 product_id=4
+time="2024-05-13T23:49:39+03:00" level=error msg="Failed order position creation" amount=6 checkout_price=10000 email=User@mail.com error="pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"" group=ordering order_id=29 product_id=4
+time="2024-05-14T00:17:46+03:00" level=error msg="Failed password change" email=User@mail.com error="Password mismatched." group=profile id=3 new_password=aM5-uhZ-A85-r4Q old_password="Pa$$w0rd" repeat_password=sdfghDSFG32
+time="2024-05-14T00:45:36+03:00" level=error msg="Failed database change" characteristic_id=1 error="This characteristic has already been assigned to the product" group=crud id=0 method=POST product_id=0 table=set

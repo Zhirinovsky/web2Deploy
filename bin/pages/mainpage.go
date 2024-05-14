@@ -17,12 +17,14 @@ var SearchText string
 var FilterCategories []models.Category
 var FilterCharacteristicSets []models.Characteristic
 var FilterCharacteristicNumbers []FilterCharacteristicInt
+var PagePagination int
 
 type MainPageObject struct {
 	BaseObject      structures.BaseObject
 	Products        []models.Product
 	Categories      []models.Category
 	Characteristics []models.Characteristic
+	PagePagination  int
 }
 
 type FilterCharacteristicInt struct {
@@ -41,6 +43,7 @@ func MainPage(w http.ResponseWriter, r *http.Request) {
 			pageObject.BaseObject.ErrorStr = bin.GetError(&bin.GlobalError)
 		}
 		pageObject.BaseObject.MessageStr = bin.GlobalMessage
+		pageObject.PagePagination = PagePagination
 		bin.GlobalMessage = ""
 		bin.Refresh(w, r)
 		t, err := template.New("main.html").Funcs(sprig.FuncMap()).ParseFiles("views/main.html")
@@ -235,5 +238,10 @@ func AddCart(w http.ResponseWriter, r *http.Request) {
 			bin.GlobalError = "Товар уже имеется в корзине"
 		}
 	}
+	http.Redirect(w, r, "/", http.StatusSeeOther)
+}
+
+func ChangePagination(w http.ResponseWriter, r *http.Request) {
+	PagePagination, _ = strconv.Atoi(r.FormValue("PagePagination"))
 	http.Redirect(w, r, "/", http.StatusSeeOther)
 }

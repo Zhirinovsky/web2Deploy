@@ -1122,3 +1122,214 @@
 {"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-08T00:47:09+03:00"}
 {"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-08T00:47:23+03:00"}
 {"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-08T00:47:23+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-09T23:40:41+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-09T23:40:41+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-09T23:40:42+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-09T23:40:42+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-09T23:40:42+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-09T23:40:54+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-09T23:40:54+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-10T02:02:03+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-10T02:02:04+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-10T02:02:07+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-10T02:02:07+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-10T16:00:38+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-10T16:00:39+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-10T16:00:42+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-10T16:00:43+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-10T16:51:25+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-10T16:51:31+03:00"}
+{"email":"Almostreal@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Товарный менеджер","subgroup":"login","time":"2024-05-10T16:51:31+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-10T18:28:22+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-10T18:28:23+03:00"}
+{"email":"Almostreal@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-10T18:28:40+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-10T18:28:43+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-10T18:28:43+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-11T17:20:34+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-11T17:20:35+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-11T17:20:44+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-11T17:20:44+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-11T17:21:42+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-11T17:21:45+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-11T17:21:45+03:00"}
+{"error":"template: admin.html:383: bad character U+007D '}'","group":"errors","level":"panic","msg":"template: admin.html:383: bad character U+007D '}'","time":"2024-05-11T18:33:42+03:00"}
+{"error":"template: admin.html:383: bad character U+007D '}'","group":"errors","level":"panic","msg":"template: admin.html:383: bad character U+007D '}'","time":"2024-05-11T18:33:42+03:00"}
+{"error":"template: admin.html:383: bad character U+007D '}'","group":"errors","level":"panic","msg":"template: admin.html:383: bad character U+007D '}'","time":"2024-05-11T18:33:42+03:00"}
+{"error":"template: admin.html:383: bad character U+007D '}'","group":"errors","level":"panic","msg":"template: admin.html:383: bad character U+007D '}'","time":"2024-05-11T18:33:42+03:00"}
+{"error":"template: admin.html:383: bad character U+007D '}'","group":"errors","level":"panic","msg":"template: admin.html:383: bad character U+007D '}'","time":"2024-05-11T18:33:42+03:00"}
+{"error":"template: admin.html:383: bad character U+007D '}'","group":"errors","level":"panic","msg":"template: admin.html:383: bad character U+007D '}'","time":"2024-05-11T18:33:43+03:00"}
+{"error":"template: admin.html:383: bad character U+007D '}'","group":"errors","level":"panic","msg":"template: admin.html:383: bad character U+007D '}'","time":"2024-05-11T18:33:49+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-12T17:24:42+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-12T17:24:42+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:24:46+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-12T17:24:47+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-12T17:24:55+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:25:00+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-12T17:25:00+03:00"}
+{"address":"","date":"2024-05-12 17:25:08","group":"crud","id":2,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-12T17:25:08+03:00","user_id":0}
+{"address":"","date":"2024-05-12 17:25:08","group":"crud","id":2,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-12T17:25:08+03:00","user_id":0}
+{"address":"","date":"2024-05-12 17:25:10","group":"crud","id":3,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-12T17:25:10+03:00","user_id":0}
+{"address":"","date":"2024-05-12 17:25:10","group":"crud","id":3,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-12T17:25:10+03:00","user_id":0}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-12T17:25:13+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:25:16+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-12T17:25:17+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-12T17:32:42+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-12T17:32:42+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-12T17:32:43+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-12T17:32:43+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-12T17:32:43+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-12T17:34:17+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-12T17:34:18+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-12T17:34:18+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-12T17:34:18+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-12T17:34:18+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:34:38+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-12T17:34:38+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:34:53+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-12T17:34:54+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:37:32+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-12T17:37:32+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:37:58+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-12T17:37:58+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-12T17:38:33+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-12T17:38:33+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-12T17:38:34+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-12T17:38:34+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-12T17:38:34+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-12T17:38:40+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-12T17:38:40+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-12T19:59:09+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-12T19:59:10+03:00"}
+{"email":"User@mail.com","group":"profile","level":"trace","msg":"Sending discount card deletion request...","time":"2024-05-12T19:59:11+03:00"}
+{"email":"User@mail.com","group":"profile","level":"info","msg":"Successful discount card deletion","time":"2024-05-12T19:59:11+03:00"}
+{"date":"2024-05-12 19:59:28","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"trace","msg":"Sending discount card creation request...","time":"2024-05-12T19:59:28+03:00"}
+{"date":"2024-05-12 19:59:28","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"info","msg":"Successful discount card creation","time":"2024-05-12T19:59:28+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-13T14:00:43+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T14:00:43+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T14:00:44+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-13T14:00:44+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-13T14:00:44+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T16:07:40+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T16:07:41+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T16:08:18+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-13T16:08:20+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-13T17:29:08+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T17:29:08+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T17:29:08+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-13T17:29:08+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-13T17:29:08+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-13T17:55:57+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T17:55:57+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T17:55:57+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-13T17:55:57+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-13T17:55:57+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-13T17:56:42+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T17:56:42+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T17:56:42+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-13T17:56:42+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-13T17:56:42+03:00"}
+{"error":"template: main.html:104: unexpected {{end}}","group":"errors","level":"error","msg":"template: main.html:104: unexpected {{end}}","time":"2024-05-13T17:57:38+03:00"}
+{"error":"template: main.html:104: unexpected {{end}}","group":"errors","level":"error","msg":"template: main.html:104: unexpected {{end}}","time":"2024-05-13T17:57:38+03:00"}
+{"error":"template: main.html:104: unexpected {{end}}","group":"errors","level":"error","msg":"template: main.html:104: unexpected {{end}}","time":"2024-05-13T17:57:39+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-13T17:58:18+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T17:58:18+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T17:58:19+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-13T17:58:19+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-13T17:58:19+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-13T17:59:56+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T17:59:56+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T17:59:57+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-13T17:59:57+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-13T17:59:57+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T18:19:57+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-13T18:19:59+03:00"}
+{"address":"Московская область, Люберцы, Волковская улица, 9","date":"2024-05-13 18:22:26","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-13T18:22:26+03:00","user_id":3}
+{"address":"Московская область, Люберцы, Волковская улица, 9","date":"2024-05-13 18:22:26","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-13T18:22:26+03:00","user_id":3}
+{"amount":3,"checkout_price":10000,"email":"User@mail.com","error":"pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"","group":"ordering","level":"error","msg":"Failed order position creation","order_id":24,"product_id":4,"time":"2024-05-13T18:22:27+03:00"}
+{"email":"User@mail.com","group":"profile","level":"trace","msg":"Sending discount card deletion request...","time":"2024-05-13T18:23:18+03:00"}
+{"email":"User@mail.com","group":"profile","level":"info","msg":"Successful discount card deletion","time":"2024-05-13T18:23:18+03:00"}
+{"date":"2024-05-13 18:23:25","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"trace","msg":"Sending discount card creation request...","time":"2024-05-13T18:23:25+03:00"}
+{"date":"2024-05-13 18:23:25","discount":0,"email":"User@mail.com","group":"profile","id":3,"level":"info","msg":"Successful discount card creation","time":"2024-05-13T18:23:25+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-13T18:23:55+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T18:23:58+03:00"}
+{"email":"Almostreal@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Товарный менеджер","subgroup":"login","time":"2024-05-13T18:24:00+03:00"}
+{"amount":75,"category_id":"5","discount":0,"group":"crud","id":2,"image_link":"/images/vacuum_cleaner_2.jpg","level":"trace","method":"PUT","msg":"Sending database change request...","name":"Scarlett SC-VC80C86","price":3000,"table":"product","time":"2024-05-13T18:24:41+03:00"}
+{"amount":75,"category_id":"5","discount":0,"group":"crud","id":2,"image_link":"/images/vacuum_cleaner_2.jpg","level":"info","method":"PUT","msg":"Successful database change","name":"Scarlett SC-VC80C86","price":3000,"table":"product","time":"2024-05-13T18:24:41+03:00"}
+{"datatype":"csv","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"orders","time":"2024-05-13T18:25:55+03:00"}
+{"datatype":"csv","group":"export/import","level":"info","msg":"Successful export","subgroup":"export","table":"orders","time":"2024-05-13T18:25:55+03:00"}
+{"datatype":"xlsx","group":"export/import","level":"trace","msg":"Export attempt...","subgroup":"export","table":"orders","time":"2024-05-13T18:26:17+03:00"}
+{"datatype":"xlsx","group":"export/import","level":"info","msg":"Successful export","subgroup":"export","table":"orders","time":"2024-05-13T18:26:17+03:00"}
+{"email":"Almostreal@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-13T18:28:40+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T18:28:46+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-13T18:28:47+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-13T23:38:58+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-13T23:38:58+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T23:39:03+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-13T23:39:04+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-13T23:39:05+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T23:39:10+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-13T23:39:11+03:00"}
+{"address":"Московская область, Ленинский городской округ, Видное, 2-я Радиальная улица, 1","date":"2024-05-13 23:39:24","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-13T23:39:24+03:00","user_id":3}
+{"address":"Московская область, Ленинский городской округ, Видное, 2-я Радиальная улица, 1","date":"2024-05-13 23:39:24","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-13T23:39:24+03:00","user_id":3}
+{"amount":3,"checkout_price":10000,"email":"User@mail.com","error":"pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"","group":"ordering","level":"error","msg":"Failed order position creation","order_id":25,"product_id":4,"time":"2024-05-13T23:39:24+03:00"}
+{"address":"Московская область, Балашиха, микрорайон Балашиха-1","date":"2024-05-13 23:40:11","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-13T23:40:43+03:00","user_id":3}
+{"address":"Московская область, Балашиха, микрорайон Балашиха-1","date":"2024-05-13 23:40:11","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-13T23:40:43+03:00","user_id":3}
+{"amount":3,"checkout_price":10000,"email":"User@mail.com","error":"pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"","group":"ordering","level":"error","msg":"Failed order position creation","order_id":26,"product_id":4,"time":"2024-05-13T23:42:55+03:00"}
+{"address":"Московская область, Балашиха, микрорайон Никольско-Архангельский, Разинское шоссе","date":"2024-05-13 23:43:03","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-13T23:43:03+03:00","user_id":3}
+{"address":"Московская область, Балашиха, микрорайон Никольско-Архангельский, Разинское шоссе","date":"2024-05-13 23:43:03","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-13T23:43:03+03:00","user_id":3}
+{"amount":3,"checkout_price":10000,"email":"User@mail.com","error":"pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"","group":"ordering","level":"error","msg":"Failed order position creation","order_id":27,"product_id":4,"time":"2024-05-13T23:43:03+03:00"}
+{"address":"Москва, улица Варварка, 4А","date":"2024-05-13 23:43:52","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-13T23:43:52+03:00","user_id":3}
+{"address":"Москва, улица Варварка, 4А","date":"2024-05-13 23:43:52","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-13T23:43:52+03:00","user_id":3}
+{"amount":3,"checkout_price":10000,"email":"User@mail.com","error":"pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"","group":"ordering","level":"error","msg":"Failed order position creation","order_id":28,"product_id":4,"time":"2024-05-13T23:48:02+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T23:48:23+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-13T23:48:23+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-13T23:49:14+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-13T23:49:19+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-13T23:49:19+03:00"}
+{"address":"Московская область, Реутов, Южная улица","date":"2024-05-13 23:49:39","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-13T23:49:39+03:00","user_id":3}
+{"address":"Московская область, Реутов, Южная улица","date":"2024-05-13 23:49:39","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-13T23:49:39+03:00","user_id":3}
+{"amount":6,"checkout_price":10000,"email":"User@mail.com","error":"pq: новая строка в отношении \"product\" нарушает ограничение-проверку \"positive_amount\"","group":"ordering","level":"error","msg":"Failed order position creation","order_id":29,"product_id":4,"time":"2024-05-13T23:49:39+03:00"}
+{"address":"Московская область, Лыткарино, Октябрьская улица, 16","date":"2024-05-13 23:56:23","email":"User@mail.com","group":"ordering","level":"trace","msg":"Sending order creation request...","status_id":1,"time":"2024-05-13T23:56:23+03:00","user_id":3}
+{"address":"Московская область, Лыткарино, Октябрьская улица, 16","date":"2024-05-13 23:56:23","email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order creation","status_id":1,"time":"2024-05-13T23:56:23+03:00","user_id":3}
+{"amount":6,"checkout_price":10000,"email":"User@mail.com","group":"ordering","level":"info","msg":"Successful order position creation","order_id":30,"product_id":4,"time":"2024-05-13T23:56:23+03:00"}
+{"active":true,"amount":6,"email":"User@mail.com","group":"ordering","id":27,"level":"info","msg":"Successful cart position deletion","product_id":4,"time":"2024-05-13T23:56:23+03:00","user_id":3}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-14T00:01:15+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-14T00:01:20+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-14T00:01:20+03:00"}
+{"address":"","date":"2024-05-14 00:01:33","group":"crud","id":24,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-14T00:01:33+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:33","group":"crud","id":24,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-14T00:01:33+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:37","group":"crud","id":25,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-14T00:01:37+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:37","group":"crud","id":25,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-14T00:01:37+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:46","group":"crud","id":26,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-14T00:01:46+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:46","group":"crud","id":26,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-14T00:01:46+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:49","group":"crud","id":27,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-14T00:01:49+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:49","group":"crud","id":27,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-14T00:01:49+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:52","group":"crud","id":28,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-14T00:01:52+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:52","group":"crud","id":28,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-14T00:01:52+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:58","group":"crud","id":29,"level":"trace","method":"DELETE","msg":"Sending database change request...","status_id":0,"table":"order","time":"2024-05-14T00:01:58+03:00","user_id":0}
+{"address":"","date":"2024-05-14 00:01:58","group":"crud","id":29,"level":"info","method":"DELETE","msg":"Successful database change","status_id":0,"table":"order","time":"2024-05-14T00:01:58+03:00","user_id":0}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-14T00:02:02+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-14T00:02:05+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Клиент","subgroup":"login","time":"2024-05-14T00:02:06+03:00"}
+{"email":"User@mail.com","gender":"Мужской","group":"profile","id":3,"last_name":"Королёв","level":"trace","middle_name":"","msg":"Sending profile data change request...","name":"Владимир","phone":"+7 (567) 896-56-78","role_id":2,"time":"2024-05-14T00:02:51+03:00"}
+{"email":"User@mail.com","gender":"Мужской","group":"profile","id":3,"last_name":"Королёв","level":"info","middle_name":"","msg":"Successful profile data change","name":"Владимир","phone":"+7 (567) 896-56-78","role_id":2,"time":"2024-05-14T00:02:51+03:00"}
+{"email":"User@mail.com","group":"profile","level":"trace","msg":"Sending discount card deletion request...","time":"2024-05-14T00:02:56+03:00"}
+{"email":"User@mail.com","group":"profile","level":"info","msg":"Successful discount card deletion","time":"2024-05-14T00:02:56+03:00"}
+{"email":"User@mail.com","gender":"Мужской","group":"profile","id":3,"last_name":"Королёв","level":"trace","middle_name":"","msg":"Sending profile data change request...","name":"Владимир","phone":"","role_id":2,"time":"2024-05-14T00:03:17+03:00"}
+{"email":"User@mail.com","gender":"Мужской","group":"profile","id":3,"last_name":"Королёв","level":"info","middle_name":"","msg":"Successful profile data change","name":"Владимир","phone":"","role_id":2,"time":"2024-05-14T00:03:17+03:00"}
+{"email":"User@mail.com","gender":"Мужской","group":"profile","id":3,"last_name":"Королёв","level":"trace","middle_name":"","msg":"Sending profile data change request...","name":"Владимир","phone":"+7 (567) 890-87-65","role_id":2,"time":"2024-05-14T00:14:17+03:00"}
+{"email":"User@mail.com","gender":"Мужской","group":"profile","id":3,"last_name":"Королёв","level":"info","middle_name":"","msg":"Successful profile data change","name":"Владимир","phone":"+7 (567) 890-87-65","role_id":2,"time":"2024-05-14T00:14:17+03:00"}
+{"email":"User@mail.com","group":"profile","id":3,"level":"trace","msg":"Sending password change request...","new_password":"aM5-uhZ-A85-r4Q","old_password":"Pa$$w0rd","repeat_password":"sdfghDSFG32","time":"2024-05-14T00:17:45+03:00"}
+{"email":"User@mail.com","error":"Password mismatched.","group":"profile","id":3,"level":"error","msg":"Failed password change","new_password":"aM5-uhZ-A85-r4Q","old_password":"Pa$$w0rd","repeat_password":"sdfghDSFG32","time":"2024-05-14T00:17:46+03:00"}
+{"email":"User@mail.com","group":"authorization","level":"info","msg":"User logout","subgroup":"logout","time":"2024-05-14T00:31:10+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-14T00:31:17+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-14T00:31:18+03:00"}
+{"characteristic_id":1,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-05-14T00:45:36+03:00"}
+{"characteristic_id":1,"error":"This characteristic has already been assigned to the product","group":"crud","id":0,"level":"error","method":"POST","msg":"Failed database change","product_id":0,"table":"set","time":"2024-05-14T00:45:36+03:00"}
+{"characteristic_id":10,"group":"crud","id":0,"level":"trace","method":"POST","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-05-14T00:45:59+03:00"}
+{"characteristic_id":10,"group":"crud","id":0,"level":"info","method":"POST","msg":"Successful database change","product_id":0,"table":"set","time":"2024-05-14T00:45:59+03:00"}
+{"characteristic_id":0,"group":"crud","id":13,"level":"trace","method":"DELETE","msg":"Sending database change request...","product_id":0,"table":"set","time":"2024-05-14T00:46:02+03:00"}
+{"characteristic_id":0,"group":"crud","id":13,"level":"info","method":"DELETE","msg":"Successful database change","product_id":0,"table":"set","time":"2024-05-14T00:46:02+03:00"}
+{"group":"crud","level":"trace","method":"POST","msg":"Sending image to server...","table":"images","time":"2024-05-14T01:03:17+03:00"}
+{"date":"","discount":0,"group":"crud","id":3,"level":"trace","method":"POST","msg":"Sending database change request...","table":"card","time":"2024-05-14T01:11:17+03:00"}
+{"date":"","discount":0,"group":"crud","id":3,"level":"info","method":"POST","msg":"Successful database change","table":"card","time":"2024-05-14T01:11:17+03:00"}

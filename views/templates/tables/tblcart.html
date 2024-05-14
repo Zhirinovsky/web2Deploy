@@ -20,7 +20,7 @@
       <button type="submit" class="btn btn-link" form="addAmount{{ .ID }}"><i class="bi bi-plus-lg"></i></button>
     </div>
   </td>
-  <td class="align-middle text-center fs-4" style="width: 130px">{{ round (mulf (subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100))) .Amount) 2 }} руб</td>
+  <td class="align-middle text-center fs-4" style="width: 140px">{{ round (mulf (subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100))) .Amount) 2 }} руб</td>
   <td class="align-middle fs-4" style="width: 225px">
     <button type="button" class="btn btn-outline-primary infoProduct ms-2 me-1" data-bs-toggle="modal" data-bs-target="#infoProduct" data-id="{{ .Product.ID }}" data-name="{{ .Product.Name }}" data-number="{{ add .Product.ID 1000 }}" data-price="{{ subf .Product.Price (mulf .Product.Price (divf .Product.Discount 100)) }}" data-amount="{{ .Product.Amount }}" data-image="{{ .Product.ImageLink }}" data-category="{{ .Product.Category.Name }}">Подробно</button>
     <button type="submit" class="btn btn-outline-danger ms-1 me-2" form="removeCart{{ .ID }}">Убрать</button>

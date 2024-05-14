@@ -16,15 +16,15 @@ var Client = redis.NewClient(&redis.Options{})
 
 // Оснвной универсальный метод отправки запросов в API
 func Request(url string, typeReq string, token string, bodyReq any, bodyResp any) *http.Response {
-	jsonReq, _ := json.Marshal(bodyReq)
-	req, _ := http.NewRequest(typeReq, GlobalUrl+url, bytes.NewBuffer(jsonReq))
+	jsonReq, _ := json.Marshal(bodyReq)                                         //Преобразование тела запроса в json
+	req, _ := http.NewRequest(typeReq, GlobalUrl+url, bytes.NewBuffer(jsonReq)) //Создание http запроса
 	req.Header.Set("Content-Type", "application/json")
 	req.Header.Set("Authorization", token)
 	client := &http.Client{}
 	response, _ := client.Do(req)
 	if response != nil {
 		body, _ := io.ReadAll(response.Body)
-		_ = json.Unmarshal(body, bodyResp)
+		_ = json.Unmarshal(body, bodyResp) //Обратное преобразование из json
 	} else {
 		SaveLog(log.Fields{
 			"group": "server",

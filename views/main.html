@@ -97,6 +97,18 @@
                         <div class="row mt-3 mx-1">
                             <button type="submit" class="btn btn-outline-primary mx-auto">Применить</button>
                         </div>
+                        <div class="d-flex justify-content-center align-items-center mt-3 mx-1">
+                            <div>Кол-во товаров на странице</div>
+                            <select id="pageSelect" class="form-select w-auto" name="PagePagination" onchange="this.form.submit()" form="paginateForm">
+                                <option {{ if eq .PagePagination 4 }} selected {{ end }}>4</option>
+                                <option {{ if eq .PagePagination 8 }} selected {{ end }}>8</option>
+                                <option {{ if eq .PagePagination 12 }} selected {{ end }}>12</option>
+                                <option {{ if eq .PagePagination 16 }} selected {{ end }}>16</option>
+                                <option {{ if eq .PagePagination 20 }} selected {{ end }}>20</option>
+                            </select>
+                        </div>
+                    </form>
+                    <form id="paginateForm" action="/main/paginate">
                     </form>
                 </div>
             </div>

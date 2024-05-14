@@ -76,6 +76,10 @@ VALUES ('Администратор'),
        ('Клиент'),
        ('Товарный менеджер');
 
+select * from cart_position;
+
+delete from cart_position where id < 100
+
 CREATE TABLE "User" (
     ID serial PRIMARY KEY,
     Email text NOT NULL UNIQUE,
@@ -137,13 +141,15 @@ CREATE TABLE Order_Position (
     Product_ID integer REFERENCES Product (ID)
 );
 
+update product set amount = amount - 6 where id = 4
+
 ---------------------------------------------------------------------
 
 CREATE OR REPLACE FUNCTION remove_product_amount_fnc()
     RETURNS trigger AS
 $$
 BEGIN
-    UPDATE Product set Amount = Product.Amount - NEW.Amount;
+    UPDATE Product set Amount = Product.Amount - NEW.Amount where Product.id = NEW.Product_ID;
     RETURN NEW;
 END;
 $$
@@ -158,7 +164,7 @@ CREATE OR REPLACE FUNCTION add_product_amount_fnc()
     RETURNS trigger AS
 $$
 BEGIN
-    UPDATE Product set Amount = Product.Amount + OLD.Amount;
+    UPDATE Product set Amount = Product.Amount + OLD.Amount where Product.id = NEW.Product_ID;
     RETURN OLD;
 END;
 $$
