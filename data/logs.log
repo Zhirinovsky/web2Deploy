@@ -1353,3 +1353,18 @@
 {"group":"server","level":"info","msg":"Received server token","time":"2024-05-14T23:56:43+03:00"}
 {"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-14T23:56:43+03:00"}
 {"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-14T23:56:43+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-16T02:44:30+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-16T02:44:30+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-16T02:44:31+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-16T02:44:32+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-16T02:44:33+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-16T02:45:01+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-16T02:45:01+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-16T02:45:02+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-16T02:45:02+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-16T02:45:02+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-16T02:49:20+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-16T02:49:20+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-16T02:49:21+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-16T02:49:22+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-16T02:49:23+03:00"}
