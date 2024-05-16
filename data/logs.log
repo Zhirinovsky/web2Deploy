@@ -1368,3 +1368,12 @@
 {"group":"server","level":"info","msg":"Received server token","time":"2024-05-16T02:49:21+03:00"}
 {"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-16T02:49:22+03:00"}
 {"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-16T02:49:23+03:00"}
+{"group":"server","level":"trace","msg":"Server startup...","time":"2024-05-16T03:48:51+03:00"}
+{"group":"server","level":"trace","msg":"Connecting to API and Redis...","time":"2024-05-16T03:48:51+03:00"}
+{"group":"server","level":"info","msg":"Received server token","time":"2024-05-16T03:48:52+03:00"}
+{"group":"server","level":"info","msg":"Metrics loaded","time":"2024-05-16T03:48:53+03:00"}
+{"group":"server","level":"info","msg":"The server is running successfully","time":"2024-05-16T03:48:54+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-16T03:49:43+03:00"}
+{"email":"qwerty@mail.com","error":"Неверные данные авторизации","group":"authorization","level":"error","msg":"Authorization error","subgroup":"login","time":"2024-05-16T03:49:44+03:00"}
+{"group":"authorization","level":"trace","msg":"Authorization attempt...","subgroup":"login","time":"2024-05-16T03:50:12+03:00"}
+{"email":"qwerty@mail.com","group":"authorization","level":"info","msg":"Successful authorization","role":"Администратор","subgroup":"login","time":"2024-05-16T03:50:12+03:00"}

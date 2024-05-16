@@ -253,18 +253,34 @@ $(document).ready(function() {
             var title = $(names[i] + ' thead td').eq( $(this).index() ).text();
             $(this).html( '<input class="w-100" type="text" placeholder="'+title+'" />' );
         } );
-        tables[i] = new DataTable(names[i], {
-            "bAutoWidth": false,
-            "bDeferRender": true,
-            "bFilter": true,
-            "bProcessing": true,
-            "bStateSave": true,
-            pagingType: 'full_numbers',
-            columnDefs: [
-                { targets: 0, visible: false }
-            ],
-            language: language,
-        });
+        if (names[i] === '#tableCharacteristic' || names[i] === '#tableCategory') {
+            tables[i] = new DataTable(names[i], {
+                "bAutoWidth": false,
+                "bDeferRender": true,
+                "bFilter": true,
+                "bProcessing": true,
+                "bStateSave": true,
+                "ordering": false,
+                pagingType: 'full_numbers',
+                columnDefs: [
+                    { targets: 0, visible: false }
+                ],
+                language: language,
+            });
+        } else {
+            tables[i] = new DataTable(names[i], {
+                "bAutoWidth": false,
+                "bDeferRender": true,
+                "bFilter": true,
+                "bProcessing": true,
+                "bStateSave": true,
+                pagingType: 'full_numbers',
+                columnDefs: [
+                    { targets: 0, visible: false }
+                ],
+                language: language,
+            });
+        }
         $(names[i] + " tfoot input").on( 'keyup change', function () {
             tables[i]
                 .column( $(this).parent().index()+':visible' )
